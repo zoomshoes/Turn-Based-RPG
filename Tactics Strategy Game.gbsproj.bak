@@ -1,6 +1,6 @@
 {
     "name": "Tactics Strategy Game",
-    "author": "meman",
+    "author": "zoomshoes",
     "_version": "3.1.0",
     "_release": "3",
     "scenes": [
@@ -813,7 +813,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "29bc7387-db37-4d98-aac8-07ff837a1ba4",
-                    "x": 15,
+                    "x": 14,
                     "y": 7
                 },
                 {
@@ -905,7 +905,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "b788b278-2677-4599-b508-b622a0b54b74",
-                    "x": 1,
+                    "x": 7,
                     "y": 10
                 }
             ],
@@ -932,9 +932,9 @@
                     "args": {
                         "speedIn": 1,
                         "speedOut": 1,
-                        "speed": 1,
-                        "allowFastForward": false,
-                        "__collapse": true,
+                        "speed": 2,
+                        "allowFastForward": true,
+                        "__collapse": false,
                         "__comment": false
                     },
                     "id": "1143cfa4-32f0-4b42-9c54-c1be9d3ec0ab"
@@ -942,7 +942,8 @@
                 {
                     "command": "EVENT_GROUP",
                     "args": {
-                        "__label": "set player hp"
+                        "__label": "set player hp",
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -1398,18 +1399,83 @@
                                             "command": "EVENT_GROUP",
                                             "args": {
                                                 "__label": "player action",
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "children": {
                                                 "true": [
                                                     {
+                                                        "command": "EVENT_SET_INPUT_SCRIPT",
+                                                        "args": {
+                                                            "input": [
+                                                                "select"
+                                                            ],
+                                                            "override": true,
+                                                            "__scriptTabs": "press",
+                                                            "__label": "assign status menu to select",
+                                                            "__collapse": true
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_GROUP",
+                                                                    "args": {
+                                                                        "__label": "show status menu",
+                                                                        "__collapse": false
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                                                                "args": {
+                                                                                    "__scriptTabs": "layout",
+                                                                                    "minHeight": 6,
+                                                                                    "maxHeight": 6,
+                                                                                    "position": "bottom",
+                                                                                    "showBorder": "true",
+                                                                                    "clearPrevious": true,
+                                                                                    "textX": 1,
+                                                                                    "textY": 1,
+                                                                                    "textHeight": 6,
+                                                                                    "closeWhen": "key",
+                                                                                    "closeButton": "a",
+                                                                                    "text": [
+                                                                                        "HP: $03$\nMP: $04$\nline 3\nline 4\nline 5\nline 6"
+                                                                                    ],
+                                                                                    "avatarId": "",
+                                                                                    "__collapse": true,
+                                                                                    "__label": "display status menu"
+                                                                                },
+                                                                                "id": "4f9e083b-f082-46fd-a404-f33d6be730a3"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_SET_VALUE",
+                                                                                "args": {
+                                                                                    "variable": "L2",
+                                                                                    "value": {
+                                                                                        "type": "number",
+                                                                                        "value": 1
+                                                                                    },
+                                                                                    "__collapse": true,
+                                                                                    "__label": "go back to player menu"
+                                                                                },
+                                                                                "id": "6d2dcb68-2857-4426-a750-b9659c5db894"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "2043a87d-0b17-4e56-8056-c316aedb7efa"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "id": "726745b2-a28a-4711-81a8-e4d460a138a1"
+                                                    },
+                                                    {
                                                         "command": "PT_EVENT_ADVANCED_MENU",
                                                         "args": {
                                                             "variable": "L0",
-                                                            "__scriptTabs": "items",
+                                                            "__scriptTabs": "text",
                                                             "width": 10,
                                                             "height": 6,
-                                                            "from": "right",
+                                                            "from": "bottom",
                                                             "items": 4,
                                                             "option_1_text": "Attack",
                                                             "option1_x": 1,
@@ -1536,7 +1602,7 @@
                                                             "comparator": 1,
                                                             "__collapseElse": true,
                                                             "__disableElse": true,
-                                                            "__collapse": false,
+                                                            "__collapse": true,
                                                             "__label": "attack is chosen"
                                                         },
                                                         "children": {
@@ -1577,8 +1643,8 @@
                                                             "comparator": 2,
                                                             "__collapseElse": true,
                                                             "__disableElse": true,
-                                                            "__collapse": false,
-                                                            "__label": "open magic menu?"
+                                                            "__collapse": true,
+                                                            "__label": "magic is chosen"
                                                         },
                                                         "children": {
                                                             "true": [
@@ -1735,6 +1801,173 @@
                                                             "false": []
                                                         },
                                                         "id": "b859cd25-5a9d-4681-89d1-e38a2212142d"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE",
+                                                        "args": {
+                                                            "variable": "L0",
+                                                            "operator": "==",
+                                                            "comparator": 3,
+                                                            "__collapseElse": true,
+                                                            "__disableElse": true,
+                                                            "__collapse": true,
+                                                            "__label": "items is chosen"
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_MENU",
+                                                                    "args": {
+                                                                        "variable": "L3",
+                                                                        "items": 3,
+                                                                        "option1": "Fire",
+                                                                        "option2": "Ice",
+                                                                        "option3": "Back",
+                                                                        "option4": "",
+                                                                        "option5": "",
+                                                                        "option6": "",
+                                                                        "option7": "",
+                                                                        "option8": "",
+                                                                        "cancelOnB": true,
+                                                                        "layout": "menu",
+                                                                        "__collapse": false,
+                                                                        "__label": "open items menu",
+                                                                        "cancelOnLastOption": true
+                                                                    },
+                                                                    "id": "fd1ca356-1dbc-46fb-a78c-f7e4ab79de98"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_GROUP",
+                                                                    "args": {
+                                                                        "__label": "do fire attack",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_IF_VALUE",
+                                                                                "args": {
+                                                                                    "variable": "L1",
+                                                                                    "operator": "==",
+                                                                                    "comparator": 1,
+                                                                                    "__collapseElse": true,
+                                                                                    "__disableElse": true
+                                                                                },
+                                                                                "children": {
+                                                                                    "true": [
+                                                                                        {
+                                                                                            "command": "EVENT_TEXT",
+                                                                                            "args": {
+                                                                                                "text": [
+                                                                                                    "fire magic logic"
+                                                                                                ],
+                                                                                                "avatarId": ""
+                                                                                            },
+                                                                                            "id": "e1090f2c-d707-4520-ab1f-e735dcbdca27"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                            "args": {
+                                                                                                "variable": "L2",
+                                                                                                "value": {
+                                                                                                    "type": "number",
+                                                                                                    "value": 2
+                                                                                                }
+                                                                                            },
+                                                                                            "id": "e0792a41-cacf-481b-9de0-fa875a398db4"
+                                                                                        }
+                                                                                    ],
+                                                                                    "false": []
+                                                                                },
+                                                                                "id": "c79b7e3c-e8e4-4a3c-9d03-7b2ae19e40e5"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "deedcdda-d5fa-4706-88d4-833b8a5f9840"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_GROUP",
+                                                                    "args": {
+                                                                        "__label": "do ice attack",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_IF_VALUE",
+                                                                                "args": {
+                                                                                    "variable": "L1",
+                                                                                    "operator": "==",
+                                                                                    "comparator": 2,
+                                                                                    "__collapseElse": true,
+                                                                                    "__disableElse": true
+                                                                                },
+                                                                                "children": {
+                                                                                    "true": [
+                                                                                        {
+                                                                                            "command": "EVENT_TEXT",
+                                                                                            "args": {
+                                                                                                "text": [
+                                                                                                    "ice magic logic"
+                                                                                                ],
+                                                                                                "avatarId": ""
+                                                                                            },
+                                                                                            "id": "1de4698f-426c-4b79-a3a0-a95cec5b0acb"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                            "args": {
+                                                                                                "variable": "L2",
+                                                                                                "value": {
+                                                                                                    "type": "number",
+                                                                                                    "value": 2
+                                                                                                }
+                                                                                            },
+                                                                                            "id": "ff7c887f-cc9f-4190-8c26-e2a5a063b0aa"
+                                                                                        }
+                                                                                    ],
+                                                                                    "false": []
+                                                                                },
+                                                                                "id": "4deab978-f1a3-44b5-91ec-059165ff8dd6"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "24790b34-fe33-4bfb-8e0a-8d9fba5508a3"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_IF_VALUE",
+                                                                    "args": {
+                                                                        "variable": "L1",
+                                                                        "operator": "==",
+                                                                        "comparator": "0",
+                                                                        "__collapseElse": true,
+                                                                        "__collapse": true,
+                                                                        "__label": "back to main menu",
+                                                                        "__disableElse": true
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_SET_VALUE",
+                                                                                "args": {
+                                                                                    "variable": "L2",
+                                                                                    "value": {
+                                                                                        "type": "number",
+                                                                                        "value": 1
+                                                                                    },
+                                                                                    "__label": "set back to player turn"
+                                                                                },
+                                                                                "id": "33c300e9-a19a-4d53-919c-74ccf47c1844"
+                                                                            }
+                                                                        ],
+                                                                        "false": []
+                                                                    },
+                                                                    "id": "c4fb0a71-a223-4240-93f3-198ee5224a76"
+                                                                }
+                                                            ],
+                                                            "false": []
+                                                        },
+                                                        "id": "cfa233f4-d7be-4a8c-8ca9-31b6e1aa2688"
                                                     }
                                                 ]
                                             },
@@ -2264,21 +2497,15 @@
                                                                     "id": "1d792bc9-2c3a-4f18-9733-7c4d03b2fbfa"
                                                                 },
                                                                 {
-                                                                    "command": "EVENT_ACTOR_MOVE_TO",
+                                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
                                                                     "args": {
-                                                                        "actorId": "$self$",
-                                                                        "x": {
-                                                                            "type": "number",
-                                                                            "value": 1
-                                                                        },
-                                                                        "y": {
-                                                                            "type": "number",
-                                                                            "value": 10
-                                                                        },
+                                                                        "actorId": "b788b278-2677-4599-b508-b622a0b54b74",
+                                                                        "x": 0,
+                                                                        "y": 5,
                                                                         "moveType": "vertical",
                                                                         "useCollisions": false
                                                                     },
-                                                                    "id": "0f60a2e4-bf14-4439-b98a-063412c61044"
+                                                                    "id": "2036d5d0-e004-4596-a4b6-13262e4983bc"
                                                                 }
                                                             ],
                                                             "true1": [],
@@ -3667,7 +3894,7 @@
             "numFrames": 10,
             "type": "animated",
             "filename": "hud_numbers.png",
-            "checksum": "75bd71bee50e88c7886350f31dcb4932bdda90cd",
+            "checksum": "5f4a1cef222752a9c36e722165078cf6627472fb",
             "width": 160,
             "height": 16,
             "states": [
@@ -6900,6 +7127,26 @@
             "symbol": "var_player_magic"
         },
         {
+            "id": "5",
+            "name": "item_potion_count",
+            "symbol": "var_item_potion_count"
+        },
+        {
+            "id": "6",
+            "name": "item_ether_count",
+            "symbol": "var_item_ether_count"
+        },
+        {
+            "id": "7",
+            "name": "player_hp_tens",
+            "symbol": "var_player_hp_tens"
+        },
+        {
+            "id": "8",
+            "name": "player_hp_one",
+            "symbol": "var_player_hp_one"
+        },
+        {
             "id": "4f9e84c2-617c-4d49-ba7b-c13714018354__L0",
             "name": "dialogue_battle",
             "symbol": "var_dialogue_battle"
@@ -6920,24 +7167,9 @@
             "symbol": "var_turn_select"
         },
         {
-            "id": "5",
-            "name": "item_potion_count",
-            "symbol": "var_item_potion_count"
-        },
-        {
-            "id": "6",
-            "name": "item_ether_count",
-            "symbol": "var_item_ether_count"
-        },
-        {
-            "id": "7",
-            "name": "player_hp_tens",
-            "symbol": "var_player_hp_tens"
-        },
-        {
-            "id": "8",
-            "name": "player_hp_one",
-            "symbol": "var_player_hp_one"
+            "id": "1bbf3c9d-958e-49e5-9ce7-4f68637bfc53__L3",
+            "name": "items_menu",
+            "symbol": "var_items_menu"
         }
     ],
     "engineFieldValues": [
@@ -6959,8 +7191,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 461,
-        "worldScrollY": 403,
+        "worldScrollX": 427,
+        "worldScrollY": 457,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -6994,7 +7226,7 @@
             577
         ],
         "showNavigator": true,
-        "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
+        "defaultFontId": "8ed435d9-51cb-44e7-8b0d-ca85e63ca427",
         "defaultCharacterEncoding": "",
         "defaultPlayerSprites": {
             "TOPDOWN": "2dde832b-d539-4006-89e1-2ba65350edf1",
