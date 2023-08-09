@@ -13,6 +13,27 @@
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -31,6 +52,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -47,6 +70,10 @@
                 0,
                 0,
                 0,
+                0,
+                0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -65,6 +92,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -83,6 +112,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -101,6 +132,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -119,6 +152,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -137,6 +172,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -155,6 +192,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -173,6 +212,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -191,6 +232,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -209,6 +252,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -227,6 +272,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -245,6 +292,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -257,10 +306,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -269,89 +314,44 @@
                 0,
                 15,
                 15,
-                15,
-                15,
                 0,
                 0,
                 0,
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
+                0,
+                0,
+                0,
+                0,
                 15,
                 15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 15,
                 15,
                 15,
@@ -687,46 +687,71 @@
                     "id": "4f9e84c2-617c-4d49-ba7b-c13714018354",
                     "x": 10,
                     "y": 7
-                }
-            ],
-            "triggers": [
+                },
                 {
                     "name": "",
-                    "id": "856b555d-ba5e-41da-8832-e40918c4aedc",
-                    "x": 16,
-                    "y": 8,
-                    "symbol": "trigger_0",
-                    "width": 2,
-                    "height": 2,
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "daf95270-e30d-423b-9ee7-990ae29f57f6",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_6",
                     "script": [
                         {
-                            "command": "EVENT_TEXT",
+                            "command": "EVENT_GROUP",
                             "args": {
-                                "text": [
-                                    "got a potion"
-                                ],
-                                "avatarId": ""
+                                "__label": "give potion"
                             },
-                            "id": "633b6b87-938d-461d-89cf-a995f272e404"
-                        },
-                        {
-                            "command": "EVENT_INC_VALUE",
-                            "args": {
-                                "variable": "5"
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "got a potion"
+                                            ],
+                                            "avatarId": "",
+                                            "__collapse": true
+                                        },
+                                        "id": "1e130788-1f57-41e5-8a49-a98e4b8d32f2"
+                                    },
+                                    {
+                                        "command": "EVENT_INC_VALUE",
+                                        "args": {
+                                            "variable": "5",
+                                            "__collapse": true
+                                        },
+                                        "id": "79aa8c7a-6404-4603-b493-5f48f481511e"
+                                    },
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "dc77d73b-f2c5-4e34-ba9b-68dd44978c0f",
+                                            "__collapse": true
+                                        },
+                                        "id": "c5bdd98e-1661-4158-adf3-5222e3f42d87"
+                                    }
+                                ]
                             },
-                            "id": "8d6d7909-8073-407d-a067-051ae6d7fd5a"
-                        },
-                        {
-                            "command": "EVENT_CALL_CUSTOM_EVENT",
-                            "args": {
-                                "customEventId": "dc77d73b-f2c5-4e34-ba9b-68dd44978c0f"
-                            },
-                            "id": "d69ddf22-957d-4c93-beec-bea06904134c"
+                            "id": "d5edd116-754b-46a0-99b2-76c815003388"
                         }
                     ],
-                    "leaveScript": []
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "a06be458-83fb-40b4-b906-2bb1f9d0d83a",
+                    "x": 16,
+                    "y": 7
                 }
             ],
+            "triggers": [],
             "script": [
                 {
                     "command": "EVENT_SET_VALUE",
@@ -753,25 +778,11 @@
                     "id": "f9af19c8-a986-4ae2-b36f-d01872523485"
                 },
                 {
-                    "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
                     "args": {
-                        "__scriptTabs": "layout",
-                        "minHeight": 2,
-                        "maxHeight": 2,
-                        "position": "bottom",
-                        "showBorder": false,
-                        "clearPrevious": true,
-                        "textX": 0,
-                        "textY": 0,
-                        "textHeight": 2,
-                        "closeWhen": "notModal",
-                        "closeButton": "a",
-                        "text": [
-                            "HP: $03$\nMP: $04$"
-                        ],
-                        "avatarId": ""
+                        "customEventId": "dc77d73b-f2c5-4e34-ba9b-68dd44978c0f"
                     },
-                    "id": "8f8a6200-05ce-4026-8367-43697f161b60"
+                    "id": "cd62a38c-33fa-488e-8796-047e14b1bcf0"
                 }
             ],
             "playerHit1Script": [],
@@ -932,8 +943,8 @@
                 {
                     "command": "EVENT_TEXT_SET_ANIMATION_SPEED",
                     "args": {
-                        "speedIn": 1,
-                        "speedOut": 1,
+                        "speedIn": 0,
+                        "speedOut": 0,
                         "speed": 2,
                         "allowFastForward": true,
                         "__collapse": false,
@@ -1362,7 +1373,7 @@
                                     "choices": 2,
                                     "__collapseCase0": false,
                                     "value0": 1,
-                                    "__collapseCase1": false,
+                                    "__collapseCase1": true,
                                     "value1": 2,
                                     "__collapseCase2": false,
                                     "value2": 3,
@@ -1615,7 +1626,7 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "player attack animation",
-                                                                        "__collapse": false
+                                                                        "__collapse": true
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -1690,7 +1701,7 @@
                                                             "comparator": 2,
                                                             "__collapseElse": true,
                                                             "__disableElse": true,
-                                                            "__collapse": true,
+                                                            "__collapse": false,
                                                             "__label": "magic is chosen"
                                                         },
                                                         "children": {
@@ -1720,7 +1731,7 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "do fire attack",
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -1769,7 +1780,7 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "do ice attack",
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -1821,7 +1832,7 @@
                                                                         "operator": "==",
                                                                         "comparator": "0",
                                                                         "__collapseElse": true,
-                                                                        "__collapse": true,
+                                                                        "__collapse": false,
                                                                         "__label": "back to main menu",
                                                                         "__disableElse": true
                                                                     },
@@ -1857,7 +1868,7 @@
                                                             "comparator": 3,
                                                             "__collapseElse": true,
                                                             "__disableElse": true,
-                                                            "__collapse": true,
+                                                            "__collapse": false,
                                                             "__label": "items is chosen"
                                                         },
                                                         "children": {
@@ -1867,8 +1878,8 @@
                                                                     "args": {
                                                                         "variable": "L3",
                                                                         "items": 3,
-                                                                        "option1": "Fire",
-                                                                        "option2": "Ice",
+                                                                        "option1": "Potion",
+                                                                        "option2": "Ether",
                                                                         "option3": "Back",
                                                                         "option4": "",
                                                                         "option5": "",
@@ -1886,19 +1897,21 @@
                                                                 {
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
-                                                                        "__label": "do fire attack",
-                                                                        "__collapse": true
+                                                                        "__label": "if potion selected",
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
                                                                             {
                                                                                 "command": "EVENT_IF_VALUE",
                                                                                 "args": {
-                                                                                    "variable": "L1",
+                                                                                    "variable": "L3",
                                                                                     "operator": "==",
                                                                                     "comparator": 1,
                                                                                     "__collapseElse": true,
-                                                                                    "__disableElse": true
+                                                                                    "__disableElse": true,
+                                                                                    "__collapse": false,
+                                                                                    "__label": "potion logic"
                                                                                 },
                                                                                 "children": {
                                                                                     "true": [
@@ -1906,7 +1919,7 @@
                                                                                             "command": "EVENT_TEXT",
                                                                                             "args": {
                                                                                                 "text": [
-                                                                                                    "fire magic logic"
+                                                                                                    "drank a potion"
                                                                                                 ],
                                                                                                 "avatarId": ""
                                                                                             },
@@ -1919,7 +1932,8 @@
                                                                                                 "value": {
                                                                                                     "type": "number",
                                                                                                     "value": 2
-                                                                                                }
+                                                                                                },
+                                                                                                "__label": "go to enemy turn"
                                                                                             },
                                                                                             "id": "e0792a41-cacf-481b-9de0-fa875a398db4"
                                                                                         }
@@ -1935,19 +1949,21 @@
                                                                 {
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
-                                                                        "__label": "do ice attack",
-                                                                        "__collapse": true
+                                                                        "__label": "if ether selected",
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
                                                                             {
                                                                                 "command": "EVENT_IF_VALUE",
                                                                                 "args": {
-                                                                                    "variable": "L1",
+                                                                                    "variable": "L3",
                                                                                     "operator": "==",
                                                                                     "comparator": 2,
                                                                                     "__collapseElse": true,
-                                                                                    "__disableElse": true
+                                                                                    "__disableElse": true,
+                                                                                    "__label": "ether logic",
+                                                                                    "__collapse": true
                                                                                 },
                                                                                 "children": {
                                                                                     "true": [
@@ -1955,7 +1971,7 @@
                                                                                             "command": "EVENT_TEXT",
                                                                                             "args": {
                                                                                                 "text": [
-                                                                                                    "ice magic logic"
+                                                                                                    "used an ether"
                                                                                                 ],
                                                                                                 "avatarId": ""
                                                                                             },
@@ -1984,11 +2000,11 @@
                                                                 {
                                                                     "command": "EVENT_IF_VALUE",
                                                                     "args": {
-                                                                        "variable": "L1",
+                                                                        "variable": "L3",
                                                                         "operator": "==",
                                                                         "comparator": "0",
                                                                         "__collapseElse": true,
-                                                                        "__collapse": true,
+                                                                        "__collapse": false,
                                                                         "__label": "back to main menu",
                                                                         "__disableElse": true
                                                                     },
@@ -2002,7 +2018,8 @@
                                                                                         "type": "number",
                                                                                         "value": 1
                                                                                     },
-                                                                                    "__label": "set back to player turn"
+                                                                                    "__label": "set back to player turn",
+                                                                                    "__collapse": true
                                                                                 },
                                                                                 "id": "33c300e9-a19a-4d53-919c-74ccf47c1844"
                                                                             }
@@ -7815,7 +7832,7 @@
                 {
                     "command": "PT_EVENT_ADVANCED_DIALOGUE",
                     "args": {
-                        "__scriptTabs": "text",
+                        "__scriptTabs": "layout",
                         "minHeight": 2,
                         "maxHeight": 2,
                         "position": "bottom",
@@ -8047,8 +8064,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 408,
-        "worldScrollY": 492,
+        "worldScrollX": 434,
+        "worldScrollY": 392,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,

@@ -13,6 +13,27 @@
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -31,6 +52,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -47,6 +70,10 @@
                 0,
                 0,
                 0,
+                0,
+                0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -65,6 +92,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -83,6 +112,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -101,6 +132,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -119,6 +152,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -137,6 +172,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -155,6 +192,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -173,6 +212,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -191,6 +232,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -209,6 +252,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -227,6 +272,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -245,6 +292,8 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -257,10 +306,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -269,89 +314,44 @@
                 0,
                 15,
                 15,
-                15,
-                15,
                 0,
                 0,
                 0,
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
+                0,
+                0,
+                0,
+                0,
                 15,
                 15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 15,
                 15,
                 15,
@@ -687,46 +687,71 @@
                     "id": "4f9e84c2-617c-4d49-ba7b-c13714018354",
                     "x": 10,
                     "y": 7
-                }
-            ],
-            "triggers": [
+                },
                 {
                     "name": "",
-                    "id": "856b555d-ba5e-41da-8832-e40918c4aedc",
-                    "x": 16,
-                    "y": 8,
-                    "symbol": "trigger_0",
-                    "width": 2,
-                    "height": 2,
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "daf95270-e30d-423b-9ee7-990ae29f57f6",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_6",
                     "script": [
                         {
-                            "command": "EVENT_TEXT",
+                            "command": "EVENT_GROUP",
                             "args": {
-                                "text": [
-                                    "got a potion"
-                                ],
-                                "avatarId": ""
+                                "__label": "give potion"
                             },
-                            "id": "633b6b87-938d-461d-89cf-a995f272e404"
-                        },
-                        {
-                            "command": "EVENT_INC_VALUE",
-                            "args": {
-                                "variable": "5"
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "got a potion"
+                                            ],
+                                            "avatarId": "",
+                                            "__collapse": true
+                                        },
+                                        "id": "1e130788-1f57-41e5-8a49-a98e4b8d32f2"
+                                    },
+                                    {
+                                        "command": "EVENT_INC_VALUE",
+                                        "args": {
+                                            "variable": "5",
+                                            "__collapse": true
+                                        },
+                                        "id": "79aa8c7a-6404-4603-b493-5f48f481511e"
+                                    },
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "dc77d73b-f2c5-4e34-ba9b-68dd44978c0f",
+                                            "__collapse": true
+                                        },
+                                        "id": "c5bdd98e-1661-4158-adf3-5222e3f42d87"
+                                    }
+                                ]
                             },
-                            "id": "8d6d7909-8073-407d-a067-051ae6d7fd5a"
-                        },
-                        {
-                            "command": "EVENT_CALL_CUSTOM_EVENT",
-                            "args": {
-                                "customEventId": "dc77d73b-f2c5-4e34-ba9b-68dd44978c0f"
-                            },
-                            "id": "d69ddf22-957d-4c93-beec-bea06904134c"
+                            "id": "d5edd116-754b-46a0-99b2-76c815003388"
                         }
                     ],
-                    "leaveScript": []
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "a06be458-83fb-40b4-b906-2bb1f9d0d83a",
+                    "x": 16,
+                    "y": 7
                 }
             ],
+            "triggers": [],
             "script": [
                 {
                     "command": "EVENT_SET_VALUE",
@@ -753,25 +778,22 @@
                     "id": "f9af19c8-a986-4ae2-b36f-d01872523485"
                 },
                 {
-                    "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                    "command": "EVENT_SET_VALUE",
                     "args": {
-                        "__scriptTabs": "layout",
-                        "minHeight": 2,
-                        "maxHeight": 2,
-                        "position": "bottom",
-                        "showBorder": false,
-                        "clearPrevious": true,
-                        "textX": 0,
-                        "textY": 0,
-                        "textHeight": 2,
-                        "closeWhen": "notModal",
-                        "closeButton": "a",
-                        "text": [
-                            "HP: $03$\nMP: $04$"
-                        ],
-                        "avatarId": ""
+                        "variable": "9",
+                        "value": {
+                            "type": "number",
+                            "value": 5
+                        }
                     },
-                    "id": "8f8a6200-05ce-4026-8367-43697f161b60"
+                    "id": "e905ec8c-657e-4dba-87c1-0c18d997baf8"
+                },
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "dc77d73b-f2c5-4e34-ba9b-68dd44978c0f"
+                    },
+                    "id": "cd62a38c-33fa-488e-8796-047e14b1bcf0"
                 }
             ],
             "playerHit1Script": [],
@@ -932,8 +954,8 @@
                 {
                     "command": "EVENT_TEXT_SET_ANIMATION_SPEED",
                     "args": {
-                        "speedIn": 1,
-                        "speedOut": 1,
+                        "speedIn": 0,
+                        "speedOut": 0,
                         "speed": 2,
                         "allowFastForward": true,
                         "__collapse": false,
@@ -1615,7 +1637,7 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "player attack animation",
-                                                                        "__collapse": false
+                                                                        "__collapse": true
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -1720,7 +1742,7 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "do fire attack",
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -1769,7 +1791,7 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "do ice attack",
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -1821,7 +1843,7 @@
                                                                         "operator": "==",
                                                                         "comparator": "0",
                                                                         "__collapseElse": true,
-                                                                        "__collapse": true,
+                                                                        "__collapse": false,
                                                                         "__label": "back to main menu",
                                                                         "__disableElse": true
                                                                     },
@@ -1857,7 +1879,7 @@
                                                             "comparator": 3,
                                                             "__collapseElse": true,
                                                             "__disableElse": true,
-                                                            "__collapse": true,
+                                                            "__collapse": false,
                                                             "__label": "items is chosen"
                                                         },
                                                         "children": {
@@ -1867,8 +1889,8 @@
                                                                     "args": {
                                                                         "variable": "L3",
                                                                         "items": 3,
-                                                                        "option1": "Fire",
-                                                                        "option2": "Ice",
+                                                                        "option1": "Potion",
+                                                                        "option2": "Ether",
                                                                         "option3": "Back",
                                                                         "option4": "",
                                                                         "option5": "",
@@ -1886,27 +1908,438 @@
                                                                 {
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
-                                                                        "__label": "do fire attack",
-                                                                        "__collapse": true
+                                                                        "__label": "if potion selected",
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
                                                                             {
                                                                                 "command": "EVENT_IF_VALUE",
                                                                                 "args": {
-                                                                                    "variable": "L1",
+                                                                                    "variable": "L3",
                                                                                     "operator": "==",
                                                                                     "comparator": 1,
                                                                                     "__collapseElse": true,
-                                                                                    "__disableElse": true
+                                                                                    "__disableElse": true,
+                                                                                    "__collapse": false,
+                                                                                    "__label": "potion logic"
                                                                                 },
                                                                                 "children": {
                                                                                     "true": [
                                                                                         {
+                                                                                            "command": "EVENT_GROUP",
+                                                                                            "args": {
+                                                                                                "__label": "set player hp",
+                                                                                                "__collapse": false
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "true": [
+                                                                                                    {
+                                                                                                        "command": "EVENT_GROUP",
+                                                                                                        "args": {
+                                                                                                            "__label": "set player hp tens",
+                                                                                                            "__collapse": false
+                                                                                                        },
+                                                                                                        "children": {
+                                                                                                            "true": [
+                                                                                                                {
+                                                                                                                    "command": "EVENT_VARIABLE_MATH",
+                                                                                                                    "args": {
+                                                                                                                        "vectorX": "3",
+                                                                                                                        "operation": "add",
+                                                                                                                        "other": "var",
+                                                                                                                        "vectorY": "9",
+                                                                                                                        "value": "0",
+                                                                                                                        "minValue": "0",
+                                                                                                                        "maxValue": "32767",
+                                                                                                                        "clamp": true,
+                                                                                                                        "__collapse": false
+                                                                                                                    },
+                                                                                                                    "id": "5fdc0981-b4ca-447b-8e6c-b719118a6521"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "command": "EVENT_SET_VALUE",
+                                                                                                                    "args": {
+                                                                                                                        "variable": "7",
+                                                                                                                        "value": {
+                                                                                                                            "type": "variable",
+                                                                                                                            "value": "3"
+                                                                                                                        },
+                                                                                                                        "__collapse": false
+                                                                                                                    },
+                                                                                                                    "id": "4339c4f9-3810-4347-b7f1-9227762ef259"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "command": "EVENT_VARIABLE_MATH",
+                                                                                                                    "args": {
+                                                                                                                        "vectorX": "7",
+                                                                                                                        "operation": "div",
+                                                                                                                        "other": "val",
+                                                                                                                        "vectorY": "L0",
+                                                                                                                        "value": 10,
+                                                                                                                        "minValue": "0",
+                                                                                                                        "maxValue": "32767",
+                                                                                                                        "clamp": false,
+                                                                                                                        "__collapse": false
+                                                                                                                    },
+                                                                                                                    "id": "c9456979-2d97-4957-b6d3-6e8ae3d83c94"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "command": "EVENT_SWITCH",
+                                                                                                                    "args": {
+                                                                                                                        "variable": "7",
+                                                                                                                        "choices": 10,
+                                                                                                                        "__collapseCase0": false,
+                                                                                                                        "value0": 0,
+                                                                                                                        "__collapseCase1": false,
+                                                                                                                        "value1": 1,
+                                                                                                                        "__collapseCase2": false,
+                                                                                                                        "value2": 2,
+                                                                                                                        "__collapseCase3": false,
+                                                                                                                        "value3": 3,
+                                                                                                                        "__collapseCase4": false,
+                                                                                                                        "value4": 4,
+                                                                                                                        "__collapseCase5": false,
+                                                                                                                        "value5": 5,
+                                                                                                                        "__collapseCase6": false,
+                                                                                                                        "value6": 6,
+                                                                                                                        "__collapseCase7": false,
+                                                                                                                        "value7": 7,
+                                                                                                                        "__collapseCase8": false,
+                                                                                                                        "value8": 8,
+                                                                                                                        "__collapseCase9": false,
+                                                                                                                        "value9": 9,
+                                                                                                                        "__collapseCase10": false,
+                                                                                                                        "value10": 11,
+                                                                                                                        "__collapseCase11": false,
+                                                                                                                        "value11": 12,
+                                                                                                                        "__collapseCase12": false,
+                                                                                                                        "value12": 13,
+                                                                                                                        "__collapseCase13": false,
+                                                                                                                        "value13": 14,
+                                                                                                                        "__collapseCase14": false,
+                                                                                                                        "value14": 15,
+                                                                                                                        "__collapseCase15": false,
+                                                                                                                        "value15": 16,
+                                                                                                                        "__collapseElse": false,
+                                                                                                                        "__disableElse": true,
+                                                                                                                        "__collapse": true
+                                                                                                                    },
+                                                                                                                    "children": {
+                                                                                                                        "true0": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "2a63a29e-e2a2-4d17-addf-f41c9f803324",
+                                                                                                                                    "spriteStateId": ""
+                                                                                                                                },
+                                                                                                                                "id": "b8609844-4e8d-42bb-9644-6c635b37cdc1"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true1": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "2a63a29e-e2a2-4d17-addf-f41c9f803324",
+                                                                                                                                    "spriteStateId": "hud_small_1"
+                                                                                                                                },
+                                                                                                                                "id": "1b5b65c7-61ef-45e4-9a76-4a107c66b7c2"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true2": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "2a63a29e-e2a2-4d17-addf-f41c9f803324",
+                                                                                                                                    "spriteStateId": "hud_small_2"
+                                                                                                                                },
+                                                                                                                                "id": "845e16a2-7e39-4eb5-9696-ad29511a1fec"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true3": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "2a63a29e-e2a2-4d17-addf-f41c9f803324",
+                                                                                                                                    "spriteStateId": "hud_small_3"
+                                                                                                                                },
+                                                                                                                                "id": "60e7a4cc-f064-4073-b482-6d9147d0b1b6"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true4": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "2a63a29e-e2a2-4d17-addf-f41c9f803324",
+                                                                                                                                    "spriteStateId": "hud_small_4"
+                                                                                                                                },
+                                                                                                                                "id": "d25f56dd-7e3a-48c3-9ef7-f56367488400"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true5": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "2a63a29e-e2a2-4d17-addf-f41c9f803324",
+                                                                                                                                    "spriteStateId": "hud_small_5"
+                                                                                                                                },
+                                                                                                                                "id": "c8135f21-ecfc-4356-899c-e62f1248b56b"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true6": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "2a63a29e-e2a2-4d17-addf-f41c9f803324",
+                                                                                                                                    "spriteStateId": "hud_small_6"
+                                                                                                                                },
+                                                                                                                                "id": "1c6a34a7-2ec1-41d1-9c4f-ea476990c80d"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true7": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "2a63a29e-e2a2-4d17-addf-f41c9f803324",
+                                                                                                                                    "spriteStateId": "hud_small_7"
+                                                                                                                                },
+                                                                                                                                "id": "067134fb-1046-4fbc-bef2-4a04928f5848"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true8": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "2a63a29e-e2a2-4d17-addf-f41c9f803324",
+                                                                                                                                    "spriteStateId": "hud_small_8"
+                                                                                                                                },
+                                                                                                                                "id": "39190ee8-42d4-4cbd-91ab-d21c94c1e48d"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true9": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "2a63a29e-e2a2-4d17-addf-f41c9f803324",
+                                                                                                                                    "spriteStateId": "hud_small_9"
+                                                                                                                                },
+                                                                                                                                "id": "75797179-5856-4923-a771-01f542e72584"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true10": [],
+                                                                                                                        "true11": [],
+                                                                                                                        "true12": [],
+                                                                                                                        "true13": [],
+                                                                                                                        "true14": [],
+                                                                                                                        "true15": [],
+                                                                                                                        "false": []
+                                                                                                                    },
+                                                                                                                    "id": "16458e44-56b4-4f7b-a5f4-6692760933ae"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        "id": "59a4e915-3f69-48b9-9fb2-2bee7802914b"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "command": "EVENT_GROUP",
+                                                                                                        "args": {
+                                                                                                            "__label": "set player hp ones",
+                                                                                                            "__collapse": true
+                                                                                                        },
+                                                                                                        "children": {
+                                                                                                            "true": [
+                                                                                                                {
+                                                                                                                    "command": "EVENT_SET_VALUE",
+                                                                                                                    "args": {
+                                                                                                                        "variable": "8",
+                                                                                                                        "value": {
+                                                                                                                            "type": "variable",
+                                                                                                                            "value": "3"
+                                                                                                                        },
+                                                                                                                        "__collapse": false
+                                                                                                                    },
+                                                                                                                    "id": "f4d34329-d3e3-4716-b401-bc48d9b31fa0"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "command": "EVENT_VARIABLE_MATH",
+                                                                                                                    "args": {
+                                                                                                                        "vectorX": "8",
+                                                                                                                        "operation": "mod",
+                                                                                                                        "other": "val",
+                                                                                                                        "vectorY": "L0",
+                                                                                                                        "value": 10,
+                                                                                                                        "minValue": "0",
+                                                                                                                        "maxValue": "32767",
+                                                                                                                        "clamp": false,
+                                                                                                                        "__collapse": false
+                                                                                                                    },
+                                                                                                                    "id": "17d536e3-02c1-4864-85cf-828374f15916"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "command": "EVENT_SWITCH",
+                                                                                                                    "args": {
+                                                                                                                        "variable": "8",
+                                                                                                                        "choices": 10,
+                                                                                                                        "__collapseCase0": false,
+                                                                                                                        "value0": 0,
+                                                                                                                        "__collapseCase1": false,
+                                                                                                                        "value1": 1,
+                                                                                                                        "__collapseCase2": false,
+                                                                                                                        "value2": 2,
+                                                                                                                        "__collapseCase3": false,
+                                                                                                                        "value3": 3,
+                                                                                                                        "__collapseCase4": false,
+                                                                                                                        "value4": 4,
+                                                                                                                        "__collapseCase5": false,
+                                                                                                                        "value5": 5,
+                                                                                                                        "__collapseCase6": false,
+                                                                                                                        "value6": 6,
+                                                                                                                        "__collapseCase7": false,
+                                                                                                                        "value7": 7,
+                                                                                                                        "__collapseCase8": false,
+                                                                                                                        "value8": 8,
+                                                                                                                        "__collapseCase9": false,
+                                                                                                                        "value9": 9,
+                                                                                                                        "__collapseCase10": false,
+                                                                                                                        "value10": 11,
+                                                                                                                        "__collapseCase11": false,
+                                                                                                                        "value11": 12,
+                                                                                                                        "__collapseCase12": false,
+                                                                                                                        "value12": 13,
+                                                                                                                        "__collapseCase13": false,
+                                                                                                                        "value13": 14,
+                                                                                                                        "__collapseCase14": false,
+                                                                                                                        "value14": 15,
+                                                                                                                        "__collapseCase15": false,
+                                                                                                                        "value15": 16,
+                                                                                                                        "__collapseElse": false,
+                                                                                                                        "__disableElse": true,
+                                                                                                                        "__collapse": true
+                                                                                                                    },
+                                                                                                                    "children": {
+                                                                                                                        "true0": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "f8344093-3802-43f1-aa78-c50ddd309a02",
+                                                                                                                                    "spriteStateId": ""
+                                                                                                                                },
+                                                                                                                                "id": "cfa6e162-8762-4a95-a88a-62dd8a4404cb"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true1": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "f8344093-3802-43f1-aa78-c50ddd309a02",
+                                                                                                                                    "spriteStateId": "hud_small_1"
+                                                                                                                                },
+                                                                                                                                "id": "eb24c912-c5d7-4b47-b9a4-7709f6f6471b"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true2": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "f8344093-3802-43f1-aa78-c50ddd309a02",
+                                                                                                                                    "spriteStateId": "hud_small_2"
+                                                                                                                                },
+                                                                                                                                "id": "1f9a9b88-77ef-4bcd-b615-18373544163d"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true3": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "f8344093-3802-43f1-aa78-c50ddd309a02",
+                                                                                                                                    "spriteStateId": "hud_small_3"
+                                                                                                                                },
+                                                                                                                                "id": "d9859f09-2149-4bef-84a7-02072560961a"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true4": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "f8344093-3802-43f1-aa78-c50ddd309a02",
+                                                                                                                                    "spriteStateId": "hud_small_4"
+                                                                                                                                },
+                                                                                                                                "id": "2085d7b9-7c99-4c00-a563-c5b1a42c1c6d"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true5": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "f8344093-3802-43f1-aa78-c50ddd309a02",
+                                                                                                                                    "spriteStateId": "hud_small_5"
+                                                                                                                                },
+                                                                                                                                "id": "0ba1cc90-532c-4729-a712-a699edc07429"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true6": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "f8344093-3802-43f1-aa78-c50ddd309a02",
+                                                                                                                                    "spriteStateId": "hud_small_6"
+                                                                                                                                },
+                                                                                                                                "id": "61b41429-9f3a-4fbc-8a80-b244e334aca5"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true7": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "f8344093-3802-43f1-aa78-c50ddd309a02",
+                                                                                                                                    "spriteStateId": "hud_small_7"
+                                                                                                                                },
+                                                                                                                                "id": "844188f3-657c-4a07-97c9-b9a406194e15"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true8": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "f8344093-3802-43f1-aa78-c50ddd309a02",
+                                                                                                                                    "spriteStateId": "hud_small_8"
+                                                                                                                                },
+                                                                                                                                "id": "0c32f831-23ed-44ad-8f22-3c1b66a7ea36"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true9": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                                                "args": {
+                                                                                                                                    "actorId": "f8344093-3802-43f1-aa78-c50ddd309a02",
+                                                                                                                                    "spriteStateId": "hud_small_9"
+                                                                                                                                },
+                                                                                                                                "id": "0725f8db-3de7-45d8-9653-a7b494bb3ce1"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "true10": [],
+                                                                                                                        "true11": [],
+                                                                                                                        "true12": [],
+                                                                                                                        "true13": [],
+                                                                                                                        "true14": [],
+                                                                                                                        "true15": [],
+                                                                                                                        "false": []
+                                                                                                                    },
+                                                                                                                    "id": "0af74e74-eeb9-423a-957b-b82916eebffd"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        "id": "dc13cd32-cfd2-4289-b5c8-6712e9a71e1d"
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            "id": "8619dc7d-83f9-4f3f-9144-376ddbf73727"
+                                                                                        },
+                                                                                        {
                                                                                             "command": "EVENT_TEXT",
                                                                                             "args": {
                                                                                                 "text": [
-                                                                                                    "fire magic logic"
+                                                                                                    "drank a potion"
                                                                                                 ],
                                                                                                 "avatarId": ""
                                                                                             },
@@ -1919,7 +2352,8 @@
                                                                                                 "value": {
                                                                                                     "type": "number",
                                                                                                     "value": 2
-                                                                                                }
+                                                                                                },
+                                                                                                "__label": "go to enemy turn"
                                                                                             },
                                                                                             "id": "e0792a41-cacf-481b-9de0-fa875a398db4"
                                                                                         }
@@ -1935,19 +2369,21 @@
                                                                 {
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
-                                                                        "__label": "do ice attack",
-                                                                        "__collapse": true
+                                                                        "__label": "if ether selected",
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
                                                                             {
                                                                                 "command": "EVENT_IF_VALUE",
                                                                                 "args": {
-                                                                                    "variable": "L1",
+                                                                                    "variable": "L3",
                                                                                     "operator": "==",
                                                                                     "comparator": 2,
                                                                                     "__collapseElse": true,
-                                                                                    "__disableElse": true
+                                                                                    "__disableElse": true,
+                                                                                    "__label": "ether logic",
+                                                                                    "__collapse": true
                                                                                 },
                                                                                 "children": {
                                                                                     "true": [
@@ -1955,7 +2391,7 @@
                                                                                             "command": "EVENT_TEXT",
                                                                                             "args": {
                                                                                                 "text": [
-                                                                                                    "ice magic logic"
+                                                                                                    "used an ether"
                                                                                                 ],
                                                                                                 "avatarId": ""
                                                                                             },
@@ -1984,11 +2420,11 @@
                                                                 {
                                                                     "command": "EVENT_IF_VALUE",
                                                                     "args": {
-                                                                        "variable": "L1",
+                                                                        "variable": "L3",
                                                                         "operator": "==",
                                                                         "comparator": "0",
                                                                         "__collapseElse": true,
-                                                                        "__collapse": true,
+                                                                        "__collapse": false,
                                                                         "__label": "back to main menu",
                                                                         "__disableElse": true
                                                                     },
@@ -2002,7 +2438,8 @@
                                                                                         "type": "number",
                                                                                         "value": 1
                                                                                     },
-                                                                                    "__label": "set back to player turn"
+                                                                                    "__label": "set back to player turn",
+                                                                                    "__collapse": true
                                                                                 },
                                                                                 "id": "33c300e9-a19a-4d53-919c-74ccf47c1844"
                                                                             }
@@ -2034,7 +2471,7 @@
                                                         "command": "EVENT_GROUP",
                                                         "args": {
                                                             "__label": "enemy attack animation",
-                                                            "__collapse": false
+                                                            "__collapse": true
                                                         },
                                                         "children": {
                                                             "true": [
@@ -2073,40 +2510,16 @@
                                                         "id": "854b0201-605f-48a8-9bb1-bf94e3a17a2f"
                                                     },
                                                     {
-                                                        "command": "EVENT_TEXT",
-                                                        "args": {
-                                                            "text": [
-                                                                "enemy does 5\ndamage to you"
-                                                            ],
-                                                            "avatarId": "",
-                                                            "__comment": true
-                                                        },
-                                                        "id": "628f9073-2d43-40a4-8625-2d03d45e227a"
-                                                    },
-                                                    {
                                                         "command": "EVENT_SET_VALUE",
                                                         "args": {
                                                             "variable": "1",
                                                             "value": {
                                                                 "type": "number",
                                                                 "value": 5
-                                                            }
+                                                            },
+                                                            "__collapse": true
                                                         },
                                                         "id": "0348fe36-193e-48b0-8e09-dc67380b280c"
-                                                    },
-                                                    {
-                                                        "command": "EVENT_VARIABLE_MATH",
-                                                        "args": {
-                                                            "vectorX": "3",
-                                                            "operation": "sub",
-                                                            "other": "var",
-                                                            "vectorY": "1",
-                                                            "value": "0",
-                                                            "minValue": "0",
-                                                            "maxValue": "32767",
-                                                            "clamp": true
-                                                        },
-                                                        "id": "d1d65430-fa08-46b9-a5c2-6363b3e1fa76"
                                                     },
                                                     {
                                                         "command": "EVENT_GROUP",
@@ -2120,10 +2533,25 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "set player hp tens",
-                                                                        "__collapse": false
+                                                                        "__collapse": true
                                                                     },
                                                                     "children": {
                                                                         "true": [
+                                                                            {
+                                                                                "command": "EVENT_VARIABLE_MATH",
+                                                                                "args": {
+                                                                                    "vectorX": "3",
+                                                                                    "operation": "sub",
+                                                                                    "other": "var",
+                                                                                    "vectorY": "1",
+                                                                                    "value": "0",
+                                                                                    "minValue": "0",
+                                                                                    "maxValue": "32767",
+                                                                                    "clamp": true,
+                                                                                    "__collapse": false
+                                                                                },
+                                                                                "id": "d1d65430-fa08-46b9-a5c2-6363b3e1fa76"
+                                                                            },
                                                                             {
                                                                                 "command": "EVENT_SET_VALUE",
                                                                                 "args": {
@@ -2311,7 +2739,7 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "set player hp ones",
-                                                                        "__collapse": false
+                                                                        "__collapse": true
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -2323,7 +2751,7 @@
                                                                                         "type": "variable",
                                                                                         "value": "3"
                                                                                     },
-                                                                                    "__collapse": true
+                                                                                    "__collapse": false
                                                                                 },
                                                                                 "id": "9ab27e27-ba91-4961-aa33-9397a4d8eeda"
                                                                             },
@@ -2338,7 +2766,7 @@
                                                                                     "minValue": "0",
                                                                                     "maxValue": "32767",
                                                                                     "clamp": false,
-                                                                                    "__collapse": true
+                                                                                    "__collapse": false
                                                                                 },
                                                                                 "id": "d3ccd2c6-6e18-44e4-8488-d8c128d05d33"
                                                                             },
@@ -8026,6 +8454,16 @@
             "id": "1bbf3c9d-958e-49e5-9ce7-4f68637bfc53__L3",
             "name": "items_menu",
             "symbol": "var_items_menu"
+        },
+        {
+            "id": "9",
+            "name": "battle_potion_heal",
+            "symbol": "var_battle_potion_heal_0"
+        },
+        {
+            "id": "7057bf3f-47d8-46e1-aacf-ee12f95dd018__L0",
+            "name": "Local 0",
+            "symbol": "var_local_0"
         }
     ],
     "engineFieldValues": [
@@ -8047,8 +8485,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 411,
-        "worldScrollY": 493,
+        "worldScrollX": 466,
+        "worldScrollY": 369,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
