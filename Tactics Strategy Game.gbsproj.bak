@@ -485,15 +485,15 @@
                                     {
                                         "command": "EVENT_SOUND_PLAY_EFFECT",
                                         "args": {
-                                            "type": "7e8ee87b-af31-4622-a09c-7e8a4b0a4fd2",
+                                            "type": "tone",
                                             "priority": "medium",
                                             "pitch": 4,
-                                            "frequency": 200,
-                                            "duration": 0.5,
+                                            "frequency": 600,
+                                            "duration": 0.2,
                                             "wait": true,
                                             "effect": 0
                                         },
-                                        "id": "3439d6f8-4660-4fa4-af80-ab0d8b7ac3a3"
+                                        "id": "da118a45-cc4d-40a5-b78d-edbc40ede758"
                                     },
                                     {
                                         "command": "PT_EVENT_SMOOTH_FADE",
@@ -912,7 +912,7 @@
             "id": "1bbf3c9d-958e-49e5-9ce7-4f68637bfc53",
             "symbol": "scene_2",
             "x": 324,
-            "y": 427.5,
+            "y": 418,
             "actors": [
                 {
                     "name": "battle_enemy_display",
@@ -2292,7 +2292,7 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "player attack animation",
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -2343,6 +2343,29 @@
                                                                                     "__collapse": true
                                                                                 },
                                                                                 "id": "e62e7f08-612b-461d-95ec-874e4dc9ee95"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "63ec86f6-61fe-45ec-98f9-7ce0877567c4"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_GROUP",
+                                                                    "args": {
+                                                                        "__label": "player attack logic",
+                                                                        "__collapse": false
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_TEXT",
+                                                                                "args": {
+                                                                                    "text": [
+                                                                                        "attack logic takes\nplace here"
+                                                                                    ],
+                                                                                    "avatarId": "",
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "82c719cb-69c0-4b11-b649-e286aa431f02"
                                                                             },
                                                                             {
                                                                                 "command": "EVENT_GROUP",
@@ -2404,29 +2427,6 @@
                                                                                     ]
                                                                                 },
                                                                                 "id": "fe280990-9cbb-4d15-a9e1-c9bc565ced79"
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    "id": "63ec86f6-61fe-45ec-98f9-7ce0877567c4"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_GROUP",
-                                                                    "args": {
-                                                                        "__label": "player attack logic",
-                                                                        "__collapse": false
-                                                                    },
-                                                                    "children": {
-                                                                        "true": [
-                                                                            {
-                                                                                "command": "EVENT_TEXT",
-                                                                                "args": {
-                                                                                    "text": [
-                                                                                        "attack logic takes\nplace here"
-                                                                                    ],
-                                                                                    "avatarId": "",
-                                                                                    "__collapse": true
-                                                                                },
-                                                                                "id": "82c719cb-69c0-4b11-b649-e286aa431f02"
                                                                             },
                                                                             {
                                                                                 "command": "EVENT_SET_VALUE",
@@ -10250,7 +10250,7 @@
             "symbol": "sound_enter_battle_final_wa",
             "filename": "enter_battle_final.wav",
             "type": "wav",
-            "inode": "233342755693221936",
+            "inode": "15762598695999553",
             "_v": 1691700853261
         }
     ],
@@ -10697,6 +10697,21 @@
             "symbol": "var_player_mp_one"
         },
         {
+            "id": "12",
+            "name": "player_max_health",
+            "symbol": "var_player_max_health"
+        },
+        {
+            "id": "13",
+            "name": "player_max_magic",
+            "symbol": "var_player_max_magic"
+        },
+        {
+            "id": "14",
+            "name": "battle_ether_recover",
+            "symbol": "var_battle_ether_recover"
+        },
+        {
             "id": "4f9e84c2-617c-4d49-ba7b-c13714018354__L0",
             "name": "dialogue_battle",
             "symbol": "var_dialogue_battle"
@@ -10725,21 +10740,6 @@
             "id": "7057bf3f-47d8-46e1-aacf-ee12f95dd018__L0",
             "name": "Local 0",
             "symbol": "var_local_0"
-        },
-        {
-            "id": "12",
-            "name": "player_max_health",
-            "symbol": "var_player_max_health"
-        },
-        {
-            "id": "13",
-            "name": "player_max_magic",
-            "symbol": "var_player_max_magic"
-        },
-        {
-            "id": "14",
-            "name": "battle_ether_recover",
-            "symbol": "var_battle_ether_recover"
         }
     ],
     "engineFieldValues": [
@@ -10761,8 +10761,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 517,
-        "worldScrollY": 355,
+        "worldScrollX": 555,
+        "worldScrollY": 342,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,

@@ -395,6 +395,19 @@
                     "symbol": "actor_0",
                     "script": [
                         {
+                            "command": "EVENT_SOUND_PLAY_EFFECT",
+                            "args": {
+                                "type": "8c60e30e-99fd-4d21-a97f-cfaccbdf4c3d",
+                                "priority": "medium",
+                                "pitch": 4,
+                                "frequency": 200,
+                                "duration": 0.5,
+                                "wait": false,
+                                "effect": 0
+                            },
+                            "id": "a3c486b6-f2e1-4a41-964b-d8ebd0970b7e"
+                        },
+                        {
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
@@ -485,15 +498,15 @@
                                     {
                                         "command": "EVENT_SOUND_PLAY_EFFECT",
                                         "args": {
-                                            "type": "tone",
+                                            "type": "91b46370-d72a-4935-b644-ace673e07fef",
                                             "priority": "medium",
                                             "pitch": 4,
-                                            "frequency": 600,
-                                            "duration": 0.2,
-                                            "wait": true,
+                                            "frequency": 200,
+                                            "duration": 0.5,
+                                            "wait": false,
                                             "effect": 0
                                         },
-                                        "id": "da118a45-cc4d-40a5-b78d-edbc40ede758"
+                                        "id": "8d32199e-8b8b-4b9d-8d16-bb75e6aed1a7"
                                     },
                                     {
                                         "command": "PT_EVENT_SMOOTH_FADE",
@@ -886,13 +899,17 @@
                     "id": "9fa68135-5050-481a-8bbf-f2adef744fdb"
                 },
                 {
-                    "command": "PT_EVENT_BACKGROUND_TEXT",
+                    "command": "EVENT_SOUND_PLAY_EFFECT",
                     "args": {
-                        "text": "test",
-                        "x": 1,
-                        "y": 1
+                        "type": "8c60e30e-99fd-4d21-a97f-cfaccbdf4c3d",
+                        "priority": "medium",
+                        "pitch": 4,
+                        "frequency": 200,
+                        "duration": 0.5,
+                        "wait": false,
+                        "effect": 0
                     },
-                    "id": "932e3797-881a-45cb-b385-a78b5ef6f779"
+                    "id": "7610f5b1-c402-4b25-8cf3-0079f7788cca"
                 }
             ],
             "playerHit1Script": [],
@@ -2071,7 +2088,7 @@
                                             "command": "EVENT_GROUP",
                                             "args": {
                                                 "__label": "player action",
-                                                "__collapse": false
+                                                "__collapse": true
                                             },
                                             "children": {
                                                 "true": [
@@ -2311,14 +2328,15 @@
                                                                             {
                                                                                 "command": "EVENT_SOUND_PLAY_EFFECT",
                                                                                 "args": {
-                                                                                    "type": "a9d3cd03-cec1-489c-a12c-22021ef79a23",
+                                                                                    "type": "97a81376-31a1-43f3-b3b5-01e577799a5c",
                                                                                     "priority": "high",
                                                                                     "pitch": 4,
                                                                                     "frequency": 200,
                                                                                     "duration": 0.5,
                                                                                     "wait": true,
                                                                                     "effect": 0,
-                                                                                    "__collapse": true
+                                                                                    "__collapse": true,
+                                                                                    "__label": "sword slash sfx"
                                                                                 },
                                                                                 "id": "14c0ee77-8504-47c4-93a4-ee7b1d7fca1f"
                                                                             },
@@ -3825,15 +3843,17 @@
                                                                 {
                                                                     "command": "EVENT_SOUND_PLAY_EFFECT",
                                                                     "args": {
-                                                                        "type": "a9d3cd03-cec1-489c-a12c-22021ef79a23",
+                                                                        "type": "97a81376-31a1-43f3-b3b5-01e577799a5c",
                                                                         "priority": "high",
                                                                         "pitch": 4,
                                                                         "frequency": 200,
                                                                         "duration": 0.5,
                                                                         "wait": true,
-                                                                        "effect": 0
+                                                                        "effect": 0,
+                                                                        "__collapse": true,
+                                                                        "__label": "sword slash sfx"
                                                                     },
-                                                                    "id": "de14bc8f-8e5a-4e86-a013-3360572bac1f"
+                                                                    "id": "f9790a73-68e4-424c-a448-e8d94a502972"
                                                                 },
                                                                 {
                                                                     "command": "EVENT_CAMERA_SHAKE",
@@ -10227,6 +10247,1158 @@
     ],
     "sounds": [
         {
+            "id": "97a81376-31a1-43f3-b3b5-01e577799a5c",
+            "name": "Naked_VGM\\Bottle_Break.vgm",
+            "symbol": "sound_naked_vgm_bottle_brea",
+            "filename": "Naked_VGM\\Bottle_Break.vgm",
+            "type": "vgm",
+            "inode": "844424931707235",
+            "_v": 1691701167043
+        },
+        {
+            "id": "9e1eaa4f-cd5c-4666-bd36-cf93d99e635c",
+            "name": "Naked_VGM\\Bump.vgm",
+            "symbol": "sound_naked_vgm_bump_vgm",
+            "filename": "Naked_VGM\\Bump.vgm",
+            "type": "vgm",
+            "inode": "1125899908416630",
+            "_v": 1691701167043
+        },
+        {
+            "id": "d9cfc456-ad66-46a3-a8c3-225f2a127cca",
+            "name": "Naked_VGM\\Cancel.vgm",
+            "symbol": "sound_naked_vgm_cancel_vgm",
+            "filename": "Naked_VGM\\Cancel.vgm",
+            "type": "vgm",
+            "inode": "1970324838512478",
+            "_v": 1691701167043
+        },
+        {
+            "id": "eb4c5638-1731-4200-9e38-f2c308e44f9f",
+            "name": "Naked_VGM\\Cat_Meow.vgm",
+            "symbol": "sound_naked_vgm_cat_meow_vg",
+            "filename": "Naked_VGM\\Cat_Meow.vgm",
+            "type": "vgm",
+            "inode": "844424931707229",
+            "_v": 1691701167043
+        },
+        {
+            "id": "0023e412-d315-49be-8f49-94e6613f1654",
+            "name": "Naked_VGM\\Click.vgm",
+            "symbol": "sound_naked_vgm_click_vgm",
+            "filename": "Naked_VGM\\Click.vgm",
+            "type": "vgm",
+            "inode": "1125899908417869",
+            "_v": 1691701167043
+        },
+        {
+            "id": "d7ec54c6-298e-48de-bd91-bc6da5321c52",
+            "name": "Naked_VGM\\Confirm.vgm",
+            "symbol": "sound_naked_vgm_confirm_vgm",
+            "filename": "Naked_VGM\\Confirm.vgm",
+            "type": "vgm",
+            "inode": "2533274791543708",
+            "_v": 1691701167043
+        },
+        {
+            "id": "bbb7f687-3bde-4dd3-a12f-1b8da2efbd71",
+            "name": "Naked_VGM\\Crunch.vgm",
+            "symbol": "sound_naked_vgm_crunch_vgm",
+            "filename": "Naked_VGM\\Crunch.vgm",
+            "type": "vgm",
+            "inode": "844424931707245",
+            "_v": 1691701167043
+        },
+        {
+            "id": "72e40b90-6bbb-4b5b-b301-0400894e4ade",
+            "name": "Naked_VGM\\Digital_Alarm.vgm",
+            "symbol": "sound_naked_vgm_digital_ala",
+            "filename": "Naked_VGM\\Digital_Alarm.vgm",
+            "type": "vgm",
+            "inode": "844424931707237",
+            "_v": 1691701167043
+        },
+        {
+            "id": "927d895a-93f0-434d-9f4a-dcc2b239a9ba",
+            "name": "Naked_VGM\\Dog_Bark.vgm",
+            "symbol": "sound_naked_vgm_dog_bark_vg",
+            "filename": "Naked_VGM\\Dog_Bark.vgm",
+            "type": "vgm",
+            "inode": "844424931707228",
+            "_v": 1691701167043
+        },
+        {
+            "id": "6e001619-7ad7-47e4-a318-3987b07d49a6",
+            "name": "Naked_VGM\\Door_Slow_Open.vgm",
+            "symbol": "sound_naked_vgm_door_slow_o",
+            "filename": "Naked_VGM\\Door_Slow_Open.vgm",
+            "type": "vgm",
+            "inode": "844424931707242",
+            "_v": 1691701167043
+        },
+        {
+            "id": "56d45d9b-041f-4f01-b83f-a7fe21a7a765",
+            "name": "Naked_VGM\\Drink.vgm",
+            "symbol": "sound_naked_vgm_drink_vgm",
+            "filename": "Naked_VGM\\Drink.vgm",
+            "type": "vgm",
+            "inode": "844424931707230",
+            "_v": 1691701167043
+        },
+        {
+            "id": "f867dac0-059d-4e22-93d7-e962264d1f44",
+            "name": "Naked_VGM\\Evil_Laugh.vgm",
+            "symbol": "sound_naked_vgm_evil_laugh_",
+            "filename": "Naked_VGM\\Evil_Laugh.vgm",
+            "type": "vgm",
+            "inode": "844424931707227",
+            "_v": 1691701167043
+        },
+        {
+            "id": "39ce274c-21ba-471e-b8f7-e045ad9143b4",
+            "name": "Naked_VGM\\Explosion.vgm",
+            "symbol": "sound_naked_vgm_explosion_v",
+            "filename": "Naked_VGM\\Explosion.vgm",
+            "type": "vgm",
+            "inode": "844424931707240",
+            "_v": 1691701167043
+        },
+        {
+            "id": "58dd55ca-e2a6-4c93-a459-4e739f3e377f",
+            "name": "Naked_VGM\\Gun.vgm",
+            "symbol": "sound_naked_vgm_gun_vgm",
+            "filename": "Naked_VGM\\Gun.vgm",
+            "type": "vgm",
+            "inode": "1970324838549804",
+            "_v": 1691701167043
+        },
+        {
+            "id": "7b2d9733-72ac-47a4-b333-b00cb3e7ee50",
+            "name": "Naked_VGM\\Hurt.vgm",
+            "symbol": "sound_naked_vgm_hurt_vgm",
+            "filename": "Naked_VGM\\Hurt.vgm",
+            "type": "vgm",
+            "inode": "3940649675516467",
+            "_v": 1691701167043
+        },
+        {
+            "id": "96e95d16-2d2b-41f4-93ef-07be2a9756ec",
+            "name": "Naked_VGM\\Jump.vgm",
+            "symbol": "sound_naked_vgm_jump_vgm",
+            "filename": "Naked_VGM\\Jump.vgm",
+            "type": "vgm",
+            "inode": "3377699722075697",
+            "_v": 1691701167043
+        },
+        {
+            "id": "38311e16-9f71-4ecd-975b-bdf4cad3738e",
+            "name": "Naked_VGM\\Laser_Gun.vgm",
+            "symbol": "sound_naked_vgm_laser_gun_v",
+            "filename": "Naked_VGM\\Laser_Gun.vgm",
+            "type": "vgm",
+            "inode": "844424931707238",
+            "_v": 1691701167043
+        },
+        {
+            "id": "7f237ae0-679e-42d4-ba69-632330174eb2",
+            "name": "Naked_VGM\\Low_Health.vgm",
+            "symbol": "sound_naked_vgm_low_health_",
+            "filename": "Naked_VGM\\Low_Health.vgm",
+            "type": "vgm",
+            "inode": "844424931707241",
+            "_v": 1691701167043
+        },
+        {
+            "id": "8c60e30e-99fd-4d21-a97f-cfaccbdf4c3d",
+            "name": "Naked_VGM\\Menu_In.vgm",
+            "symbol": "sound_naked_vgm_menu_in_vgm",
+            "filename": "Naked_VGM\\Menu_In.vgm",
+            "type": "vgm",
+            "inode": "844424931707233",
+            "_v": 1691701167043
+        },
+        {
+            "id": "a1167355-e134-4396-9807-c4a28b96786b",
+            "name": "Naked_VGM\\Menu_Out.vgm",
+            "symbol": "sound_naked_vgm_menu_out_vg",
+            "filename": "Naked_VGM\\Menu_Out.vgm",
+            "type": "vgm",
+            "inode": "844424931707234",
+            "_v": 1691701167043
+        },
+        {
+            "id": "bc152ef1-6b8d-42b6-b0ef-9afd93747eb9",
+            "name": "Naked_VGM\\Monster_Scream.vgm",
+            "symbol": "sound_naked_vgm_monster_scr",
+            "filename": "Naked_VGM\\Monster_Scream.vgm",
+            "type": "vgm",
+            "inode": "844424931707231",
+            "_v": 1691701167043
+        },
+        {
+            "id": "8e4c92f3-4f22-4ac4-a59d-a9750959a5bd",
+            "name": "Naked_VGM\\Notso_Confirm.vgm",
+            "symbol": "sound_naked_vgm_notso_confi",
+            "filename": "Naked_VGM\\Notso_Confirm.vgm",
+            "type": "vgm",
+            "inode": "4785074605403411",
+            "_v": 1691701167043
+        },
+        {
+            "id": "2de6ce99-1706-47e6-80c8-7b23ac60bc48",
+            "name": "Naked_VGM\\Pause.vgm",
+            "symbol": "sound_naked_vgm_pause_vgm",
+            "filename": "Naked_VGM\\Pause.vgm",
+            "type": "vgm",
+            "inode": "844424931707243",
+            "_v": 1691701167043
+        },
+        {
+            "id": "e0092e1a-832c-480a-959e-7df138ffbe9a",
+            "name": "Naked_VGM\\Phone_Ring.vgm",
+            "symbol": "sound_naked_vgm_phone_ring_",
+            "filename": "Naked_VGM\\Phone_Ring.vgm",
+            "type": "vgm",
+            "inode": "844424931707232",
+            "_v": 1691701167043
+        },
+        {
+            "id": "c7ceaa7c-db82-41d2-bf34-29c72ee159b3",
+            "name": "Naked_VGM\\Powerdown.vgm",
+            "symbol": "sound_naked_vgm_powerdown_v",
+            "filename": "Naked_VGM\\Powerdown.vgm",
+            "type": "vgm",
+            "inode": "1970324838542832",
+            "_v": 1691701167043
+        },
+        {
+            "id": "a30a4509-0349-41bf-901e-38b6463e1a67",
+            "name": "Naked_VGM\\Powerup.vgm",
+            "symbol": "sound_naked_vgm_powerup_vgm",
+            "filename": "Naked_VGM\\Powerup.vgm",
+            "type": "vgm",
+            "inode": "10977524093283153",
+            "_v": 1691701167043
+        },
+        {
+            "id": "8f702e9f-6a7e-453a-89a6-3f0eaec79feb",
+            "name": "Naked_VGM\\Siren.vgm",
+            "symbol": "sound_naked_vgm_siren_vgm",
+            "filename": "Naked_VGM\\Siren.vgm",
+            "type": "vgm",
+            "inode": "844424931707236",
+            "_v": 1691701166848
+        },
+        {
+            "id": "d8f12dbf-9622-461f-b847-034b4b68258d",
+            "name": "Naked_VGM\\Steps.vgm",
+            "symbol": "sound_naked_vgm_steps_vgm",
+            "filename": "Naked_VGM\\Steps.vgm",
+            "type": "vgm",
+            "inode": "844424931707239",
+            "_v": 1691701166848
+        },
+        {
+            "id": "23de7169-b048-4eda-9233-9c6544926959",
+            "name": "Naked_VGM\\Sword_Slash.vgm",
+            "symbol": "sound_naked_vgm_sword_slash",
+            "filename": "Naked_VGM\\Sword_Slash.vgm",
+            "type": "vgm",
+            "inode": "1125899908417878",
+            "_v": 1691701166848
+        },
+        {
+            "id": "807c7a19-4411-4573-a265-323901373963",
+            "name": "Naked_VGM\\Thunder.vgm",
+            "symbol": "sound_naked_vgm_thunder_vgm",
+            "filename": "Naked_VGM\\Thunder.vgm",
+            "type": "vgm",
+            "inode": "844424931707244",
+            "_v": 1691701166848
+        },
+        {
+            "id": "a99dd575-773c-4e23-aad2-5ad30764e802",
+            "name": "Naked_VGM\\Trampoline.vgm",
+            "symbol": "sound_naked_vgm_trampoline_",
+            "filename": "Naked_VGM\\Trampoline.vgm",
+            "type": "vgm",
+            "inode": "844424931707226",
+            "_v": 1691701166848
+        },
+        {
+            "id": "defca6fe-7cb1-4106-9566-62ffcdf586ef",
+            "name": "Naked_VGM\\Water_Splash.vgm",
+            "symbol": "sound_naked_vgm_water_splas",
+            "filename": "Naked_VGM\\Water_Splash.vgm",
+            "type": "vgm",
+            "inode": "5348024559069990",
+            "_v": 1691701166848
+        },
+        {
+            "id": "de27f534-458a-4994-bb9e-4517df83dea6",
+            "name": "Naked_VGM_ALT\\Bottle_Break.vgm",
+            "symbol": "sound_naked_vgm_alt_bottle_",
+            "filename": "Naked_VGM_ALT\\Bottle_Break.vgm",
+            "type": "vgm",
+            "inode": "844424931707268",
+            "_v": 1691701167043
+        },
+        {
+            "id": "964b3a4d-cf45-4e05-9eab-ee876fc25da5",
+            "name": "Naked_VGM_ALT\\Bump.vgm",
+            "symbol": "sound_naked_vgm_alt_bump_vg",
+            "filename": "Naked_VGM_ALT\\Bump.vgm",
+            "type": "vgm",
+            "inode": "844424931707255",
+            "_v": 1691701167043
+        },
+        {
+            "id": "f2b1268b-6bd2-4f23-8e9b-35794808819d",
+            "name": "Naked_VGM_ALT\\Cancel.vgm",
+            "symbol": "sound_naked_vgm_alt_cancel_",
+            "filename": "Naked_VGM_ALT\\Cancel.vgm",
+            "type": "vgm",
+            "inode": "844424931707249",
+            "_v": 1691701167043
+        },
+        {
+            "id": "912bc8de-e601-4540-949b-abad84bc187a",
+            "name": "Naked_VGM_ALT\\Cat_Meow.vgm",
+            "symbol": "sound_naked_vgm_alt_cat_meo",
+            "filename": "Naked_VGM_ALT\\Cat_Meow.vgm",
+            "type": "vgm",
+            "inode": "844424931707262",
+            "_v": 1691701167043
+        },
+        {
+            "id": "d4c1ecdb-a62b-4803-a785-ed577f60a322",
+            "name": "Naked_VGM_ALT\\Click.vgm",
+            "symbol": "sound_naked_vgm_alt_click_v",
+            "filename": "Naked_VGM_ALT\\Click.vgm",
+            "type": "vgm",
+            "inode": "844424931707257",
+            "_v": 1691701167043
+        },
+        {
+            "id": "3b0d1005-cb8b-4b9e-b607-ee130656293c",
+            "name": "Naked_VGM_ALT\\Confirm.vgm",
+            "symbol": "sound_naked_vgm_alt_confirm",
+            "filename": "Naked_VGM_ALT\\Confirm.vgm",
+            "type": "vgm",
+            "inode": "844424931707247",
+            "_v": 1691701167043
+        },
+        {
+            "id": "d7906c74-2354-4814-b5d6-338e8d67625e",
+            "name": "Naked_VGM_ALT\\Crunch.vgm",
+            "symbol": "sound_naked_vgm_alt_crunch_",
+            "filename": "Naked_VGM_ALT\\Crunch.vgm",
+            "type": "vgm",
+            "inode": "844424931707284",
+            "_v": 1691701167043
+        },
+        {
+            "id": "b9788956-1e7c-4f77-9000-e8a2208bfd3d",
+            "name": "Naked_VGM_ALT\\Digital_Alarm.vgm",
+            "symbol": "sound_naked_vgm_alt_digital",
+            "filename": "Naked_VGM_ALT\\Digital_Alarm.vgm",
+            "type": "vgm",
+            "inode": "844424931707270",
+            "_v": 1691701167043
+        },
+        {
+            "id": "143831fc-ddff-4935-8cb8-f9fdf3d0beed",
+            "name": "Naked_VGM_ALT\\Dog_Bark.vgm",
+            "symbol": "sound_naked_vgm_alt_dog_bar",
+            "filename": "Naked_VGM_ALT\\Dog_Bark.vgm",
+            "type": "vgm",
+            "inode": "844424931707261",
+            "_v": 1691701167043
+        },
+        {
+            "id": "daf7e6f0-5e9b-4920-86f6-f811f3934475",
+            "name": "Naked_VGM_ALT\\Door_Slow_Open.vgm",
+            "symbol": "sound_naked_vgm_alt_door_sl",
+            "filename": "Naked_VGM_ALT\\Door_Slow_Open.vgm",
+            "type": "vgm",
+            "inode": "844424931707279",
+            "_v": 1691701167043
+        },
+        {
+            "id": "0e15615d-a3f5-435b-863f-52f58cc96976",
+            "name": "Naked_VGM_ALT\\Drink.vgm",
+            "symbol": "sound_naked_vgm_alt_drink_v",
+            "filename": "Naked_VGM_ALT\\Drink.vgm",
+            "type": "vgm",
+            "inode": "844424931707263",
+            "_v": 1691701167043
+        },
+        {
+            "id": "69326b23-cace-4e55-8fa5-f8684562495d",
+            "name": "Naked_VGM_ALT\\Evil_Laugh.vgm",
+            "symbol": "sound_naked_vgm_alt_evil_la",
+            "filename": "Naked_VGM_ALT\\Evil_Laugh.vgm",
+            "type": "vgm",
+            "inode": "844424931707260",
+            "_v": 1691701167043
+        },
+        {
+            "id": "f1a376bd-2ce8-408a-8b5e-604000b6d697",
+            "name": "Naked_VGM_ALT\\Explosion.vgm",
+            "symbol": "sound_naked_vgm_alt_explosi",
+            "filename": "Naked_VGM_ALT\\Explosion.vgm",
+            "type": "vgm",
+            "inode": "844424931707275",
+            "_v": 1691701167043
+        },
+        {
+            "id": "b70fcae4-ebdb-48d8-bb9e-e39a477dacb6",
+            "name": "Naked_VGM_ALT\\Gun.vgm",
+            "symbol": "sound_naked_vgm_alt_gun_vgm",
+            "filename": "Naked_VGM_ALT\\Gun.vgm",
+            "type": "vgm",
+            "inode": "844424931707256",
+            "_v": 1691701167043
+        },
+        {
+            "id": "2ee990b5-8090-4188-b906-b2789f52b0cd",
+            "name": "Naked_VGM_ALT\\Hurt.vgm",
+            "symbol": "sound_naked_vgm_alt_hurt_vg",
+            "filename": "Naked_VGM_ALT\\Hurt.vgm",
+            "type": "vgm",
+            "inode": "844424931707251",
+            "_v": 1691701167043
+        },
+        {
+            "id": "50f2a740-a48d-4d9b-a913-8a780486eeb1",
+            "name": "Naked_VGM_ALT\\Jump.vgm",
+            "symbol": "sound_naked_vgm_alt_jump_vg",
+            "filename": "Naked_VGM_ALT\\Jump.vgm",
+            "type": "vgm",
+            "inode": "844424931707250",
+            "_v": 1691701167043
+        },
+        {
+            "id": "c06344ae-c16b-4d05-afa0-8787fd2098b2",
+            "name": "Naked_VGM_ALT\\Laser_Gun.vgm",
+            "symbol": "sound_naked_vgm_alt_laser_g",
+            "filename": "Naked_VGM_ALT\\Laser_Gun.vgm",
+            "type": "vgm",
+            "inode": "844424931707271",
+            "_v": 1691701167043
+        },
+        {
+            "id": "0efca731-4cf4-4f7f-9237-c6ab94736e01",
+            "name": "Naked_VGM_ALT\\Low_Health.vgm",
+            "symbol": "sound_naked_vgm_alt_low_hea",
+            "filename": "Naked_VGM_ALT\\Low_Health.vgm",
+            "type": "vgm",
+            "inode": "844424931707277",
+            "_v": 1691701167043
+        },
+        {
+            "id": "c7487cc2-8758-46ad-a3d1-5e5f4a7e9626",
+            "name": "Naked_VGM_ALT\\Menu_In.vgm",
+            "symbol": "sound_naked_vgm_alt_menu_in",
+            "filename": "Naked_VGM_ALT\\Menu_In.vgm",
+            "type": "vgm",
+            "inode": "844424931707266",
+            "_v": 1691701167043
+        },
+        {
+            "id": "fb5bcf7c-dc7d-4d6d-a92c-5d1366f13879",
+            "name": "Naked_VGM_ALT\\Menu_Out.vgm",
+            "symbol": "sound_naked_vgm_alt_menu_ou",
+            "filename": "Naked_VGM_ALT\\Menu_Out.vgm",
+            "type": "vgm",
+            "inode": "844424931707267",
+            "_v": 1691701167043
+        },
+        {
+            "id": "91b46370-d72a-4935-b644-ace673e07fef",
+            "name": "Naked_VGM_ALT\\Monster_Scream.vgm",
+            "symbol": "sound_naked_vgm_alt_monster",
+            "filename": "Naked_VGM_ALT\\Monster_Scream.vgm",
+            "type": "vgm",
+            "inode": "844424931707264",
+            "_v": 1691701167043
+        },
+        {
+            "id": "1f4f36e4-fa7c-4f77-a179-7acff0f31afe",
+            "name": "Naked_VGM_ALT\\Notso_Confirm.vgm",
+            "symbol": "sound_naked_vgm_alt_notso_c",
+            "filename": "Naked_VGM_ALT\\Notso_Confirm.vgm",
+            "type": "vgm",
+            "inode": "844424931707248",
+            "_v": 1691701167043
+        },
+        {
+            "id": "f26cc81c-9aed-4f79-9939-b083a867f593",
+            "name": "Naked_VGM_ALT\\Pause.vgm",
+            "symbol": "sound_naked_vgm_alt_pause_v",
+            "filename": "Naked_VGM_ALT\\Pause.vgm",
+            "type": "vgm",
+            "inode": "844424931707281",
+            "_v": 1691701167043
+        },
+        {
+            "id": "e0e2f98e-33d7-4751-817c-0c1e1677ae2f",
+            "name": "Naked_VGM_ALT\\Phone_Ring.vgm",
+            "symbol": "sound_naked_vgm_alt_phone_r",
+            "filename": "Naked_VGM_ALT\\Phone_Ring.vgm",
+            "type": "vgm",
+            "inode": "844424931707265",
+            "_v": 1691701167043
+        },
+        {
+            "id": "2618703c-8687-4002-b86b-89b0d8abce40",
+            "name": "Naked_VGM_ALT\\Powerdown.vgm",
+            "symbol": "sound_naked_vgm_alt_powerdo",
+            "filename": "Naked_VGM_ALT\\Powerdown.vgm",
+            "type": "vgm",
+            "inode": "844424931707254",
+            "_v": 1691701167043
+        },
+        {
+            "id": "dbe806bb-7f83-40b1-bfa4-330411df9844",
+            "name": "Naked_VGM_ALT\\Powerup.vgm",
+            "symbol": "sound_naked_vgm_alt_powerup",
+            "filename": "Naked_VGM_ALT\\Powerup.vgm",
+            "type": "vgm",
+            "inode": "844424931707253",
+            "_v": 1691701167043
+        },
+        {
+            "id": "0e08a642-99e7-4c99-856f-ed4a120c91ba",
+            "name": "Naked_VGM_ALT\\Siren.vgm",
+            "symbol": "sound_naked_vgm_alt_siren_v",
+            "filename": "Naked_VGM_ALT\\Siren.vgm",
+            "type": "vgm",
+            "inode": "844424931707269",
+            "_v": 1691701167043
+        },
+        {
+            "id": "88c39413-dd98-4d40-8883-0824eb3dd771",
+            "name": "Naked_VGM_ALT\\Steps.vgm",
+            "symbol": "sound_naked_vgm_alt_steps_v",
+            "filename": "Naked_VGM_ALT\\Steps.vgm",
+            "type": "vgm",
+            "inode": "844424931707272",
+            "_v": 1691701167043
+        },
+        {
+            "id": "60e2a517-a193-4104-88eb-45076639e86f",
+            "name": "Naked_VGM_ALT\\Sword_Slash.vgm",
+            "symbol": "sound_naked_vgm_alt_sword_s",
+            "filename": "Naked_VGM_ALT\\Sword_Slash.vgm",
+            "type": "vgm",
+            "inode": "844424931707258",
+            "_v": 1691701167043
+        },
+        {
+            "id": "c4dd9b22-f99c-47cf-be41-5d00f70e190b",
+            "name": "Naked_VGM_ALT\\Thunder.vgm",
+            "symbol": "sound_naked_vgm_alt_thunder",
+            "filename": "Naked_VGM_ALT\\Thunder.vgm",
+            "type": "vgm",
+            "inode": "844424931707282",
+            "_v": 1691701167043
+        },
+        {
+            "id": "f8036fd2-d710-4509-8763-d86e9796aff1",
+            "name": "Naked_VGM_ALT\\Trampoline.vgm",
+            "symbol": "sound_naked_vgm_alt_trampol",
+            "filename": "Naked_VGM_ALT\\Trampoline.vgm",
+            "type": "vgm",
+            "inode": "844424931707259",
+            "_v": 1691701167043
+        },
+        {
+            "id": "74e122bc-2836-4ad4-86f9-ca1b054daf7a",
+            "name": "Naked_VGM_ALT\\Water_Splash.vgm",
+            "symbol": "sound_naked_vgm_alt_water_s",
+            "filename": "Naked_VGM_ALT\\Water_Splash.vgm",
+            "type": "vgm",
+            "inode": "844424931707252",
+            "_v": 1691701167043
+        },
+        {
+            "id": "453a23f7-bb90-418b-bff0-8f157661e51d",
+            "name": "Player_VGM\\Bottle_Break.vgm",
+            "symbol": "sound_player_vgm_bottle_bre",
+            "filename": "Player_VGM\\Bottle_Break.vgm",
+            "type": "vgm",
+            "inode": "562949954996658",
+            "_v": 1691701167043
+        },
+        {
+            "id": "9b55990e-4f50-4140-8149-a42fcd2bef4f",
+            "name": "Player_VGM\\Bump.vgm",
+            "symbol": "sound_player_vgm_bump_vgm",
+            "filename": "Player_VGM\\Bump.vgm",
+            "type": "vgm",
+            "inode": "562949954996645",
+            "_v": 1691701167043
+        },
+        {
+            "id": "560ac730-9c46-4893-aba1-eb6a02f75c5a",
+            "name": "Player_VGM\\Cancel.vgm",
+            "symbol": "sound_player_vgm_cancel_vgm",
+            "filename": "Player_VGM\\Cancel.vgm",
+            "type": "vgm",
+            "inode": "844424931707290",
+            "_v": 1691701167043
+        },
+        {
+            "id": "f84e05de-ccc0-4af6-87bf-e538d5c96aa5",
+            "name": "Player_VGM\\Cat_Meow.vgm",
+            "symbol": "sound_player_vgm_cat_meow_v",
+            "filename": "Player_VGM\\Cat_Meow.vgm",
+            "type": "vgm",
+            "inode": "562949954996652",
+            "_v": 1691701167043
+        },
+        {
+            "id": "63868105-4dc0-496f-be5d-09d45aba52b7",
+            "name": "Player_VGM\\Click.vgm",
+            "symbol": "sound_player_vgm_click_vgm",
+            "filename": "Player_VGM\\Click.vgm",
+            "type": "vgm",
+            "inode": "562949954996647",
+            "_v": 1691701167043
+        },
+        {
+            "id": "c2b2a2b3-8baa-4a42-a646-50b6e2c2b0c2",
+            "name": "Player_VGM\\Confirm.vgm",
+            "symbol": "sound_player_vgm_confirm_vg",
+            "filename": "Player_VGM\\Confirm.vgm",
+            "type": "vgm",
+            "inode": "844424931707287",
+            "_v": 1691701167043
+        },
+        {
+            "id": "6d277719-f300-4f7f-a5d9-d3af7b1c6a30",
+            "name": "Player_VGM\\Crunch.vgm",
+            "symbol": "sound_player_vgm_crunch_vgm",
+            "filename": "Player_VGM\\Crunch.vgm",
+            "type": "vgm",
+            "inode": "562949954996668",
+            "_v": 1691701167043
+        },
+        {
+            "id": "a982e1ce-d619-42bb-bf88-7d85d6f4f2b2",
+            "name": "Player_VGM\\Digital_Alarm.vgm",
+            "symbol": "sound_player_vgm_digital_al",
+            "filename": "Player_VGM\\Digital_Alarm.vgm",
+            "type": "vgm",
+            "inode": "562949954996660",
+            "_v": 1691701167043
+        },
+        {
+            "id": "7320c313-5e52-45c3-90d8-c2e2f072beac",
+            "name": "Player_VGM\\Dog_Bark.vgm",
+            "symbol": "sound_player_vgm_dog_bark_v",
+            "filename": "Player_VGM\\Dog_Bark.vgm",
+            "type": "vgm",
+            "inode": "562949954996651",
+            "_v": 1691701167043
+        },
+        {
+            "id": "e51baabc-edf9-4a5b-a0a3-400eac62fc51",
+            "name": "Player_VGM\\Door_Slow_Open.vgm",
+            "symbol": "sound_player_vgm_door_slow_",
+            "filename": "Player_VGM\\Door_Slow_Open.vgm",
+            "type": "vgm",
+            "inode": "562949954996665",
+            "_v": 1691701167043
+        },
+        {
+            "id": "d1a56626-420b-4b01-941c-d4ccab6eb55f",
+            "name": "Player_VGM\\Drink.vgm",
+            "symbol": "sound_player_vgm_drink_vgm",
+            "filename": "Player_VGM\\Drink.vgm",
+            "type": "vgm",
+            "inode": "562949954996653",
+            "_v": 1691701167043
+        },
+        {
+            "id": "e330114f-8a69-4f3d-9f74-caaa6fc9e768",
+            "name": "Player_VGM\\Evil_Laugh.vgm",
+            "symbol": "sound_player_vgm_evil_laugh",
+            "filename": "Player_VGM\\Evil_Laugh.vgm",
+            "type": "vgm",
+            "inode": "562949954996650",
+            "_v": 1691701167043
+        },
+        {
+            "id": "32b87fdf-f7d5-4d7e-be86-5ebef6abd1a8",
+            "name": "Player_VGM\\Explosion.vgm",
+            "symbol": "sound_player_vgm_explosion_",
+            "filename": "Player_VGM\\Explosion.vgm",
+            "type": "vgm",
+            "inode": "562949954996663",
+            "_v": 1691701167043
+        },
+        {
+            "id": "07feb90a-8adc-4f96-8c76-45c645f095ef",
+            "name": "Player_VGM\\Gun.vgm",
+            "symbol": "sound_player_vgm_gun_vgm",
+            "filename": "Player_VGM\\Gun.vgm",
+            "type": "vgm",
+            "inode": "562949954996646",
+            "_v": 1691701167043
+        },
+        {
+            "id": "1a484a42-2c25-4b37-88da-d010013d5166",
+            "name": "Player_VGM\\Hurt.vgm",
+            "symbol": "sound_player_vgm_hurt_vgm",
+            "filename": "Player_VGM\\Hurt.vgm",
+            "type": "vgm",
+            "inode": "844424931707293",
+            "_v": 1691701167043
+        },
+        {
+            "id": "87265a08-6f47-4d14-96ae-08151d3b437a",
+            "name": "Player_VGM\\Jump.vgm",
+            "symbol": "sound_player_vgm_jump_vgm",
+            "filename": "Player_VGM\\Jump.vgm",
+            "type": "vgm",
+            "inode": "844424931707292",
+            "_v": 1691701167043
+        },
+        {
+            "id": "44cabc65-7534-458c-afb9-664bfafd5761",
+            "name": "Player_VGM\\Laser_Gun.vgm",
+            "symbol": "sound_player_vgm_laser_gun_",
+            "filename": "Player_VGM\\Laser_Gun.vgm",
+            "type": "vgm",
+            "inode": "562949954996661",
+            "_v": 1691701167043
+        },
+        {
+            "id": "9e8aac35-968a-46df-ab03-f2f53e0eefba",
+            "name": "Player_VGM\\Low_Health.vgm",
+            "symbol": "sound_player_vgm_low_health",
+            "filename": "Player_VGM\\Low_Health.vgm",
+            "type": "vgm",
+            "inode": "562949954996664",
+            "_v": 1691701167043
+        },
+        {
+            "id": "5d2a5dd6-8ced-4c4f-ae94-bfbcdfd28c47",
+            "name": "Player_VGM\\Menu_In.vgm",
+            "symbol": "sound_player_vgm_menu_in_vg",
+            "filename": "Player_VGM\\Menu_In.vgm",
+            "type": "vgm",
+            "inode": "562949954996656",
+            "_v": 1691701167044
+        },
+        {
+            "id": "a6e6bb6e-30ac-462c-a75d-ee7a3b1bccd7",
+            "name": "Player_VGM\\Menu_Out.vgm",
+            "symbol": "sound_player_vgm_menu_out_v",
+            "filename": "Player_VGM\\Menu_Out.vgm",
+            "type": "vgm",
+            "inode": "562949954996657",
+            "_v": 1691701167043
+        },
+        {
+            "id": "4358e4c6-acc0-4f89-9f0c-efdaa248baef",
+            "name": "Player_VGM\\Monster_Scream.vgm",
+            "symbol": "sound_player_vgm_monster_sc",
+            "filename": "Player_VGM\\Monster_Scream.vgm",
+            "type": "vgm",
+            "inode": "562949954996654",
+            "_v": 1691701167043
+        },
+        {
+            "id": "dc1c8d5a-5d57-4169-ae39-9c09a5090b1a",
+            "name": "Player_VGM\\Notso_Confirm.vgm",
+            "symbol": "sound_player_vgm_notso_conf",
+            "filename": "Player_VGM\\Notso_Confirm.vgm",
+            "type": "vgm",
+            "inode": "844424931707289",
+            "_v": 1691701167043
+        },
+        {
+            "id": "9d170dbb-beb2-4a4f-9fb8-c484148cfe7c",
+            "name": "Player_VGM\\Pause.vgm",
+            "symbol": "sound_player_vgm_pause_vgm",
+            "filename": "Player_VGM\\Pause.vgm",
+            "type": "vgm",
+            "inode": "562949954996666",
+            "_v": 1691701167043
+        },
+        {
+            "id": "47f0b14e-48e0-4d18-85bb-31965f14ace3",
+            "name": "Player_VGM\\Phone_Ring.vgm",
+            "symbol": "sound_player_vgm_phone_ring",
+            "filename": "Player_VGM\\Phone_Ring.vgm",
+            "type": "vgm",
+            "inode": "562949954996655",
+            "_v": 1691701167043
+        },
+        {
+            "id": "af7ec173-7aba-48cb-ab5b-e5e97e49d41c",
+            "name": "Player_VGM\\Powerdown.vgm",
+            "symbol": "sound_player_vgm_powerdown_",
+            "filename": "Player_VGM\\Powerdown.vgm",
+            "type": "vgm",
+            "inode": "562949954996644",
+            "_v": 1691701167043
+        },
+        {
+            "id": "ef2c2f8e-76cb-4c84-859d-28937f68d752",
+            "name": "Player_VGM\\Powerup.vgm",
+            "symbol": "sound_player_vgm_powerup_vg",
+            "filename": "Player_VGM\\Powerup.vgm",
+            "type": "vgm",
+            "inode": "562949954996643",
+            "_v": 1691701167043
+        },
+        {
+            "id": "60a6dfb6-6b3b-42a9-afef-8e919e7cd075",
+            "name": "Player_VGM\\Siren.vgm",
+            "symbol": "sound_player_vgm_siren_vgm",
+            "filename": "Player_VGM\\Siren.vgm",
+            "type": "vgm",
+            "inode": "562949954996659",
+            "_v": 1691701167044
+        },
+        {
+            "id": "a42c61f9-fcf4-4f66-9916-26ca2869f10c",
+            "name": "Player_VGM\\Steps.vgm",
+            "symbol": "sound_player_vgm_steps_vgm",
+            "filename": "Player_VGM\\Steps.vgm",
+            "type": "vgm",
+            "inode": "562949954996662",
+            "_v": 1691701167043
+        },
+        {
+            "id": "d3aa0942-363c-4790-b7fb-48b6794fedce",
+            "name": "Player_VGM\\Sword_Slash.vgm",
+            "symbol": "sound_player_vgm_sword_slas",
+            "filename": "Player_VGM\\Sword_Slash.vgm",
+            "type": "vgm",
+            "inode": "562949954996648",
+            "_v": 1691701168856
+        },
+        {
+            "id": "427c164a-0543-4963-881e-a5e21080bc57",
+            "name": "Player_VGM\\Thunder.vgm",
+            "symbol": "sound_player_vgm_thunder_vg",
+            "filename": "Player_VGM\\Thunder.vgm",
+            "type": "vgm",
+            "inode": "562949954996667",
+            "_v": 1691701167044
+        },
+        {
+            "id": "7102cedc-d266-4af3-b7c1-a82111257637",
+            "name": "Player_VGM\\Trampoline.vgm",
+            "symbol": "sound_player_vgm_trampoline",
+            "filename": "Player_VGM\\Trampoline.vgm",
+            "type": "vgm",
+            "inode": "562949954996649",
+            "_v": 1691701167044
+        },
+        {
+            "id": "1453b3c4-4ee1-4916-8cea-41d4d7104e56",
+            "name": "Player_VGM\\Water_Splash.vgm",
+            "symbol": "sound_player_vgm_water_spla",
+            "filename": "Player_VGM\\Water_Splash.vgm",
+            "type": "vgm",
+            "inode": "562949954996642",
+            "_v": 1691701167044
+        },
+        {
+            "id": "258faecf-31a5-47ee-bf59-ad0b35b8da44",
+            "name": "WAV\\Bottle_Break.wav",
+            "symbol": "sound_wav_bottle_break_wav",
+            "filename": "WAV\\Bottle_Break.wav",
+            "type": "wav",
+            "inode": "562949954996691",
+            "_v": 1691701167043
+        },
+        {
+            "id": "76c79a6d-aa63-4188-aff1-3b151b901211",
+            "name": "WAV\\Bump.wav",
+            "symbol": "sound_wav_bump_wav",
+            "filename": "WAV\\Bump.wav",
+            "type": "wav",
+            "inode": "562949954996678",
+            "_v": 1691701167043
+        },
+        {
+            "id": "2b6182cd-362f-4e64-9618-5c55f7dd4ae1",
+            "name": "WAV\\Cancel.wav",
+            "symbol": "sound_wav_cancel_wav",
+            "filename": "WAV\\Cancel.wav",
+            "type": "wav",
+            "inode": "562949954996672",
+            "_v": 1691701167043
+        },
+        {
+            "id": "d4b34174-7330-44c2-9b19-4bfa0239f71b",
+            "name": "WAV\\Cat_Meow.wav",
+            "symbol": "sound_wav_cat_meow_wav",
+            "filename": "WAV\\Cat_Meow.wav",
+            "type": "wav",
+            "inode": "562949954996685",
+            "_v": 1691701167043
+        },
+        {
+            "id": "d911721c-1eb3-440a-9142-ec1b6aede505",
+            "name": "WAV\\Click.wav",
+            "symbol": "sound_wav_click_wav",
+            "filename": "WAV\\Click.wav",
+            "type": "wav",
+            "inode": "562949954996680",
+            "_v": 1691701167043
+        },
+        {
+            "id": "2fd6a506-5834-487c-9ab8-4d99cb709cd3",
+            "name": "WAV\\Confirm.wav",
+            "symbol": "sound_wav_confirm_wav",
+            "filename": "WAV\\Confirm.wav",
+            "type": "wav",
+            "inode": "562949954996670",
+            "_v": 1691701167043
+        },
+        {
+            "id": "84628df2-4b2a-49f4-927e-8b7ce11a13a3",
+            "name": "WAV\\Crunch.wav",
+            "symbol": "sound_wav_crunch_wav",
+            "filename": "WAV\\Crunch.wav",
+            "type": "wav",
+            "inode": "562949954996701",
+            "_v": 1691701167043
+        },
+        {
+            "id": "e811a6ee-0d12-4457-ad2e-5d29c1fe69d1",
+            "name": "WAV\\Digital_Alarm.wav",
+            "symbol": "sound_wav_digital_alarm_wav",
+            "filename": "WAV\\Digital_Alarm.wav",
+            "type": "wav",
+            "inode": "562949954996693",
+            "_v": 1691701167043
+        },
+        {
+            "id": "ecbeaec5-d1cd-4905-97f9-89b51df3a4a9",
+            "name": "WAV\\Dog_Bark.wav",
+            "symbol": "sound_wav_dog_bark_wav",
+            "filename": "WAV\\Dog_Bark.wav",
+            "type": "wav",
+            "inode": "562949954996684",
+            "_v": 1691701167043
+        },
+        {
+            "id": "dd58eeb1-19e2-49c8-86ed-7a44f1453b0a",
+            "name": "WAV\\Door_Slow_Open.wav",
+            "symbol": "sound_wav_door_slow_open_wa",
+            "filename": "WAV\\Door_Slow_Open.wav",
+            "type": "wav",
+            "inode": "562949954996698",
+            "_v": 1691701167043
+        },
+        {
+            "id": "61422d20-fbf1-4d6a-a8ab-d2d869334606",
+            "name": "WAV\\Drink.wav",
+            "symbol": "sound_wav_drink_wav",
+            "filename": "WAV\\Drink.wav",
+            "type": "wav",
+            "inode": "562949954996686",
+            "_v": 1691701167043
+        },
+        {
+            "id": "c75efd2a-5ff8-444b-abf2-58a88eabf1c6",
+            "name": "WAV\\Evil_Laugh.wav",
+            "symbol": "sound_wav_evil_laugh_wav",
+            "filename": "WAV\\Evil_Laugh.wav",
+            "type": "wav",
+            "inode": "562949954996683",
+            "_v": 1691701167043
+        },
+        {
+            "id": "a198e600-5161-42e5-8256-9d38ce673619",
+            "name": "WAV\\Explosion.wav",
+            "symbol": "sound_wav_explosion_wav",
+            "filename": "WAV\\Explosion.wav",
+            "type": "wav",
+            "inode": "562949954996696",
+            "_v": 1691701167043
+        },
+        {
+            "id": "377a8712-61cd-49d5-8453-be8423f0630b",
+            "name": "WAV\\Gun.wav",
+            "symbol": "sound_wav_gun_wav",
+            "filename": "WAV\\Gun.wav",
+            "type": "wav",
+            "inode": "562949954996679",
+            "_v": 1691701167043
+        },
+        {
+            "id": "5b4db6bd-9b9e-4c4d-b209-a78fa0cee11f",
+            "name": "WAV\\Hurt.wav",
+            "symbol": "sound_wav_hurt_wav",
+            "filename": "WAV\\Hurt.wav",
+            "type": "wav",
+            "inode": "562949954996674",
+            "_v": 1691701167043
+        },
+        {
+            "id": "6769f735-5c2a-49d7-96b8-0346b5b4625d",
+            "name": "WAV\\Jump.wav",
+            "symbol": "sound_wav_jump_wav",
+            "filename": "WAV\\Jump.wav",
+            "type": "wav",
+            "inode": "562949954996673",
+            "_v": 1691701167043
+        },
+        {
+            "id": "8a6c4863-9705-4092-a7e9-6c952148ab5f",
+            "name": "WAV\\Laser_Gun.wav",
+            "symbol": "sound_wav_laser_gun_wav",
+            "filename": "WAV\\Laser_Gun.wav",
+            "type": "wav",
+            "inode": "562949954996694",
+            "_v": 1691701167043
+        },
+        {
+            "id": "d423f159-11a4-4b21-b47e-764edbbfe5d3",
+            "name": "WAV\\Low_Health.wav",
+            "symbol": "sound_wav_low_health_wav",
+            "filename": "WAV\\Low_Health.wav",
+            "type": "wav",
+            "inode": "562949954996697",
+            "_v": 1691701167043
+        },
+        {
+            "id": "50706eea-de65-4560-8eac-2873c3dde3f8",
+            "name": "WAV\\Menu_In.wav",
+            "symbol": "sound_wav_menu_in_wav",
+            "filename": "WAV\\Menu_In.wav",
+            "type": "wav",
+            "inode": "562949954996689",
+            "_v": 1691701167043
+        },
+        {
+            "id": "2955a6de-0317-48b5-b785-d14273e83351",
+            "name": "WAV\\Menu_Out.wav",
+            "symbol": "sound_wav_menu_out_wav",
+            "filename": "WAV\\Menu_Out.wav",
+            "type": "wav",
+            "inode": "562949954996690",
+            "_v": 1691701167043
+        },
+        {
+            "id": "45055f0f-79e5-4874-9601-9e58d29d092c",
+            "name": "WAV\\Monster_Scream.wav",
+            "symbol": "sound_wav_monster_scream_wa",
+            "filename": "WAV\\Monster_Scream.wav",
+            "type": "wav",
+            "inode": "562949954996687",
+            "_v": 1691701167043
+        },
+        {
+            "id": "11f8d8f7-460b-441d-9968-bf302d93a8b3",
+            "name": "WAV\\Notso_Confirm.wav",
+            "symbol": "sound_wav_notso_confirm_wav",
+            "filename": "WAV\\Notso_Confirm.wav",
+            "type": "wav",
+            "inode": "562949954996671",
+            "_v": 1691701167043
+        },
+        {
+            "id": "fa42dd92-105a-41b2-8239-218d8b1fe908",
+            "name": "WAV\\Pause.wav",
+            "symbol": "sound_wav_pause_wav",
+            "filename": "WAV\\Pause.wav",
+            "type": "wav",
+            "inode": "562949954996699",
+            "_v": 1691701167043
+        },
+        {
+            "id": "819fac42-ce0e-49e4-a25e-78fb810be7c7",
+            "name": "WAV\\Phone_Ring.wav",
+            "symbol": "sound_wav_phone_ring_wav",
+            "filename": "WAV\\Phone_Ring.wav",
+            "type": "wav",
+            "inode": "562949954996688",
+            "_v": 1691701167043
+        },
+        {
+            "id": "666d89ab-4325-4e77-81d5-cca2fd8250e1",
+            "name": "WAV\\Powerdown.wav",
+            "symbol": "sound_wav_powerdown_wav",
+            "filename": "WAV\\Powerdown.wav",
+            "type": "wav",
+            "inode": "562949954996677",
+            "_v": 1691701167043
+        },
+        {
+            "id": "f8465b4a-2c81-449c-a8b2-554f2b738f4e",
+            "name": "WAV\\Powerup.wav",
+            "symbol": "sound_wav_powerup_wav",
+            "filename": "WAV\\Powerup.wav",
+            "type": "wav",
+            "inode": "562949954996676",
+            "_v": 1691701167043
+        },
+        {
+            "id": "c0ae7f63-5e40-41a3-a571-4ff97284fb45",
+            "name": "WAV\\Siren.wav",
+            "symbol": "sound_wav_siren_wav",
+            "filename": "WAV\\Siren.wav",
+            "type": "wav",
+            "inode": "562949954996692",
+            "_v": 1691701167043
+        },
+        {
+            "id": "6a27976c-883d-418e-ae78-c5e619c76863",
+            "name": "WAV\\Steps.wav",
+            "symbol": "sound_wav_steps_wav",
+            "filename": "WAV\\Steps.wav",
+            "type": "wav",
+            "inode": "562949954996695",
+            "_v": 1691701167043
+        },
+        {
+            "id": "7df740fc-14ff-4453-ad84-5a02d03789c9",
+            "name": "WAV\\Sword_Slash.wav",
+            "symbol": "sound_wav_sword_slash_wav",
+            "filename": "WAV\\Sword_Slash.wav",
+            "type": "wav",
+            "inode": "562949954996681",
+            "_v": 1691701167043
+        },
+        {
+            "id": "86f9de74-0908-4d9b-b7d0-ce6760e88d24",
+            "name": "WAV\\Thunder.wav",
+            "symbol": "sound_wav_thunder_wav",
+            "filename": "WAV\\Thunder.wav",
+            "type": "wav",
+            "inode": "562949954996700",
+            "_v": 1691701167043
+        },
+        {
+            "id": "3ca646a5-c576-4cc4-af0f-40de86254461",
+            "name": "WAV\\Trampoline.wav",
+            "symbol": "sound_wav_trampoline_wav",
+            "filename": "WAV\\Trampoline.wav",
+            "type": "wav",
+            "inode": "562949954996682",
+            "_v": 1691701167043
+        },
+        {
+            "id": "ebffb16b-87ba-43ab-83d7-b2c20e259437",
+            "name": "WAV\\Water_Splash.wav",
+            "symbol": "sound_wav_water_splash_wav",
+            "filename": "WAV\\Water_Splash.wav",
+            "type": "wav",
+            "inode": "562949954996675",
+            "_v": 1691701167043
+        },
+        {
             "id": "a9d3cd03-cec1-489c-a12c-22021ef79a23",
             "name": "attack1.wav",
             "symbol": "sound_attack1_wav",
@@ -10761,8 +11933,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 555,
-        "worldScrollY": 342,
+        "worldScrollX": 546,
+        "worldScrollY": 370,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
