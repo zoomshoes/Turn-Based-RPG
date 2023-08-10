@@ -1034,29 +1034,6 @@
                     "y": 1
                 },
                 {
-                    "name": "player_damage_float",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "940f7fbf-ff82-4cbc-b754-cd6e14adc238",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 255,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "persistent": false,
-                    "collisionGroup": "",
-                    "symbol": "actor_5",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "b788b278-2677-4599-b508-b622a0b54b74",
-                    "x": 6,
-                    "y": 12
-                },
-                {
                     "name": "player_tens_magic",
                     "frame": 0,
                     "animate": false,
@@ -1126,29 +1103,6 @@
                     "y": 2
                 },
                 {
-                    "name": "enemy_damage_float",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "940f7fbf-ff82-4cbc-b754-cd6e14adc238",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 255,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "persistent": false,
-                    "collisionGroup": "",
-                    "symbol": "actor_10",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "7c7061d8-11c1-4514-9869-c52a4d065cec",
-                    "x": 13,
-                    "y": 5
-                },
-                {
                     "name": "battle_enemy_effect_actor",
                     "frame": 0,
                     "animate": false,
@@ -1168,7 +1122,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "9ac78b8b-7026-4ae9-bce2-f178cebb7bf6",
-                    "x": 12,
+                    "x": 9,
                     "y": 9
                 }
             ],
@@ -1178,7 +1132,7 @@
                     "command": "EVENT_GROUP",
                     "args": {
                         "__label": "hide sprites to be used later",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -1186,7 +1140,7 @@
                                 "command": "EVENT_ACTOR_DEACTIVATE",
                                 "args": {
                                     "actorId": "$self$",
-                                    "__collapse": false,
+                                    "__collapse": true,
                                     "__comment": true,
                                     "__label": "hide player sprite"
                                 },
@@ -1195,7 +1149,8 @@
                             {
                                 "command": "EVENT_ACTOR_DEACTIVATE",
                                 "args": {
-                                    "actorId": "$self$"
+                                    "actorId": "$self$",
+                                    "__collapse": true
                                 },
                                 "id": "fdc48989-1377-408c-8878-cfa4e4826b75"
                             },
@@ -1204,7 +1159,8 @@
                                 "args": {
                                     "actorId": "b788b278-2677-4599-b508-b622a0b54b74",
                                     "__label": "hide floating player damage sprite",
-                                    "__collapse": true
+                                    "__collapse": true,
+                                    "__comment": true
                                 },
                                 "id": "c31acb9d-4c91-4590-b4f5-1565db53b06c"
                             },
@@ -1213,7 +1169,8 @@
                                 "args": {
                                     "actorId": "7c7061d8-11c1-4514-9869-c52a4d065cec",
                                     "__label": "hide floating enemy damage sprite",
-                                    "__collapse": true
+                                    "__collapse": true,
+                                    "__comment": true
                                 },
                                 "id": "9c097128-b94e-4780-8b99-634aaeb98a89"
                             },
@@ -1237,7 +1194,8 @@
                             {
                                 "command": "EVENT_ACTOR_DEACTIVATE",
                                 "args": {
-                                    "actorId": "9ac78b8b-7026-4ae9-bce2-f178cebb7bf6"
+                                    "actorId": "9ac78b8b-7026-4ae9-bce2-f178cebb7bf6",
+                                    "__collapse": true
                                 },
                                 "id": "aa30b3ae-7cbb-4905-a01d-1b4383a94174"
                             }
@@ -2153,7 +2111,7 @@
                                                     {
                                                         "command": "EVENT_WAIT",
                                                         "args": {
-                                                            "time": 0.5,
+                                                            "time": 0.3,
                                                             "frames": 30,
                                                             "__collapse": true
                                                         },
@@ -2168,7 +2126,8 @@
                                                             "override": true,
                                                             "__scriptTabs": "press",
                                                             "__label": "assign status menu to select",
-                                                            "__collapse": true
+                                                            "__collapse": true,
+                                                            "__comment": true
                                                         },
                                                         "children": {
                                                             "true": [
@@ -2358,7 +2317,7 @@
                                                             "comparator": 1,
                                                             "__collapseElse": true,
                                                             "__disableElse": true,
-                                                            "__collapse": false,
+                                                            "__collapse": true,
                                                             "__label": "attack is chosen"
                                                         },
                                                         "children": {
@@ -2367,7 +2326,7 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "player normal attack animation",
-                                                                        "__collapse": false
+                                                                        "__collapse": true
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -2562,7 +2521,8 @@
                                                                                 "command": "EVENT_GROUP",
                                                                                 "args": {
                                                                                     "__label": "show floating damage number (enemy)",
-                                                                                    "__collapse": true
+                                                                                    "__collapse": false,
+                                                                                    "__comment": true
                                                                                 },
                                                                                 "children": {
                                                                                     "true": [
@@ -2649,7 +2609,7 @@
                                                             "comparator": 2,
                                                             "__collapseElse": true,
                                                             "__disableElse": true,
-                                                            "__collapse": true,
+                                                            "__collapse": false,
                                                             "__label": "magic is chosen"
                                                         },
                                                         "children": {
@@ -2761,7 +2721,8 @@
                                                                                                 "text": [
                                                                                                     "fire logic takes\nplace here"
                                                                                                 ],
-                                                                                                "avatarId": ""
+                                                                                                "avatarId": "",
+                                                                                                "__collapse": true
                                                                                             },
                                                                                             "id": "b2c11712-91a7-4897-832d-4a489bcec894"
                                                                                         },
@@ -2769,7 +2730,8 @@
                                                                                             "command": "EVENT_GROUP",
                                                                                             "args": {
                                                                                                 "__label": "show floating damage number (enemy)",
-                                                                                                "__collapse": true
+                                                                                                "__collapse": true,
+                                                                                                "__comment": true
                                                                                             },
                                                                                             "children": {
                                                                                                 "true": [
@@ -2834,7 +2796,8 @@
                                                                                                     "type": "number",
                                                                                                     "value": 2
                                                                                                 },
-                                                                                                "__label": "set to enemy turn"
+                                                                                                "__label": "set to enemy turn",
+                                                                                                "__collapse": true
                                                                                             },
                                                                                             "id": "57645aa9-92ad-4a98-9c09-1e90ff282dda"
                                                                                         }
@@ -2863,7 +2826,8 @@
                                                                                     "comparator": 2,
                                                                                     "__collapseElse": true,
                                                                                     "__disableElse": true,
-                                                                                    "__label": "if Ice is selected"
+                                                                                    "__label": "if Ice is selected",
+                                                                                    "__collapse": true
                                                                                 },
                                                                                 "children": {
                                                                                     "true": [
@@ -2895,7 +2859,8 @@
                                                                                             "command": "EVENT_GROUP",
                                                                                             "args": {
                                                                                                 "__label": "show floating damage number (enemy)",
-                                                                                                "__collapse": true
+                                                                                                "__collapse": true,
+                                                                                                "__comment": true
                                                                                             },
                                                                                             "children": {
                                                                                                 "true": [
@@ -4124,7 +4089,7 @@
                                                     {
                                                         "command": "EVENT_WAIT",
                                                         "args": {
-                                                            "time": 0.5,
+                                                            "time": 0.3,
                                                             "frames": 30
                                                         },
                                                         "id": "a6aa951d-8a21-4db0-925a-3b63d351c35e"
@@ -4204,7 +4169,7 @@
                                                         "command": "EVENT_GROUP",
                                                         "args": {
                                                             "__label": "set player hp",
-                                                            "__collapse": true
+                                                            "__collapse": false
                                                         },
                                                         "children": {
                                                             "true": [
@@ -4227,7 +4192,7 @@
                                                                                     "minValue": "0",
                                                                                     "maxValue": "32767",
                                                                                     "clamp": true,
-                                                                                    "__collapse": false
+                                                                                    "__collapse": true
                                                                                 },
                                                                                 "id": "d1d65430-fa08-46b9-a5c2-6363b3e1fa76"
                                                                             },
@@ -4648,7 +4613,9 @@
                                                             "value15": 16,
                                                             "__collapseElse": false,
                                                             "__disableElse": true,
-                                                            "__collapse": false
+                                                            "__collapse": false,
+                                                            "__comment": true,
+                                                            "__label": "show floating damage number"
                                                         },
                                                         "children": {
                                                             "true0": [
@@ -4656,7 +4623,8 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "show floating damage number (player)",
-                                                                        "__collapse": true
+                                                                        "__collapse": true,
+                                                                        "__comment": true
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -12931,8 +12899,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 522,
+        "worldScrollX": 548,
+        "worldScrollY": 426,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
