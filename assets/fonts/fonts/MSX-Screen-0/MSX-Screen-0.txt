@@ -1,0 +1,5 @@
+Font: MSX-Screen-0
+Top padding: 7
+Interword: 0
+Kerning: 2
+txt2img.sh -f MSX-Screen-0 -t7 -i0 -k2 file.txt 

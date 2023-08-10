@@ -1,0 +1,5 @@
+Font: Mx437-AMI-EGA-8x8
+Top padding: 7
+Interword: 0
+Kerning: 0
+txt2img.sh -f Mx437-AMI-EGA-8x8 -t7 -i0 -k0 file.txt 
