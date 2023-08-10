@@ -461,7 +461,8 @@
                                 "__collapseCase15": false,
                                 "value15": 16,
                                 "__collapseElse": false,
-                                "__disableElse": true
+                                "__disableElse": true,
+                                "__collapse": false
                             },
                             "children": {
                                 "true0": [
@@ -482,9 +483,50 @@
                                         "id": "b30834b0-127a-4977-9ada-de5f1815cc61"
                                     },
                                     {
+                                        "command": "EVENT_SOUND_PLAY_EFFECT",
+                                        "args": {
+                                            "type": "7e8ee87b-af31-4622-a09c-7e8a4b0a4fd2",
+                                            "priority": "medium",
+                                            "pitch": 4,
+                                            "frequency": 200,
+                                            "duration": 0.5,
+                                            "wait": true,
+                                            "effect": 0
+                                        },
+                                        "id": "3439d6f8-4660-4fa4-af80-ab0d8b7ac3a3"
+                                    },
+                                    {
+                                        "command": "PT_EVENT_SMOOTH_FADE",
+                                        "args": {
+                                            "direction": "out",
+                                            "color": "black",
+                                            "speed": 2,
+                                            "__scriptTabs": "sprites",
+                                            "bgPalette0": "keep",
+                                            "bgPalette1": "keep",
+                                            "bgPalette2": "keep",
+                                            "bgPalette3": "keep",
+                                            "bgPalette4": "keep",
+                                            "bgPalette5": "keep",
+                                            "bgPalette6": "keep",
+                                            "bgPalette7": "keep",
+                                            "sprPalette0": "keep",
+                                            "sprPalette1": "keep",
+                                            "sprPalette2": "keep",
+                                            "sprPalette3": "keep",
+                                            "sprPalette4": "keep",
+                                            "sprPalette5": "keep",
+                                            "sprPalette6": "keep",
+                                            "sprPalette7": "keep",
+                                            "__comment": false
+                                        },
+                                        "id": "1f0c2861-60ef-4f48-99c7-0416477381df"
+                                    },
+                                    {
                                         "command": "EVENT_CALL_CUSTOM_EVENT",
                                         "args": {
-                                            "customEventId": "c2aefd1b-d815-4077-9096-b195b74dc461"
+                                            "customEventId": "c2aefd1b-d815-4077-9096-b195b74dc461",
+                                            "__comment": true
                                         },
                                         "id": "141f248c-38d2-4028-847f-80c18f7ede15"
                                     },
@@ -866,7 +908,7 @@
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [],
-            "autoFadeSpeed": 2,
+            "autoFadeSpeed": 1,
             "id": "1bbf3c9d-958e-49e5-9ce7-4f68637bfc53",
             "symbol": "scene_2",
             "x": 324,
@@ -1918,10 +1960,37 @@
                     "id": "1c8c5404-7f7e-4631-a435-bccfcec06d85"
                 },
                 {
+                    "command": "PT_EVENT_SMOOTH_FADE",
+                    "args": {
+                        "direction": "in",
+                        "color": "black",
+                        "speed": 2,
+                        "__scriptTabs": "sprites",
+                        "bgPalette0": "keep",
+                        "bgPalette1": "keep",
+                        "bgPalette2": "keep",
+                        "bgPalette3": "keep",
+                        "bgPalette4": "keep",
+                        "bgPalette5": "keep",
+                        "bgPalette6": "keep",
+                        "bgPalette7": "keep",
+                        "sprPalette0": "keep",
+                        "sprPalette1": "keep",
+                        "sprPalette2": "keep",
+                        "sprPalette3": "keep",
+                        "sprPalette4": "keep",
+                        "sprPalette5": "keep",
+                        "sprPalette6": "keep",
+                        "sprPalette7": "keep",
+                        "__comment": false
+                    },
+                    "id": "4cc31f7c-fb21-4fec-8b2e-72b03a6df564"
+                },
+                {
                     "command": "EVENT_CALL_CUSTOM_EVENT",
                     "args": {
                         "customEventId": "4525a59f-068d-4c7e-8de5-681defdf4c32",
-                        "__comment": false,
+                        "__comment": true,
                         "__collapse": true
                     },
                     "id": "3d4da60d-14ee-4e39-a663-c0713e755733"
@@ -2214,7 +2283,7 @@
                                                             "comparator": 1,
                                                             "__collapseElse": true,
                                                             "__disableElse": true,
-                                                            "__collapse": true,
+                                                            "__collapse": false,
                                                             "__label": "attack is chosen"
                                                         },
                                                         "children": {
@@ -2223,7 +2292,7 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "player attack animation",
-                                                                        "__collapse": false
+                                                                        "__collapse": true
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -2389,7 +2458,7 @@
                                                             "comparator": 2,
                                                             "__collapseElse": true,
                                                             "__disableElse": true,
-                                                            "__collapse": true,
+                                                            "__collapse": false,
                                                             "__label": "magic is chosen"
                                                         },
                                                         "children": {
@@ -3160,7 +3229,7 @@
                                                                                                                 "type": "number",
                                                                                                                 "value": 3
                                                                                                             },
-                                                                                                            "__collapse": true,
+                                                                                                            "__collapse": false,
                                                                                                             "__label": "re-open item menu"
                                                                                                         },
                                                                                                         "id": "fbc0b436-71de-4cf9-bf61-d08e3bf4f7ef"
@@ -3683,7 +3752,7 @@
                                                                         "operator": "==",
                                                                         "comparator": "0",
                                                                         "__collapseElse": true,
-                                                                        "__collapse": false,
+                                                                        "__collapse": true,
                                                                         "__label": "back to main menu",
                                                                         "__disableElse": true
                                                                     },
@@ -10165,6 +10234,24 @@
             "type": "wav",
             "inode": "12103423998943770",
             "_v": 1691559908996
+        },
+        {
+            "id": "3ba2cfd9-537d-4177-b8bb-b7f5607554cc",
+            "name": "enter_battle.wav",
+            "symbol": "sound_enter_battle_wav",
+            "filename": "enter_battle.wav",
+            "type": "wav",
+            "inode": "844424931705993",
+            "_v": 1691700707376
+        },
+        {
+            "id": "7e8ee87b-af31-4622-a09c-7e8a4b0a4fd2",
+            "name": "enter_battle_final.wav",
+            "symbol": "sound_enter_battle_final_wa",
+            "filename": "enter_battle_final.wav",
+            "type": "wav",
+            "inode": "233342755693221936",
+            "_v": 1691700853261
         }
     ],
     "fonts": [
@@ -10674,8 +10761,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 549,
-        "worldScrollY": 482,
+        "worldScrollX": 517,
+        "worldScrollY": 355,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
