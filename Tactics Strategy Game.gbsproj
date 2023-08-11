@@ -1207,9 +1207,9 @@
                 {
                     "command": "EVENT_GROUP",
                     "args": {
-                        "__label": "set hp and mp hud digits",
-                        "__collapse": false,
-                        "__comment": false
+                        "__label": "Set HP & Mana Full",
+                        "__collapse": true,
+                        "__comment": true
                     },
                     "children": {
                         "true": [
@@ -1611,7 +1611,7 @@
                                                     "type": "variable",
                                                     "value": "4"
                                                 },
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "id": "94d33895-57fb-4200-b09c-9c9b8a3af53a"
                                         },
@@ -1626,7 +1626,7 @@
                                                 "minValue": "0",
                                                 "maxValue": "32767",
                                                 "clamp": false,
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "id": "f20c9b94-d357-4375-ae31-df17ba3c89ad"
                                         },
@@ -1790,7 +1790,7 @@
                                 "command": "EVENT_GROUP",
                                 "args": {
                                     "__label": "set player mp ones",
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
                                 "children": {
                                     "true": [
@@ -1985,7 +1985,7 @@
                     "command": "EVENT_CALL_CUSTOM_EVENT",
                     "args": {
                         "customEventId": "8a58b5e8-dc1f-4f85-b690-27a5b382a06f",
-                        "__collapse": false,
+                        "__collapse": true,
                         "$variable[V0]$": {
                             "type": "variable",
                             "value": "7"
@@ -2013,7 +2013,8 @@
                         "$actor[0]$": "2a63a29e-e2a2-4d17-addf-f41c9f803324",
                         "$actor[1]$": "f8344093-3802-43f1-aa78-c50ddd309a02",
                         "$actor[2]$": "91f5d446-8659-47a2-94ab-9f3dcd77d8d2",
-                        "$actor[3]$": "e2fc70f6-762a-4bfc-89a0-6ee91591bdae"
+                        "$actor[3]$": "e2fc70f6-762a-4bfc-89a0-6ee91591bdae",
+                        "__label": "Set HP & Mana Full"
                     },
                     "id": "2cd33d5d-822e-4a3f-8719-d752626f4a91"
                 },
@@ -2077,7 +2078,7 @@
                 {
                     "command": "EVENT_LOOP",
                     "args": {
-                        "__collapse": true,
+                        "__collapse": false,
                         "__label": "main battle loop"
                     },
                     "children": {
@@ -2098,39 +2099,62 @@
                                                 "text": [
                                                     "R.I.P X_X"
                                                 ],
-                                                "avatarId": ""
+                                                "avatarId": "",
+                                                "__label": "Death Txt",
+                                                "__collapse": true
                                             },
                                             "id": "2b6b96d6-8bc9-48e5-9b97-6877db5a5ea3"
                                         },
                                         {
-                                            "command": "EVENT_SET_INPUT_SCRIPT",
+                                            "command": "EVENT_CALL_CUSTOM_EVENT",
                                             "args": {
-                                                "input": [
-                                                    "b",
-                                                    "select",
-                                                    "start",
-                                                    "a"
-                                                ],
-                                                "override": true,
-                                                "__scriptTabs": "press",
+                                                "customEventId": "8a58b5e8-dc1f-4f85-b690-27a5b382a06f",
+                                                "__collapse": true,
+                                                "$variable[V0]$": {
+                                                    "type": "variable",
+                                                    "value": "7"
+                                                },
+                                                "$variable[V1]$": {
+                                                    "type": "variable",
+                                                    "value": "3"
+                                                },
+                                                "$variable[V2]$": {
+                                                    "type": "variable",
+                                                    "value": "8"
+                                                },
+                                                "$variable[V3]$": {
+                                                    "type": "variable",
+                                                    "value": "10"
+                                                },
+                                                "$variable[V4]$": {
+                                                    "type": "variable",
+                                                    "value": "4"
+                                                },
+                                                "$variable[V5]$": {
+                                                    "type": "variable",
+                                                    "value": "11"
+                                                },
+                                                "$actor[0]$": "2a63a29e-e2a2-4d17-addf-f41c9f803324",
+                                                "$actor[1]$": "f8344093-3802-43f1-aa78-c50ddd309a02",
+                                                "$actor[2]$": "91f5d446-8659-47a2-94ab-9f3dcd77d8d2",
+                                                "$actor[3]$": "e2fc70f6-762a-4bfc-89a0-6ee91591bdae",
+                                                "__label": "Set HP & Mana Full",
                                                 "__comment": true
                                             },
-                                            "children": {
-                                                "true": [
-                                                    {
-                                                        "command": "EVENT_SWITCH_SCENE",
-                                                        "args": {
-                                                            "sceneId": "7057bf3f-47d8-46e1-aacf-ee12f95dd018",
-                                                            "x": 8,
-                                                            "y": 6,
-                                                            "direction": "",
-                                                            "fadeSpeed": "2"
-                                                        },
-                                                        "id": "c49b4680-7ecb-446b-96f7-329fb3dd8320"
-                                                    }
-                                                ]
+                                            "id": "7e2e621a-f321-4cce-954b-2412d25ba93b"
+                                        },
+                                        {
+                                            "command": "EVENT_SWITCH_SCENE",
+                                            "args": {
+                                                "sceneId": "7057bf3f-47d8-46e1-aacf-ee12f95dd018",
+                                                "x": 8,
+                                                "y": 6,
+                                                "direction": "",
+                                                "fadeSpeed": "2",
+                                                "__collapse": false,
+                                                "__label": "Back to start"
                                             },
-                                            "id": "bfea38bf-d83b-479e-967d-6da7ea271e50"
+                                            "id": "c49b4680-7ecb-446b-96f7-329fb3dd8320"
                                         }
                                     ],
                                     "false": [
@@ -2182,7 +2206,7 @@
                                                         "command": "EVENT_GROUP",
                                                         "args": {
                                                             "__label": "player action",
-                                                            "__collapse": false
+                                                            "__collapse": true
                                                         },
                                                         "children": {
                                                             "true": [
@@ -16595,7 +16619,7 @@
                                 "command": "EVENT_GROUP",
                                 "args": {
                                     "__label": "set player hp tens",
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
                                 "children": {
                                     "true": [
@@ -16994,7 +17018,7 @@
                                                     "type": "variable",
                                                     "value": "V4"
                                                 },
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "id": "a2f104c7-c020-45c1-96b0-63e0636a7cf0"
                                         },
@@ -17009,16 +17033,16 @@
                                                 "minValue": "0",
                                                 "maxValue": "32767",
                                                 "clamp": false,
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "id": "06701615-b3f6-4323-bef8-785f772d5a4d"
                                         },
                                         {
                                             "command": "EVENT_SWITCH",
                                             "args": {
-                                                "variable": "10",
+                                                "variable": "V3",
                                                 "choices": 10,
-                                                "__collapseCase0": true,
+                                                "__collapseCase0": false,
                                                 "value0": 0,
                                                 "__collapseCase1": true,
                                                 "value1": 1,
@@ -17174,7 +17198,7 @@
                                 "command": "EVENT_GROUP",
                                 "args": {
                                     "__label": "set player mp ones",
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -17201,7 +17225,7 @@
                                                 "minValue": "0",
                                                 "maxValue": "32767",
                                                 "clamp": false,
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "id": "1b582f2b-067d-4681-91f2-dc87a127970f"
                                         },
@@ -17244,7 +17268,7 @@
                                                 "value15": 16,
                                                 "__collapseElse": false,
                                                 "__disableElse": true,
-                                                "__collapse": true,
+                                                "__collapse": false,
                                                 "__label": "Update Ones (MP)"
                                             },
                                             "children": {
@@ -19296,14 +19320,14 @@
     "settings": {
         "startSceneId": "7057bf3f-47d8-46e1-aacf-ee12f95dd018",
         "startX": 10,
-        "startY": 6,
+        "startY": 5,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": "all",
-        "worldScrollX": 537,
-        "worldScrollY": 448,
+        "worldScrollX": 251,
+        "worldScrollY": 587,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -19332,8 +19356,8 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            230,
-            737,
+            226,
+            740,
             30
         ],
         "showNavigator": true,
