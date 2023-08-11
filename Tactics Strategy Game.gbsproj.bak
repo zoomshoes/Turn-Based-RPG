@@ -599,170 +599,181 @@
                     "startScript": [],
                     "updateScript": [
                         {
-                            "command": "EVENT_VARIABLE_MATH",
+                            "command": "EVENT_GROUP",
                             "args": {
-                                "vectorX": "0",
-                                "operation": "set",
-                                "other": "rnd",
-                                "vectorY": "L0",
-                                "value": "0",
-                                "minValue": 1,
-                                "maxValue": 5,
-                                "clamp": false,
-                                "__collapse": true
-                            },
-                            "id": "675693cb-5e92-49e0-a543-c2b290edcbe2"
-                        },
-                        {
-                            "command": "EVENT_SWITCH",
-                            "args": {
-                                "variable": "0",
-                                "choices": 5,
-                                "__collapseCase0": false,
-                                "value0": 1,
-                                "__collapseCase1": false,
-                                "value1": 2,
-                                "__collapseCase2": false,
-                                "value2": 3,
-                                "__collapseCase3": false,
-                                "value3": 4,
-                                "__collapseCase4": false,
-                                "value4": 5,
-                                "__collapseCase5": false,
-                                "value5": 6,
-                                "__collapseCase6": false,
-                                "value6": 7,
-                                "__collapseCase7": false,
-                                "value7": 8,
-                                "__collapseCase8": false,
-                                "value8": 9,
-                                "__collapseCase9": false,
-                                "value9": 10,
-                                "__collapseCase10": false,
-                                "value10": 11,
-                                "__collapseCase11": false,
-                                "value11": 12,
-                                "__collapseCase12": false,
-                                "value12": 13,
-                                "__collapseCase13": false,
-                                "value13": 14,
-                                "__collapseCase14": false,
-                                "value14": 15,
-                                "__collapseCase15": false,
-                                "value15": 16,
-                                "__collapseElse": false,
-                                "__disableElse": true,
-                                "__collapse": false
+                                "__label": "random walking"
                             },
                             "children": {
-                                "true0": [
+                                "true": [
                                     {
-                                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                        "command": "EVENT_VARIABLE_MATH",
                                         "args": {
-                                            "actorId": "$self$",
-                                            "x": 1,
-                                            "y": 0,
-                                            "moveType": "horizontal",
-                                            "useCollisions": true
+                                            "vectorX": "0",
+                                            "operation": "set",
+                                            "other": "rnd",
+                                            "vectorY": "L0",
+                                            "value": "0",
+                                            "minValue": 1,
+                                            "maxValue": 5,
+                                            "clamp": false,
+                                            "__collapse": true
                                         },
-                                        "id": "abe3e8b2-25fb-4767-bca4-cabd8dc67d1f"
+                                        "id": "675693cb-5e92-49e0-a543-c2b290edcbe2"
                                     },
                                     {
-                                        "command": "EVENT_WAIT",
+                                        "command": "EVENT_SWITCH",
                                         "args": {
-                                            "time": 1.5,
-                                            "frames": 30
+                                            "variable": "0",
+                                            "choices": 5,
+                                            "__collapseCase0": false,
+                                            "value0": 1,
+                                            "__collapseCase1": false,
+                                            "value1": 2,
+                                            "__collapseCase2": false,
+                                            "value2": 3,
+                                            "__collapseCase3": false,
+                                            "value3": 4,
+                                            "__collapseCase4": false,
+                                            "value4": 5,
+                                            "__collapseCase5": false,
+                                            "value5": 6,
+                                            "__collapseCase6": false,
+                                            "value6": 7,
+                                            "__collapseCase7": false,
+                                            "value7": 8,
+                                            "__collapseCase8": false,
+                                            "value8": 9,
+                                            "__collapseCase9": false,
+                                            "value9": 10,
+                                            "__collapseCase10": false,
+                                            "value10": 11,
+                                            "__collapseCase11": false,
+                                            "value11": 12,
+                                            "__collapseCase12": false,
+                                            "value12": 13,
+                                            "__collapseCase13": false,
+                                            "value13": 14,
+                                            "__collapseCase14": false,
+                                            "value14": 15,
+                                            "__collapseCase15": false,
+                                            "value15": 16,
+                                            "__collapseElse": false,
+                                            "__disableElse": true,
+                                            "__collapse": true
                                         },
-                                        "id": "f60a2014-8fa7-4b26-b8cf-5d563f20447a"
+                                        "children": {
+                                            "true0": [
+                                                {
+                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                    "args": {
+                                                        "actorId": "$self$",
+                                                        "x": 1,
+                                                        "y": 0,
+                                                        "moveType": "horizontal",
+                                                        "useCollisions": true
+                                                    },
+                                                    "id": "abe3e8b2-25fb-4767-bca4-cabd8dc67d1f"
+                                                },
+                                                {
+                                                    "command": "EVENT_WAIT",
+                                                    "args": {
+                                                        "time": 1.5,
+                                                        "frames": 30
+                                                    },
+                                                    "id": "f60a2014-8fa7-4b26-b8cf-5d563f20447a"
+                                                }
+                                            ],
+                                            "true1": [
+                                                {
+                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                    "args": {
+                                                        "actorId": "$self$",
+                                                        "x": -1,
+                                                        "y": 0,
+                                                        "moveType": "horizontal",
+                                                        "useCollisions": true
+                                                    },
+                                                    "id": "572608c2-d40b-4de2-a7d5-fed5dfc43a0c"
+                                                },
+                                                {
+                                                    "command": "EVENT_WAIT",
+                                                    "args": {
+                                                        "time": 1.5,
+                                                        "frames": 30
+                                                    },
+                                                    "id": "a16fdfcd-34d0-408f-90bf-1fed7ae18067"
+                                                }
+                                            ],
+                                            "true2": [
+                                                {
+                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                    "args": {
+                                                        "actorId": "$self$",
+                                                        "x": 0,
+                                                        "y": 1,
+                                                        "moveType": "vertical",
+                                                        "useCollisions": true
+                                                    },
+                                                    "id": "259dcf46-1379-4b2d-a896-380b20928903"
+                                                },
+                                                {
+                                                    "command": "EVENT_WAIT",
+                                                    "args": {
+                                                        "time": 1.5,
+                                                        "frames": 30
+                                                    },
+                                                    "id": "0f230901-b8c9-44e6-8953-164c9fa06822"
+                                                }
+                                            ],
+                                            "true3": [
+                                                {
+                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                    "args": {
+                                                        "actorId": "$self$",
+                                                        "x": 0,
+                                                        "y": -1,
+                                                        "moveType": "vertical",
+                                                        "useCollisions": true
+                                                    },
+                                                    "id": "cc805d2f-abbf-4eec-a34e-75715e042d92"
+                                                },
+                                                {
+                                                    "command": "EVENT_WAIT",
+                                                    "args": {
+                                                        "time": 1.5,
+                                                        "frames": 30
+                                                    },
+                                                    "id": "af151f56-0522-4978-9ca6-d3221cb68eb4"
+                                                }
+                                            ],
+                                            "true4": [
+                                                {
+                                                    "command": "EVENT_WAIT",
+                                                    "args": {
+                                                        "time": 3,
+                                                        "frames": 30
+                                                    },
+                                                    "id": "27d7418c-ad91-44b3-9ca3-bc69f6d72e94"
+                                                }
+                                            ],
+                                            "true5": [],
+                                            "true6": [],
+                                            "true7": [],
+                                            "true8": [],
+                                            "true9": [],
+                                            "true10": [],
+                                            "true11": [],
+                                            "true12": [],
+                                            "true13": [],
+                                            "true14": [],
+                                            "true15": [],
+                                            "false": []
+                                        },
+                                        "id": "d0b7652d-90e0-4a5a-a88d-e985fa3e5b0c"
                                     }
-                                ],
-                                "true1": [
-                                    {
-                                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "x": -1,
-                                            "y": 0,
-                                            "moveType": "horizontal",
-                                            "useCollisions": true
-                                        },
-                                        "id": "572608c2-d40b-4de2-a7d5-fed5dfc43a0c"
-                                    },
-                                    {
-                                        "command": "EVENT_WAIT",
-                                        "args": {
-                                            "time": 1.5,
-                                            "frames": 30
-                                        },
-                                        "id": "a16fdfcd-34d0-408f-90bf-1fed7ae18067"
-                                    }
-                                ],
-                                "true2": [
-                                    {
-                                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "x": 0,
-                                            "y": 1,
-                                            "moveType": "vertical",
-                                            "useCollisions": true
-                                        },
-                                        "id": "259dcf46-1379-4b2d-a896-380b20928903"
-                                    },
-                                    {
-                                        "command": "EVENT_WAIT",
-                                        "args": {
-                                            "time": 1.5,
-                                            "frames": 30
-                                        },
-                                        "id": "0f230901-b8c9-44e6-8953-164c9fa06822"
-                                    }
-                                ],
-                                "true3": [
-                                    {
-                                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "x": 0,
-                                            "y": -1,
-                                            "moveType": "vertical",
-                                            "useCollisions": true
-                                        },
-                                        "id": "cc805d2f-abbf-4eec-a34e-75715e042d92"
-                                    },
-                                    {
-                                        "command": "EVENT_WAIT",
-                                        "args": {
-                                            "time": 1.5,
-                                            "frames": 30
-                                        },
-                                        "id": "af151f56-0522-4978-9ca6-d3221cb68eb4"
-                                    }
-                                ],
-                                "true4": [
-                                    {
-                                        "command": "EVENT_WAIT",
-                                        "args": {
-                                            "time": 3,
-                                            "frames": 30
-                                        },
-                                        "id": "27d7418c-ad91-44b3-9ca3-bc69f6d72e94"
-                                    }
-                                ],
-                                "true5": [],
-                                "true6": [],
-                                "true7": [],
-                                "true8": [],
-                                "true9": [],
-                                "true10": [],
-                                "true11": [],
-                                "true12": [],
-                                "true13": [],
-                                "true14": [],
-                                "true15": [],
-                                "false": []
+                                ]
                             },
-                            "id": "d0b7652d-90e0-4a5a-a88d-e985fa3e5b0c"
+                            "id": "0d59f9d8-5eb7-4bfe-bd00-04fb6bbad0f9"
                         }
                     ],
                     "hit1Script": [],
@@ -928,7 +939,7 @@
         },
         {
             "name": "battle_plains",
-            "backgroundId": "3b25ab4a-f5cd-4bb2-ab8c-0cae0770344b",
+            "backgroundId": "598c7171-c814-493f-a218-2ab7f2236ec3",
             "width": 20,
             "height": 18,
             "type": "TOPDOWN",
@@ -1080,29 +1091,6 @@
                     "y": 2
                 },
                 {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "6b485411-45c0-43fd-8d22-9e00554b83cf",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "persistent": false,
-                    "collisionGroup": "",
-                    "symbol": "actor_9",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "2a676f8d-4bda-4044-9739-a9861cef7c4c",
-                    "x": 2,
-                    "y": 2
-                },
-                {
                     "name": "battle_enemy_effect_actor",
                     "frame": 0,
                     "animate": false,
@@ -1123,7 +1111,7 @@
                     "hit3Script": [],
                     "id": "9ac78b8b-7026-4ae9-bce2-f178cebb7bf6",
                     "x": 9,
-                    "y": 9
+                    "y": 13
                 }
             ],
             "triggers": [],
@@ -2317,7 +2305,7 @@
                                                             "comparator": 1,
                                                             "__collapseElse": true,
                                                             "__disableElse": true,
-                                                            "__collapse": true,
+                                                            "__collapse": false,
                                                             "__label": "attack is chosen"
                                                         },
                                                         "children": {
@@ -2502,7 +2490,7 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "player attack logic",
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -2513,7 +2501,7 @@
                                                                                         "attack logic takes\nplace here"
                                                                                     ],
                                                                                     "avatarId": "",
-                                                                                    "__collapse": true
+                                                                                    "__collapse": false
                                                                                 },
                                                                                 "id": "82c719cb-69c0-4b11-b649-e286aa431f02"
                                                                             },
@@ -2609,7 +2597,7 @@
                                                             "comparator": 2,
                                                             "__collapseElse": true,
                                                             "__disableElse": true,
-                                                            "__collapse": false,
+                                                            "__collapse": true,
                                                             "__label": "magic is chosen"
                                                         },
                                                         "children": {
@@ -2639,7 +2627,7 @@
                                                                     "command": "EVENT_GROUP",
                                                                     "args": {
                                                                         "__label": "do fire attack",
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -2687,29 +2675,121 @@
                                                                                                         "id": "b37780eb-a5a0-49a9-9b1f-c22e2fbf2a23"
                                                                                                     },
                                                                                                     {
-                                                                                                        "command": "EVENT_ACTOR_SHOW",
+                                                                                                        "command": "EVENT_ACTOR_ACTIVATE",
                                                                                                         "args": {
                                                                                                             "actorId": "9ac78b8b-7026-4ae9-bce2-f178cebb7bf6",
                                                                                                             "__collapse": true
                                                                                                         },
+                                                                                                        "id": "9859ce24-3508-4540-91e5-e2bb6a50b2c4"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "command": "EVENT_ACTOR_SHOW",
+                                                                                                        "args": {
+                                                                                                            "actorId": "9ac78b8b-7026-4ae9-bce2-f178cebb7bf6",
+                                                                                                            "__collapse": true,
+                                                                                                            "__comment": false
+                                                                                                        },
                                                                                                         "id": "c08fedb4-abdf-47f3-a0fe-476ab5b4733a"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                                                        "args": {
+                                                                                                            "actorId": "9ac78b8b-7026-4ae9-bce2-f178cebb7bf6",
+                                                                                                            "x": 5,
+                                                                                                            "y": -5,
+                                                                                                            "moveType": "diagonal",
+                                                                                                            "useCollisions": false,
+                                                                                                            "__collapse": true
+                                                                                                        },
+                                                                                                        "id": "e0960614-e2af-4dcc-bb7a-16d14e4c7973"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                                                                                                        "args": {
+                                                                                                            "actorId": "29bc7387-db37-4d98-aac8-07ff837a1ba4",
+                                                                                                            "speed": 3,
+                                                                                                            "__collapse": true
+                                                                                                        },
+                                                                                                        "id": "1940566c-c3e8-4419-bc5d-d68f704fcb4f"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "command": "EVENT_SOUND_PLAY_EFFECT",
+                                                                                                        "args": {
+                                                                                                            "type": "bbb7f687-3bde-4dd3-a12f-1b8da2efbd71",
+                                                                                                            "priority": "high",
+                                                                                                            "pitch": 4,
+                                                                                                            "frequency": 200,
+                                                                                                            "duration": 0.5,
+                                                                                                            "wait": true,
+                                                                                                            "effect": 0,
+                                                                                                            "__collapse": true
+                                                                                                        },
+                                                                                                        "id": "f8beb0f3-45c5-4f2f-ae3e-389b9e245523"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                        "args": {
+                                                                                                            "actorId": "29bc7387-db37-4d98-aac8-07ff837a1ba4",
+                                                                                                            "spriteStateId": "on_fire",
+                                                                                                            "__collapse": true
+                                                                                                        },
+                                                                                                        "id": "e2a3e98c-ba47-4306-9f4f-86bf17b006bc"
                                                                                                     },
                                                                                                     {
                                                                                                         "command": "EVENT_WAIT",
                                                                                                         "args": {
-                                                                                                            "time": 1,
+                                                                                                            "time": 1.5,
                                                                                                             "frames": 30,
                                                                                                             "__collapse": true
                                                                                                         },
                                                                                                         "id": "8df41594-3de1-4bde-89fd-fd57b3bc6361"
                                                                                                     },
                                                                                                     {
+                                                                                                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                                                                                                        "args": {
+                                                                                                            "actorId": "29bc7387-db37-4d98-aac8-07ff837a1ba4",
+                                                                                                            "speed": 31,
+                                                                                                            "__collapse": true
+                                                                                                        },
+                                                                                                        "id": "54ea4986-9de0-4bc3-98f3-5cb37852963a"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "command": "EVENT_ACTOR_SET_STATE",
+                                                                                                        "args": {
+                                                                                                            "actorId": "29bc7387-db37-4d98-aac8-07ff837a1ba4",
+                                                                                                            "spriteStateId": "",
+                                                                                                            "__collapse": true
+                                                                                                        },
+                                                                                                        "id": "a233b56d-8f18-4417-bb18-3b51c8cb0bec"
+                                                                                                    },
+                                                                                                    {
                                                                                                         "command": "EVENT_ACTOR_HIDE",
+                                                                                                        "args": {
+                                                                                                            "actorId": "9ac78b8b-7026-4ae9-bce2-f178cebb7bf6",
+                                                                                                            "__collapse": true,
+                                                                                                            "__comment": false
+                                                                                                        },
+                                                                                                        "id": "cf093d29-b957-4f45-a9c7-88ecb019fdb8"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                                                        "args": {
+                                                                                                            "actorId": "9ac78b8b-7026-4ae9-bce2-f178cebb7bf6",
+                                                                                                            "x": -5,
+                                                                                                            "y": 5,
+                                                                                                            "moveType": "diagonal",
+                                                                                                            "useCollisions": false,
+                                                                                                            "__collapse": true
+                                                                                                        },
+                                                                                                        "id": "28e40f49-227d-41ef-8365-2d1d2fb72db0"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "command": "EVENT_ACTOR_DEACTIVATE",
                                                                                                         "args": {
                                                                                                             "actorId": "9ac78b8b-7026-4ae9-bce2-f178cebb7bf6",
                                                                                                             "__collapse": true
                                                                                                         },
-                                                                                                        "id": "cf093d29-b957-4f45-a9c7-88ecb019fdb8"
+                                                                                                        "id": "c40a4b67-4955-4fdb-8522-ff6866ee493f"
                                                                                                     }
                                                                                                 ]
                                                                                             },
@@ -5504,6 +5584,17 @@
             "tileColors": []
         },
         {
+            "id": "598c7171-c814-493f-a218-2ab7f2236ec3",
+            "name": "map_grass_hud_new",
+            "symbol": "bg_map_grass_hud_new",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "map_grass_hud_new.png",
+            "tileColors": []
+        },
+        {
             "id": "d782d87a-6e0d-492d-9856-54533a81a184",
             "name": "map_grass_hud_shadow",
             "symbol": "bg_map_grass_hud_shadow",
@@ -6770,11 +6861,11 @@
             "id": "4ffdd12c-8629-42dd-acfe-17e2a2729794",
             "name": "battle_enemy",
             "symbol": "sprite_battle_enemy",
-            "numFrames": 4,
+            "numFrames": 8,
             "type": "animated",
             "filename": "battle_enemy.png",
-            "checksum": "cf0358c710471459c39887bd098d55d1de1c683e",
-            "width": 64,
+            "checksum": "5a59ad1b2c8f93b0a22f87cf988e75b8d186a6ab",
+            "width": 128,
             "height": 32,
             "states": [
                 {
@@ -7070,9 +7161,303 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "id": "499fce05-cfd4-4c6b-b3c2-32e133b881e3",
+                    "name": "on_fire",
+                    "animations": [
+                        {
+                            "id": "f31d109f-21bb-4858-8349-cf7497357bc9",
+                            "frames": [
+                                {
+                                    "id": "b8c224c2-36ce-47a6-8dc7-1903614621b1",
+                                    "tiles": [
+                                        {
+                                            "id": "458fd806-e1d9-40ef-b383-f509d438bbca",
+                                            "x": -8,
+                                            "y": 16,
+                                            "sliceX": 64,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "3287b3e0-4f7c-494f-aff7-732661506b29",
+                                            "x": -8,
+                                            "y": 0,
+                                            "sliceX": 64,
+                                            "sliceY": 16,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "1bd2c1d1-5bbe-4fab-b262-8c9764ca24d7",
+                                            "x": 0,
+                                            "y": 16,
+                                            "sliceX": 72,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "d9f03705-86b2-45cf-bb22-eeae6070a6e8",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 72,
+                                            "sliceY": 16,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "d64868ee-9a41-4af6-b996-28f4d74bd08d",
+                                            "x": 8,
+                                            "y": 16,
+                                            "sliceX": 80,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "7ac26043-f741-4791-b178-a084887297b8",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 80,
+                                            "sliceY": 16,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "8f0ca510-a399-46fd-9280-85d43a81179d",
+                                            "x": 16,
+                                            "y": 16,
+                                            "sliceX": 88,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "aafc784f-2f58-4459-af10-ce1862c031d3",
+                                            "x": 16,
+                                            "y": 0,
+                                            "sliceX": 88,
+                                            "sliceY": 16,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "50b762ab-8b31-42e5-b90c-71151dd8d047",
+                                    "tiles": [
+                                        {
+                                            "id": "ee1382b2-9c2b-4054-8c4b-6c45a6fb5782",
+                                            "x": -8,
+                                            "y": 16,
+                                            "sliceX": 96,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "dbb4f626-a6da-41e4-a3fd-cadd70fb5c1f",
+                                            "x": -8,
+                                            "y": 0,
+                                            "sliceX": 96,
+                                            "sliceY": 16,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "8e66629d-ce13-411c-b56c-55a25460629c",
+                                            "x": 0,
+                                            "y": 16,
+                                            "sliceX": 104,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "05838991-6867-4cd3-b644-5c317678d463",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 104,
+                                            "sliceY": 16,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "59ed5c10-80b8-4160-9280-fa91f5b1d3a3",
+                                            "x": 8,
+                                            "y": 16,
+                                            "sliceX": 112,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "6bc04f25-78aa-4b6a-975b-34cd35e177f0",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 112,
+                                            "sliceY": 16,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "e55c017e-a3d5-402d-8866-ae4c9759a192",
+                                            "x": 16,
+                                            "y": 16,
+                                            "sliceX": 120,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "63094d66-4695-46a4-b2ea-b6d769b4fc71",
+                                            "x": 16,
+                                            "y": 0,
+                                            "sliceX": 120,
+                                            "sliceY": 16,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02e4cac3-d64c-42f4-895d-cf4a944257e2",
+                            "frames": [
+                                {
+                                    "id": "79267577-2acb-45a3-b35a-3078f4eadb33",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5f9361ed-7cae-494c-8329-ed16d304458d",
+                            "frames": [
+                                {
+                                    "id": "e1b0c783-5f7e-4273-805c-9e39dbf09cbd",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "9638b166-2929-4283-8aac-b6ca693d94f3",
+                            "frames": [
+                                {
+                                    "id": "ab2dbae8-d1f1-4900-ac0d-9ad23ca8524e",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "2abe8e0e-9814-4114-a428-80c9edc7e54e",
+                            "frames": [
+                                {
+                                    "id": "8fe15226-97d1-4267-8c8e-76feed801235",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "a14c6065-e41a-4922-8d24-7b60258cd4d1",
+                            "frames": [
+                                {
+                                    "id": "db21bf81-bfd3-4cb8-958f-af0b30eec8e3",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "b330535f-8d2b-45d5-9f85-0540680aed33",
+                            "frames": [
+                                {
+                                    "id": "7e2f392b-911d-45e1-bb09-79195b51a08b",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "a8a1b801-5f16-405a-86eb-125cf502f1f2",
+                            "frames": [
+                                {
+                                    "id": "71128081-d493-4594-b925-49382967df33",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ],
+                    "animationType": "fixed",
+                    "flipLeft": true
                 }
             ],
-            "numTiles": 14,
+            "numTiles": 24,
             "canvasWidth": 32,
             "canvasHeight": 32,
             "boundsX": 0,
@@ -11199,6 +11584,15 @@
             "actors": {},
             "symbol": "script_6",
             "script": []
+        },
+        {
+            "id": "8a58b5e8-dc1f-4f85-b690-27a5b382a06f",
+            "name": "atk1111",
+            "description": "",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_7",
+            "script": []
         }
     ],
     "music": [
@@ -11218,7 +11612,7 @@
             "symbol": "sound_naked_vgm_bottle_brea",
             "filename": "Naked_VGM\\Bottle_Break.vgm",
             "type": "vgm",
-            "inode": "844424931707235",
+            "inode": "7881299349212442",
             "_v": 1691701167043
         },
         {
@@ -11227,7 +11621,7 @@
             "symbol": "sound_naked_vgm_bump_vgm",
             "filename": "Naked_VGM\\Bump.vgm",
             "type": "vgm",
-            "inode": "1125899908416630",
+            "inode": "4785074605395230",
             "_v": 1691701167043
         },
         {
@@ -11236,7 +11630,7 @@
             "symbol": "sound_naked_vgm_cancel_vgm",
             "filename": "Naked_VGM\\Cancel.vgm",
             "type": "vgm",
-            "inode": "1970324838512478",
+            "inode": "4222124651974250",
             "_v": 1691701167043
         },
         {
@@ -11245,7 +11639,7 @@
             "symbol": "sound_naked_vgm_cat_meow_vg",
             "filename": "Naked_VGM\\Cat_Meow.vgm",
             "type": "vgm",
-            "inode": "844424931707229",
+            "inode": "2814749768421034",
             "_v": 1691701167043
         },
         {
@@ -11254,7 +11648,7 @@
             "symbol": "sound_naked_vgm_click_vgm",
             "filename": "Naked_VGM\\Click.vgm",
             "type": "vgm",
-            "inode": "1125899908417869",
+            "inode": "4503599628684971",
             "_v": 1691701167043
         },
         {
@@ -11263,7 +11657,7 @@
             "symbol": "sound_naked_vgm_confirm_vgm",
             "filename": "Naked_VGM\\Confirm.vgm",
             "type": "vgm",
-            "inode": "2533274791543708",
+            "inode": "3096224745131693",
             "_v": 1691701167043
         },
         {
@@ -11272,7 +11666,7 @@
             "symbol": "sound_naked_vgm_crunch_vgm",
             "filename": "Naked_VGM\\Crunch.vgm",
             "type": "vgm",
-            "inode": "844424931707245",
+            "inode": "6755399442374255",
             "_v": 1691701167043
         },
         {
@@ -11281,7 +11675,7 @@
             "symbol": "sound_naked_vgm_digital_ala",
             "filename": "Naked_VGM\\Digital_Alarm.vgm",
             "type": "vgm",
-            "inode": "844424931707237",
+            "inode": "14636698790274519",
             "_v": 1691701167043
         },
         {
@@ -11290,7 +11684,7 @@
             "symbol": "sound_naked_vgm_dog_bark_vg",
             "filename": "Naked_VGM\\Dog_Bark.vgm",
             "type": "vgm",
-            "inode": "844424931707228",
+            "inode": "6473924465666550",
             "_v": 1691701167043
         },
         {
@@ -11299,7 +11693,7 @@
             "symbol": "sound_naked_vgm_door_slow_o",
             "filename": "Naked_VGM\\Door_Slow_Open.vgm",
             "type": "vgm",
-            "inode": "844424931707242",
+            "inode": "6192449488956180",
             "_v": 1691701167043
         },
         {
@@ -11308,7 +11702,7 @@
             "symbol": "sound_naked_vgm_drink_vgm",
             "filename": "Naked_VGM\\Drink.vgm",
             "type": "vgm",
-            "inode": "844424931707230",
+            "inode": "9007199256063162",
             "_v": 1691701167043
         },
         {
@@ -11317,7 +11711,7 @@
             "symbol": "sound_naked_vgm_evil_laugh_",
             "filename": "Naked_VGM\\Evil_Laugh.vgm",
             "type": "vgm",
-            "inode": "844424931707227",
+            "inode": "4785074605403342",
             "_v": 1691701167043
         },
         {
@@ -11326,7 +11720,7 @@
             "symbol": "sound_naked_vgm_explosion_v",
             "filename": "Naked_VGM\\Explosion.vgm",
             "type": "vgm",
-            "inode": "844424931707240",
+            "inode": "2814749768428866",
             "_v": 1691701167043
         },
         {
@@ -11335,7 +11729,7 @@
             "symbol": "sound_naked_vgm_gun_vgm",
             "filename": "Naked_VGM\\Gun.vgm",
             "type": "vgm",
-            "inode": "1970324838549804",
+            "inode": "36028797020287271",
             "_v": 1691701167043
         },
         {
@@ -11344,7 +11738,7 @@
             "symbol": "sound_naked_vgm_hurt_vgm",
             "filename": "Naked_VGM\\Hurt.vgm",
             "type": "vgm",
-            "inode": "3940649675516467",
+            "inode": "42221246507951206",
             "_v": 1691701167043
         },
         {
@@ -11353,7 +11747,7 @@
             "symbol": "sound_naked_vgm_jump_vgm",
             "filename": "Naked_VGM\\Jump.vgm",
             "type": "vgm",
-            "inode": "3377699722075697",
+            "inode": "18014398510838288",
             "_v": 1691701167043
         },
         {
@@ -11362,7 +11756,7 @@
             "symbol": "sound_naked_vgm_laser_gun_v",
             "filename": "Naked_VGM\\Laser_Gun.vgm",
             "type": "vgm",
-            "inode": "844424931707238",
+            "inode": "4222124652017816",
             "_v": 1691701167043
         },
         {
@@ -11371,7 +11765,7 @@
             "symbol": "sound_naked_vgm_low_health_",
             "filename": "Naked_VGM\\Low_Health.vgm",
             "type": "vgm",
-            "inode": "844424931707241",
+            "inode": "5066549582149842",
             "_v": 1691701167043
         },
         {
@@ -11380,7 +11774,7 @@
             "symbol": "sound_naked_vgm_menu_in_vgm",
             "filename": "Naked_VGM\\Menu_In.vgm",
             "type": "vgm",
-            "inode": "844424931707233",
+            "inode": "34339947160058147",
             "_v": 1691701167043
         },
         {
@@ -11389,7 +11783,7 @@
             "symbol": "sound_naked_vgm_menu_out_vg",
             "filename": "Naked_VGM\\Menu_Out.vgm",
             "type": "vgm",
-            "inode": "844424931707234",
+            "inode": "4222124652017994",
             "_v": 1691701167043
         },
         {
@@ -11398,7 +11792,7 @@
             "symbol": "sound_naked_vgm_monster_scr",
             "filename": "Naked_VGM\\Monster_Scream.vgm",
             "type": "vgm",
-            "inode": "844424931707231",
+            "inode": "3096224745175373",
             "_v": 1691701167043
         },
         {
@@ -11407,7 +11801,7 @@
             "symbol": "sound_naked_vgm_notso_confi",
             "filename": "Naked_VGM\\Notso_Confirm.vgm",
             "type": "vgm",
-            "inode": "4785074605403411",
+            "inode": "7036874419124888",
             "_v": 1691701167043
         },
         {
@@ -11416,7 +11810,7 @@
             "symbol": "sound_naked_vgm_pause_vgm",
             "filename": "Naked_VGM\\Pause.vgm",
             "type": "vgm",
-            "inode": "844424931707243",
+            "inode": "38843546787447153",
             "_v": 1691701167043
         },
         {
@@ -11425,7 +11819,7 @@
             "symbol": "sound_naked_vgm_phone_ring_",
             "filename": "Naked_VGM\\Phone_Ring.vgm",
             "type": "vgm",
-            "inode": "844424931707232",
+            "inode": "35747322043629954",
             "_v": 1691701167043
         },
         {
@@ -11434,7 +11828,7 @@
             "symbol": "sound_naked_vgm_powerdown_v",
             "filename": "Naked_VGM\\Powerdown.vgm",
             "type": "vgm",
-            "inode": "1970324838542832",
+            "inode": "10696049116381741",
             "_v": 1691701167043
         },
         {
@@ -11443,7 +11837,7 @@
             "symbol": "sound_naked_vgm_powerup_vgm",
             "filename": "Naked_VGM\\Powerup.vgm",
             "type": "vgm",
-            "inode": "10977524093283153",
+            "inode": "81909218224177765",
             "_v": 1691701167043
         },
         {
@@ -11452,7 +11846,7 @@
             "symbol": "sound_naked_vgm_siren_vgm",
             "filename": "Naked_VGM\\Siren.vgm",
             "type": "vgm",
-            "inode": "844424931707236",
+            "inode": "15481123720490267",
             "_v": 1691701166848
         },
         {
@@ -11461,7 +11855,7 @@
             "symbol": "sound_naked_vgm_steps_vgm",
             "filename": "Naked_VGM\\Steps.vgm",
             "type": "vgm",
-            "inode": "844424931707239",
+            "inode": "19421773394463938",
             "_v": 1691701166848
         },
         {
@@ -11470,7 +11864,7 @@
             "symbol": "sound_naked_vgm_sword_slash",
             "filename": "Naked_VGM\\Sword_Slash.vgm",
             "type": "vgm",
-            "inode": "1125899908417878",
+            "inode": "3659174698675487",
             "_v": 1691701166848
         },
         {
@@ -11479,7 +11873,7 @@
             "symbol": "sound_naked_vgm_thunder_vgm",
             "filename": "Naked_VGM\\Thunder.vgm",
             "type": "vgm",
-            "inode": "844424931707244",
+            "inode": "10414574139731338",
             "_v": 1691701166848
         },
         {
@@ -11488,7 +11882,7 @@
             "symbol": "sound_naked_vgm_trampoline_",
             "filename": "Naked_VGM\\Trampoline.vgm",
             "type": "vgm",
-            "inode": "844424931707226",
+            "inode": "10977524093152692",
             "_v": 1691701166848
         },
         {
@@ -11497,7 +11891,7 @@
             "symbol": "sound_naked_vgm_water_splas",
             "filename": "Naked_VGM\\Water_Splash.vgm",
             "type": "vgm",
-            "inode": "5348024559069990",
+            "inode": "10133099163020798",
             "_v": 1691701166848
         },
         {
@@ -11506,7 +11900,7 @@
             "symbol": "sound_naked_vgm_alt_bottle_",
             "filename": "Naked_VGM_ALT\\Bottle_Break.vgm",
             "type": "vgm",
-            "inode": "844424931707268",
+            "inode": "6192449489071715",
             "_v": 1691701167043
         },
         {
@@ -11515,7 +11909,7 @@
             "symbol": "sound_naked_vgm_alt_bump_vg",
             "filename": "Naked_VGM_ALT\\Bump.vgm",
             "type": "vgm",
-            "inode": "844424931707255",
+            "inode": "4503599628818512",
             "_v": 1691701167043
         },
         {
@@ -11524,7 +11918,7 @@
             "symbol": "sound_naked_vgm_alt_cancel_",
             "filename": "Naked_VGM_ALT\\Cancel.vgm",
             "type": "vgm",
-            "inode": "844424931707249",
+            "inode": "80783318317432430",
             "_v": 1691701167043
         },
         {
@@ -11533,7 +11927,7 @@
             "symbol": "sound_naked_vgm_alt_cat_meo",
             "filename": "Naked_VGM_ALT\\Cat_Meow.vgm",
             "type": "vgm",
-            "inode": "844424931707262",
+            "inode": "18014398510965629",
             "_v": 1691701167043
         },
         {
@@ -11542,7 +11936,7 @@
             "symbol": "sound_naked_vgm_alt_click_v",
             "filename": "Naked_VGM_ALT\\Click.vgm",
             "type": "vgm",
-            "inode": "844424931707257",
+            "inode": "9851624186410184",
             "_v": 1691701167043
         },
         {
@@ -11551,7 +11945,7 @@
             "symbol": "sound_naked_vgm_alt_confirm",
             "filename": "Naked_VGM_ALT\\Confirm.vgm",
             "type": "vgm",
-            "inode": "844424931707247",
+            "inode": "10414574139831533",
             "_v": 1691701167043
         },
         {
@@ -11560,7 +11954,7 @@
             "symbol": "sound_naked_vgm_alt_crunch_",
             "filename": "Naked_VGM_ALT\\Crunch.vgm",
             "type": "vgm",
-            "inode": "844424931707284",
+            "inode": "71494644086152444",
             "_v": 1691701167043
         },
         {
@@ -11569,7 +11963,7 @@
             "symbol": "sound_naked_vgm_alt_digital",
             "filename": "Naked_VGM_ALT\\Digital_Alarm.vgm",
             "type": "vgm",
-            "inode": "844424931707270",
+            "inode": "4222124652305706",
             "_v": 1691701167043
         },
         {
@@ -11578,7 +11972,7 @@
             "symbol": "sound_naked_vgm_alt_dog_bar",
             "filename": "Naked_VGM_ALT\\Dog_Bark.vgm",
             "type": "vgm",
-            "inode": "844424931707261",
+            "inode": "7036874419464116",
             "_v": 1691701167043
         },
         {
@@ -11587,7 +11981,7 @@
             "symbol": "sound_naked_vgm_alt_door_sl",
             "filename": "Naked_VGM_ALT\\Door_Slow_Open.vgm",
             "type": "vgm",
-            "inode": "844424931707279",
+            "inode": "5629499535911297",
             "_v": 1691701167043
         },
         {
@@ -11596,7 +11990,7 @@
             "symbol": "sound_naked_vgm_alt_drink_v",
             "filename": "Naked_VGM_ALT\\Drink.vgm",
             "type": "vgm",
-            "inode": "844424931707263",
+            "inode": "5066549582489986",
             "_v": 1691701167043
         },
         {
@@ -11605,7 +11999,7 @@
             "symbol": "sound_naked_vgm_alt_evil_la",
             "filename": "Naked_VGM_ALT\\Evil_Laugh.vgm",
             "type": "vgm",
-            "inode": "844424931707260",
+            "inode": "12666373953677699",
             "_v": 1691701167043
         },
         {
@@ -11614,7 +12008,7 @@
             "symbol": "sound_naked_vgm_alt_explosi",
             "filename": "Naked_VGM_ALT\\Explosion.vgm",
             "type": "vgm",
-            "inode": "844424931707275",
+            "inode": "4503599629069426",
             "_v": 1691701167043
         },
         {
@@ -11623,7 +12017,7 @@
             "symbol": "sound_naked_vgm_alt_gun_vgm",
             "filename": "Naked_VGM_ALT\\Gun.vgm",
             "type": "vgm",
-            "inode": "844424931707256",
+            "inode": "8444249303018611",
             "_v": 1691701167043
         },
         {
@@ -11632,7 +12026,7 @@
             "symbol": "sound_naked_vgm_alt_hurt_vg",
             "filename": "Naked_VGM_ALT\\Hurt.vgm",
             "type": "vgm",
-            "inode": "844424931707251",
+            "inode": "6473924466044020",
             "_v": 1691701167043
         },
         {
@@ -11641,7 +12035,7 @@
             "symbol": "sound_naked_vgm_alt_jump_vg",
             "filename": "Naked_VGM_ALT\\Jump.vgm",
             "type": "vgm",
-            "inode": "844424931707250",
+            "inode": "8725724279729270",
             "_v": 1691701167043
         },
         {
@@ -11650,7 +12044,7 @@
             "symbol": "sound_naked_vgm_alt_laser_g",
             "filename": "Naked_VGM_ALT\\Laser_Gun.vgm",
             "type": "vgm",
-            "inode": "844424931707271",
+            "inode": "4785074605780088",
             "_v": 1691701167043
         },
         {
@@ -11659,7 +12053,7 @@
             "symbol": "sound_naked_vgm_alt_low_hea",
             "filename": "Naked_VGM_ALT\\Low_Health.vgm",
             "type": "vgm",
-            "inode": "844424931707277",
+            "inode": "7318349396175993",
             "_v": 1691701167043
         },
         {
@@ -11668,7 +12062,7 @@
             "symbol": "sound_naked_vgm_alt_menu_in",
             "filename": "Naked_VGM_ALT\\Menu_In.vgm",
             "type": "vgm",
-            "inode": "844424931707266",
+            "inode": "7599824372889548",
             "_v": 1691701167043
         },
         {
@@ -11677,7 +12071,7 @@
             "symbol": "sound_naked_vgm_alt_menu_ou",
             "filename": "Naked_VGM_ALT\\Menu_Out.vgm",
             "type": "vgm",
-            "inode": "844424931707267",
+            "inode": "18014398511184103",
             "_v": 1691701167043
         },
         {
@@ -11686,7 +12080,7 @@
             "symbol": "sound_naked_vgm_alt_monster",
             "filename": "Naked_VGM_ALT\\Monster_Scream.vgm",
             "type": "vgm",
-            "inode": "844424931707264",
+            "inode": "9007199256443121",
             "_v": 1691701167043
         },
         {
@@ -11695,7 +12089,7 @@
             "symbol": "sound_naked_vgm_alt_notso_c",
             "filename": "Naked_VGM_ALT\\Notso_Confirm.vgm",
             "type": "vgm",
-            "inode": "844424931707248",
+            "inode": "20829148278290718",
             "_v": 1691701167043
         },
         {
@@ -11704,7 +12098,7 @@
             "symbol": "sound_naked_vgm_alt_pause_v",
             "filename": "Naked_VGM_ALT\\Pause.vgm",
             "type": "vgm",
-            "inode": "844424931707281",
+            "inode": "19984723348158751",
             "_v": 1691701167043
         },
         {
@@ -11713,7 +12107,7 @@
             "symbol": "sound_naked_vgm_alt_phone_r",
             "filename": "Naked_VGM_ALT\\Phone_Ring.vgm",
             "type": "vgm",
-            "inode": "844424931707265",
+            "inode": "98234766873755729",
             "_v": 1691701167043
         },
         {
@@ -11722,7 +12116,7 @@
             "symbol": "sound_naked_vgm_alt_powerdo",
             "filename": "Naked_VGM_ALT\\Powerdown.vgm",
             "type": "vgm",
-            "inode": "844424931707254",
+            "inode": "12103424000296523",
             "_v": 1691701167043
         },
         {
@@ -11731,7 +12125,7 @@
             "symbol": "sound_naked_vgm_alt_powerup",
             "filename": "Naked_VGM_ALT\\Powerup.vgm",
             "type": "vgm",
-            "inode": "844424931707253",
+            "inode": "9851624186611278",
             "_v": 1691701167043
         },
         {
@@ -11740,7 +12134,7 @@
             "symbol": "sound_naked_vgm_alt_siren_v",
             "filename": "Naked_VGM_ALT\\Siren.vgm",
             "type": "vgm",
-            "inode": "844424931707269",
+            "inode": "15481123720824405",
             "_v": 1691701167043
         },
         {
@@ -11749,7 +12143,7 @@
             "symbol": "sound_naked_vgm_alt_steps_v",
             "filename": "Naked_VGM_ALT\\Steps.vgm",
             "type": "vgm",
-            "inode": "844424931707272",
+            "inode": "16325548650956409",
             "_v": 1691701167043
         },
         {
@@ -11758,7 +12152,7 @@
             "symbol": "sound_naked_vgm_alt_sword_s",
             "filename": "Naked_VGM_ALT\\Sword_Slash.vgm",
             "type": "vgm",
-            "inode": "844424931707258",
+            "inode": "32651097300183862",
             "_v": 1691701167043
         },
         {
@@ -11767,7 +12161,7 @@
             "symbol": "sound_naked_vgm_alt_thunder",
             "filename": "Naked_VGM_ALT\\Thunder.vgm",
             "type": "vgm",
-            "inode": "844424931707282",
+            "inode": "22517998138604346",
             "_v": 1691701167043
         },
         {
@@ -11776,7 +12170,7 @@
             "symbol": "sound_naked_vgm_alt_trampol",
             "filename": "Naked_VGM_ALT\\Trampoline.vgm",
             "type": "vgm",
-            "inode": "844424931707259",
+            "inode": "5066549582590683",
             "_v": 1691701167043
         },
         {
@@ -11785,7 +12179,7 @@
             "symbol": "sound_naked_vgm_alt_water_s",
             "filename": "Naked_VGM_ALT\\Water_Splash.vgm",
             "type": "vgm",
-            "inode": "844424931707252",
+            "inode": "12384898977068203",
             "_v": 1691701167043
         },
         {
@@ -11794,7 +12188,7 @@
             "symbol": "sound_player_vgm_bottle_bre",
             "filename": "Player_VGM\\Bottle_Break.vgm",
             "type": "vgm",
-            "inode": "562949954996658",
+            "inode": "3940649675748821",
             "_v": 1691701167043
         },
         {
@@ -11803,7 +12197,7 @@
             "symbol": "sound_player_vgm_bump_vgm",
             "filename": "Player_VGM\\Bump.vgm",
             "type": "vgm",
-            "inode": "562949954996645",
+            "inode": "6473924466253617",
             "_v": 1691701167043
         },
         {
@@ -11812,7 +12206,7 @@
             "symbol": "sound_player_vgm_cancel_vgm",
             "filename": "Player_VGM\\Cancel.vgm",
             "type": "vgm",
-            "inode": "844424931707290",
+            "inode": "9570149210073486",
             "_v": 1691701167043
         },
         {
@@ -11821,7 +12215,7 @@
             "symbol": "sound_player_vgm_cat_meow_v",
             "filename": "Player_VGM\\Cat_Meow.vgm",
             "type": "vgm",
-            "inode": "562949954996652",
+            "inode": "10696049116917977",
             "_v": 1691701167043
         },
         {
@@ -11830,7 +12224,7 @@
             "symbol": "sound_player_vgm_click_vgm",
             "filename": "Player_VGM\\Click.vgm",
             "type": "vgm",
-            "inode": "562949954996647",
+            "inode": "8162774326565239",
             "_v": 1691701167043
         },
         {
@@ -11839,7 +12233,7 @@
             "symbol": "sound_player_vgm_confirm_vg",
             "filename": "Player_VGM\\Confirm.vgm",
             "type": "vgm",
-            "inode": "844424931707287",
+            "inode": "8444249303276122",
             "_v": 1691701167043
         },
         {
@@ -11848,7 +12242,7 @@
             "symbol": "sound_player_vgm_crunch_vgm",
             "filename": "Player_VGM\\Crunch.vgm",
             "type": "vgm",
-            "inode": "562949954996668",
+            "inode": "8162774326873221",
             "_v": 1691701167043
         },
         {
@@ -11857,7 +12251,7 @@
             "symbol": "sound_player_vgm_digital_al",
             "filename": "Player_VGM\\Digital_Alarm.vgm",
             "type": "vgm",
-            "inode": "562949954996660",
+            "inode": "4785074606346257",
             "_v": 1691701167043
         },
         {
@@ -11866,7 +12260,7 @@
             "symbol": "sound_player_vgm_dog_bark_v",
             "filename": "Player_VGM\\Dog_Bark.vgm",
             "type": "vgm",
-            "inode": "562949954996651",
+            "inode": "30962247440437402",
             "_v": 1691701167043
         },
         {
@@ -11875,7 +12269,7 @@
             "symbol": "sound_player_vgm_door_slow_",
             "filename": "Player_VGM\\Door_Slow_Open.vgm",
             "type": "vgm",
-            "inode": "562949954996665",
+            "inode": "12103424000827303",
             "_v": 1691701167043
         },
         {
@@ -11884,7 +12278,7 @@
             "symbol": "sound_player_vgm_drink_vgm",
             "filename": "Player_VGM\\Drink.vgm",
             "type": "vgm",
-            "inode": "562949954996653",
+            "inode": "18014398511751847",
             "_v": 1691701167043
         },
         {
@@ -11893,7 +12287,7 @@
             "symbol": "sound_player_vgm_evil_laugh",
             "filename": "Player_VGM\\Evil_Laugh.vgm",
             "type": "vgm",
-            "inode": "562949954996650",
+            "inode": "14918173767969935",
             "_v": 1691701167043
         },
         {
@@ -11902,7 +12296,7 @@
             "symbol": "sound_player_vgm_explosion_",
             "filename": "Player_VGM\\Explosion.vgm",
             "type": "vgm",
-            "inode": "562949954996663",
+            "inode": "9570149210468911",
             "_v": 1691701167043
         },
         {
@@ -11911,7 +12305,7 @@
             "symbol": "sound_player_vgm_gun_vgm",
             "filename": "Player_VGM\\Gun.vgm",
             "type": "vgm",
-            "inode": "562949954996646",
+            "inode": "12947848931412700",
             "_v": 1691701167043
         },
         {
@@ -11920,7 +12314,7 @@
             "symbol": "sound_player_vgm_hurt_vgm",
             "filename": "Player_VGM\\Hurt.vgm",
             "type": "vgm",
-            "inode": "844424931707293",
+            "inode": "14355223815149178",
             "_v": 1691701167043
         },
         {
@@ -11929,7 +12323,7 @@
             "symbol": "sound_player_vgm_jump_vgm",
             "filename": "Player_VGM\\Jump.vgm",
             "type": "vgm",
-            "inode": "844424931707292",
+            "inode": "9288674234357512",
             "_v": 1691701167043
         },
         {
@@ -11938,7 +12332,7 @@
             "symbol": "sound_player_vgm_laser_gun_",
             "filename": "Player_VGM\\Laser_Gun.vgm",
             "type": "vgm",
-            "inode": "562949954996661",
+            "inode": "25614222883577120",
             "_v": 1691701167043
         },
         {
@@ -11947,7 +12341,7 @@
             "symbol": "sound_player_vgm_low_health",
             "filename": "Player_VGM\\Low_Health.vgm",
             "type": "vgm",
-            "inode": "562949954996664",
+            "inode": "18577348465810770",
             "_v": 1691701167043
         },
         {
@@ -11956,7 +12350,7 @@
             "symbol": "sound_player_vgm_menu_in_vg",
             "filename": "Player_VGM\\Menu_In.vgm",
             "type": "vgm",
-            "inode": "562949954996656",
+            "inode": "1688849863312825",
             "_v": 1691701167044
         },
         {
@@ -11965,7 +12359,7 @@
             "symbol": "sound_player_vgm_menu_out_v",
             "filename": "Player_VGM\\Menu_Out.vgm",
             "type": "vgm",
-            "inode": "562949954996657",
+            "inode": "1688849863312838",
             "_v": 1691701167043
         },
         {
@@ -11974,7 +12368,7 @@
             "symbol": "sound_player_vgm_monster_sc",
             "filename": "Player_VGM\\Monster_Scream.vgm",
             "type": "vgm",
-            "inode": "562949954996654",
+            "inode": "1688849863312843",
             "_v": 1691701167043
         },
         {
@@ -11983,7 +12377,7 @@
             "symbol": "sound_player_vgm_notso_conf",
             "filename": "Player_VGM\\Notso_Confirm.vgm",
             "type": "vgm",
-            "inode": "844424931707289",
+            "inode": "2814749770155706",
             "_v": 1691701167043
         },
         {
@@ -11992,7 +12386,7 @@
             "symbol": "sound_player_vgm_pause_vgm",
             "filename": "Player_VGM\\Pause.vgm",
             "type": "vgm",
-            "inode": "562949954996666",
+            "inode": "5910974513972965",
             "_v": 1691701167043
         },
         {
@@ -12001,7 +12395,7 @@
             "symbol": "sound_player_vgm_phone_ring",
             "filename": "Player_VGM\\Phone_Ring.vgm",
             "type": "vgm",
-            "inode": "562949954996655",
+            "inode": "2814749770155753",
             "_v": 1691701167043
         },
         {
@@ -12010,7 +12404,7 @@
             "symbol": "sound_player_vgm_powerdown_",
             "filename": "Player_VGM\\Powerdown.vgm",
             "type": "vgm",
-            "inode": "562949954996644",
+            "inode": "1970324840023787",
             "_v": 1691701167043
         },
         {
@@ -12019,7 +12413,7 @@
             "symbol": "sound_player_vgm_powerup_vg",
             "filename": "Player_VGM\\Powerup.vgm",
             "type": "vgm",
-            "inode": "562949954996643",
+            "inode": "1970324840023818",
             "_v": 1691701167043
         },
         {
@@ -12028,7 +12422,7 @@
             "symbol": "sound_player_vgm_siren_vgm",
             "filename": "Player_VGM\\Siren.vgm",
             "type": "vgm",
-            "inode": "562949954996659",
+            "inode": "6192449490694985",
             "_v": 1691701167044
         },
         {
@@ -12037,7 +12431,7 @@
             "symbol": "sound_player_vgm_steps_vgm",
             "filename": "Player_VGM\\Steps.vgm",
             "type": "vgm",
-            "inode": "562949954996662",
+            "inode": "10696049118065596",
             "_v": 1691701167043
         },
         {
@@ -12046,7 +12440,7 @@
             "symbol": "sound_player_vgm_sword_slas",
             "filename": "Player_VGM\\Sword_Slash.vgm",
             "type": "vgm",
-            "inode": "562949954996648",
+            "inode": "16607023628989562",
             "_v": 1691701168856
         },
         {
@@ -12055,7 +12449,7 @@
             "symbol": "sound_player_vgm_thunder_vg",
             "filename": "Player_VGM\\Thunder.vgm",
             "type": "vgm",
-            "inode": "562949954996667",
+            "inode": "5066549583852857",
             "_v": 1691701167044
         },
         {
@@ -12064,7 +12458,7 @@
             "symbol": "sound_player_vgm_trampoline",
             "filename": "Player_VGM\\Trampoline.vgm",
             "type": "vgm",
-            "inode": "562949954996649",
+            "inode": "4785074607142668",
             "_v": 1691701167044
         },
         {
@@ -12073,7 +12467,7 @@
             "symbol": "sound_player_vgm_water_spla",
             "filename": "Player_VGM\\Water_Splash.vgm",
             "type": "vgm",
-            "inode": "562949954996642",
+            "inode": "2251799816746767",
             "_v": 1691701167044
         },
         {
@@ -12082,7 +12476,7 @@
             "symbol": "sound_wav_bottle_break_wav",
             "filename": "WAV\\Bottle_Break.wav",
             "type": "wav",
-            "inode": "562949954996691",
+            "inode": "8162774327671400",
             "_v": 1691701167043
         },
         {
@@ -12091,7 +12485,7 @@
             "symbol": "sound_wav_bump_wav",
             "filename": "WAV\\Bump.wav",
             "type": "wav",
-            "inode": "562949954996678",
+            "inode": "10414574141356698",
             "_v": 1691701167043
         },
         {
@@ -12100,7 +12494,7 @@
             "symbol": "sound_wav_cancel_wav",
             "filename": "WAV\\Cancel.wav",
             "type": "wav",
-            "inode": "562949954996672",
+            "inode": "3659174700301044",
             "_v": 1691701167043
         },
         {
@@ -12109,7 +12503,7 @@
             "symbol": "sound_wav_cat_meow_wav",
             "filename": "WAV\\Cat_Meow.wav",
             "type": "wav",
-            "inode": "562949954996685",
+            "inode": "1970324840037170",
             "_v": 1691701167043
         },
         {
@@ -12118,7 +12512,7 @@
             "symbol": "sound_wav_click_wav",
             "filename": "WAV\\Click.wav",
             "type": "wav",
-            "inode": "562949954996680",
+            "inode": "2251799816748339",
             "_v": 1691701167043
         },
         {
@@ -12127,7 +12521,7 @@
             "symbol": "sound_wav_confirm_wav",
             "filename": "WAV\\Confirm.wav",
             "type": "wav",
-            "inode": "562949954996670",
+            "inode": "5348024560566238",
             "_v": 1691701167043
         },
         {
@@ -12136,7 +12530,7 @@
             "symbol": "sound_wav_crunch_wav",
             "filename": "WAV\\Crunch.wav",
             "type": "wav",
-            "inode": "562949954996701",
+            "inode": "8162774327672890",
             "_v": 1691701167043
         },
         {
@@ -12145,7 +12539,7 @@
             "symbol": "sound_wav_digital_alarm_wav",
             "filename": "WAV\\Digital_Alarm.wav",
             "type": "wav",
-            "inode": "562949954996693",
+            "inode": "1970324840038914",
             "_v": 1691701167043
         },
         {
@@ -12154,7 +12548,7 @@
             "symbol": "sound_wav_dog_bark_wav",
             "filename": "WAV\\Dog_Bark.wav",
             "type": "wav",
-            "inode": "562949954996684",
+            "inode": "1970324840038930",
             "_v": 1691701167043
         },
         {
@@ -12163,7 +12557,7 @@
             "symbol": "sound_wav_door_slow_open_wa",
             "filename": "WAV\\Door_Slow_Open.wav",
             "type": "wav",
-            "inode": "562949954996698",
+            "inode": "1970324840038932",
             "_v": 1691701167043
         },
         {
@@ -12172,7 +12566,7 @@
             "symbol": "sound_wav_drink_wav",
             "filename": "WAV\\Drink.wav",
             "type": "wav",
-            "inode": "562949954996686",
+            "inode": "3940649677013586",
             "_v": 1691701167043
         },
         {
@@ -12181,7 +12575,7 @@
             "symbol": "sound_wav_evil_laugh_wav",
             "filename": "WAV\\Evil_Laugh.wav",
             "type": "wav",
-            "inode": "562949954996683",
+            "inode": "9288674234516086",
             "_v": 1691701167043
         },
         {
@@ -12190,7 +12584,7 @@
             "symbol": "sound_wav_explosion_wav",
             "filename": "WAV\\Explosion.wav",
             "type": "wav",
-            "inode": "562949954996696",
+            "inode": "1970324840039271",
             "_v": 1691701167043
         },
         {
@@ -12199,7 +12593,7 @@
             "symbol": "sound_wav_gun_wav",
             "filename": "WAV\\Gun.wav",
             "type": "wav",
-            "inode": "562949954996679",
+            "inode": "1688849863361002",
             "_v": 1691701167043
         },
         {
@@ -12208,7 +12602,7 @@
             "symbol": "sound_wav_hurt_wav",
             "filename": "WAV\\Hurt.wav",
             "type": "wav",
-            "inode": "562949954996674",
+            "inode": "3940649677047291",
             "_v": 1691701167043
         },
         {
@@ -12217,7 +12611,7 @@
             "symbol": "sound_wav_jump_wav",
             "filename": "WAV\\Jump.wav",
             "type": "wav",
-            "inode": "562949954996673",
+            "inode": "4222124653758161",
             "_v": 1691701167043
         },
         {
@@ -12226,7 +12620,7 @@
             "symbol": "sound_wav_laser_gun_wav",
             "filename": "WAV\\Laser_Gun.wav",
             "type": "wav",
-            "inode": "562949954996694",
+            "inode": "7036874420864900",
             "_v": 1691701167043
         },
         {
@@ -12235,7 +12629,7 @@
             "symbol": "sound_wav_low_health_wav",
             "filename": "WAV\\Low_Health.wav",
             "type": "wav",
-            "inode": "562949954996697",
+            "inode": "9851624187971620",
             "_v": 1691701167043
         },
         {
@@ -12244,7 +12638,7 @@
             "symbol": "sound_wav_menu_in_wav",
             "filename": "WAV\\Menu_In.wav",
             "type": "wav",
-            "inode": "562949954996689",
+            "inode": "2251799816811073",
             "_v": 1691701167043
         },
         {
@@ -12253,7 +12647,7 @@
             "symbol": "sound_wav_menu_out_wav",
             "filename": "WAV\\Menu_Out.wav",
             "type": "wav",
-            "inode": "562949954996690",
+            "inode": "14636698792341532",
             "_v": 1691701167043
         },
         {
@@ -12262,7 +12656,7 @@
             "symbol": "sound_wav_monster_scream_wa",
             "filename": "WAV\\Monster_Scream.wav",
             "type": "wav",
-            "inode": "562949954996687",
+            "inode": "3096224747204922",
             "_v": 1691701167043
         },
         {
@@ -12271,7 +12665,7 @@
             "symbol": "sound_wav_notso_confirm_wav",
             "filename": "WAV\\Notso_Confirm.wav",
             "type": "wav",
-            "inode": "562949954996671",
+            "inode": "2814749770494316",
             "_v": 1691701167043
         },
         {
@@ -12280,7 +12674,7 @@
             "symbol": "sound_wav_pause_wav",
             "filename": "WAV\\Pause.wav",
             "type": "wav",
-            "inode": "562949954996699",
+            "inode": "2533274793785753",
             "_v": 1691701167043
         },
         {
@@ -12289,7 +12683,7 @@
             "symbol": "sound_wav_phone_ring_wav",
             "filename": "WAV\\Phone_Ring.wav",
             "type": "wav",
-            "inode": "562949954996688",
+            "inode": "3940649677342359",
             "_v": 1691701167043
         },
         {
@@ -12298,7 +12692,7 @@
             "symbol": "sound_wav_powerdown_wav",
             "filename": "WAV\\Powerdown.wav",
             "type": "wav",
-            "inode": "562949954996677",
+            "inode": "52635820648286633",
             "_v": 1691701167043
         },
         {
@@ -12307,7 +12701,7 @@
             "symbol": "sound_wav_powerup_wav",
             "filename": "WAV\\Powerup.wav",
             "type": "wav",
-            "inode": "562949954996676",
+            "inode": "15762598699190698",
             "_v": 1691701167043
         },
         {
@@ -12316,7 +12710,7 @@
             "symbol": "sound_wav_siren_wav",
             "filename": "WAV\\Siren.wav",
             "type": "wav",
-            "inode": "562949954996692",
+            "inode": "46443371160652205",
             "_v": 1691701167043
         },
         {
@@ -12325,7 +12719,7 @@
             "symbol": "sound_wav_steps_wav",
             "filename": "WAV\\Steps.wav",
             "type": "wav",
-            "inode": "562949954996695",
+            "inode": "3940649677390140",
             "_v": 1691701167043
         },
         {
@@ -12334,7 +12728,7 @@
             "symbol": "sound_wav_sword_slash_wav",
             "filename": "WAV\\Sword_Slash.wav",
             "type": "wav",
-            "inode": "562949954996681",
+            "inode": "1125899910323268",
             "_v": 1691701167043
         },
         {
@@ -12343,7 +12737,7 @@
             "symbol": "sound_wav_thunder_wav",
             "filename": "WAV\\Thunder.wav",
             "type": "wav",
-            "inode": "562949954996700",
+            "inode": "1125899910323273",
             "_v": 1691701167043
         },
         {
@@ -12352,7 +12746,7 @@
             "symbol": "sound_wav_trampoline_wav",
             "filename": "WAV\\Trampoline.wav",
             "type": "wav",
-            "inode": "562949954996682",
+            "inode": "1125899910323287",
             "_v": 1691701167043
         },
         {
@@ -12361,7 +12755,7 @@
             "symbol": "sound_wav_water_splash_wav",
             "filename": "WAV\\Water_Splash.wav",
             "type": "wav",
-            "inode": "562949954996675",
+            "inode": "1125899910323288",
             "_v": 1691701167043
         },
         {
@@ -12370,7 +12764,7 @@
             "symbol": "sound_attack1_wav",
             "filename": "attack1.wav",
             "type": "wav",
-            "inode": "12103423998943770",
+            "inode": "1125899910323296",
             "_v": 1691559908996
         },
         {
@@ -12379,7 +12773,7 @@
             "symbol": "sound_enter_battle_wav",
             "filename": "enter_battle.wav",
             "type": "wav",
-            "inode": "844424931705993",
+            "inode": "1407374887033957",
             "_v": 1691700707376
         },
         {
@@ -12388,7 +12782,7 @@
             "symbol": "sound_enter_battle_final_wa",
             "filename": "enter_battle_final.wav",
             "type": "wav",
-            "inode": "15762598695999553",
+            "inode": "1125899910323312",
             "_v": 1691700853261
         }
     ],
@@ -12898,9 +13292,9 @@
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
-        "showConnections": true,
-        "worldScrollX": 548,
-        "worldScrollY": 426,
+        "showConnections": "all",
+        "worldScrollX": 405,
+        "worldScrollY": 496,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -12929,9 +13323,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            153,
+            30,
             205,
-            608
+            762
         ],
         "showNavigator": true,
         "defaultFontId": "5f2d03f0-4f39-4c45-b5f9-9555fa402a92",
