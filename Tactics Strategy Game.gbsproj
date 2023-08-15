@@ -7893,7 +7893,8 @@
                                                 "right"
                                             ],
                                             "override": true,
-                                            "__scriptTabs": "press"
+                                            "__scriptTabs": "press",
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
@@ -7938,7 +7939,8 @@
                                                 "left"
                                             ],
                                             "override": true,
-                                            "__scriptTabs": "press"
+                                            "__scriptTabs": "press",
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
@@ -7982,7 +7984,8 @@
                                                 "a"
                                             ],
                                             "override": true,
-                                            "__scriptTabs": "press"
+                                            "__scriptTabs": "press",
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
@@ -8030,7 +8033,8 @@
                                                 "b"
                                             ],
                                             "override": true,
-                                            "__scriptTabs": "press"
+                                            "__scriptTabs": "press",
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
@@ -8078,7 +8082,8 @@
                                                 "start"
                                             ],
                                             "override": true,
-                                            "__scriptTabs": "press"
+                                            "__scriptTabs": "press",
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
@@ -12718,27 +12723,27 @@
                                 "command": "EVENT_ACTOR_ACTIVATE",
                                 "args": {
                                     "actorId": "$self$",
-                                    "__collapse": true
-                                },
-                                "id": "5d2787f3-841f-4265-ae53-5f1418eff58d"
-                            },
-                            {
-                                "command": "EVENT_ENGINE_FIELD_SET",
-                                "args": {
-                                    "engineFieldKey": "topdown_grid",
                                     "__collapse": false,
                                     "__comment": true
                                 },
-                                "id": "9d395c50-e9bd-41ce-a0b8-022c616e7f6f"
+                                "id": "5d2787f3-841f-4265-ae53-5f1418eff58d"
                             },
                             {
                                 "command": "EVENT_ACTOR_SET_STATE",
                                 "args": {
                                     "actorId": "$self$",
-                                    "spriteStateId": "menu_animation",
-                                    "__collapse": true
+                                    "spriteStateId": "",
+                                    "__collapse": false
                                 },
                                 "id": "7f6fbcc5-1290-4ea9-9868-23103f3f6f1a"
+                            },
+                            {
+                                "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                                "args": {
+                                    "actorId": "$self$",
+                                    "speed": 15
+                                },
+                                "id": "bfabfd11-b6ce-460a-ab75-4a51a2c037e7"
                             },
                             {
                                 "command": "EVENT_ACTOR_SET_POSITION",
@@ -14615,7 +14620,7 @@
             "name": "desert_1",
             "backgroundId": "4b6aeb5c-bbf9-437a-ba54-e0f0b2410dfb",
             "width": 40,
-            "height": 20,
+            "height": 18,
             "type": "TOPDOWN",
             "paletteIds": [],
             "spritePaletteIds": [],
@@ -14862,54 +14867,14 @@
                 15,
                 15,
                 0,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                15,
-                15,
-                0,
-                0,
-                0,
-                0,
                 0,
                 0,
-                0,
-                0,
-                0,
-                0,
-                15,
-                0,
-                15,
                 15,
                 15,
                 15,
                 15,
                 15,
                 15,
-                15,
                 0,
                 0,
                 0,
@@ -14928,8 +14893,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -14940,14 +14903,14 @@
                 0,
                 0,
                 0,
+                0,
+                0,
                 15,
                 0,
                 0,
                 0,
                 15,
                 15,
-                0,
-                0,
                 15,
                 15,
                 15,
@@ -14980,6 +14943,8 @@
                 0,
                 0,
                 0,
+                0,
+                0,
                 15,
                 0,
                 0,
@@ -14988,11 +14953,8 @@
                 15,
                 0,
                 0,
-                15,
                 15,
                 15,
-                15,
-                0,
                 0,
                 0,
                 0,
@@ -15019,17 +14981,20 @@
                 0,
                 0,
                 0,
-                0,
-                15,
                 0,
                 0,
                 0,
                 0,
+                15,
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -15061,7 +15026,6 @@
                 0,
                 0,
                 15,
-                0,
                 0,
                 0,
                 0,
@@ -15093,9 +15057,10 @@
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
+                15,
+                15,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -15252,28 +15217,15 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
-                0,
-                0,
                 0,
                 0,
-                15,
                 0,
                 0,
-                0,
-                15,
-                15,
                 0,
                 0,
                 0,
                 0,
-                15,
                 15,
-                0,
-                0,
                 0,
                 0,
                 0,
@@ -15285,33 +15237,6 @@
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                15,
-                0,
-                0,
-                0,
-                15,
-                15,
-                0,
-                0,
-                0,
-                0,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -15938,6 +15863,14 @@
                 {
                     "command": "EVENT_CALL_CUSTOM_EVENT",
                     "args": {
+                        "customEventId": "1cd4b9a5-53cc-4a1a-a7a9-e58a35dc89c9",
+                        "__collapse": true
+                    },
+                    "id": "bbb7af71-1743-4d85-bddd-f9dbbea540b1"
+                },
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
                         "customEventId": "37fef11c-ef9f-4dc2-8d2e-c4acc9936b30"
                     },
                     "id": "da883ea6-c52b-4229-a04d-0824b264b22a"
@@ -15945,7 +15878,17 @@
             ],
             "playerHit1Script": [],
             "playerHit2Script": [],
-            "playerHit3Script": []
+            "playerHit3Script": [],
+            "parallax": [
+                {
+                    "height": 4,
+                    "speed": 1
+                },
+                {
+                    "height": 0,
+                    "speed": 0
+                }
+            ]
         },
         {
             "name": "intro_chamber",
@@ -16601,17 +16544,19 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "intro_chamber.png"
+            "filename": "intro_chamber.png",
+            "tileColors": []
         },
         {
             "id": "4b6aeb5c-bbf9-437a-ba54-e0f0b2410dfb",
             "name": "map_desert_1",
             "symbol": "bg_map_desert_1",
             "width": 40,
-            "height": 20,
+            "height": 18,
             "imageWidth": 320,
-            "imageHeight": 160,
-            "filename": "map_desert_1.png"
+            "imageHeight": 144,
+            "filename": "map_desert_1.png",
+            "tileColors": []
         },
         {
             "id": "e4c8c3ec-c9a3-4c6e-965a-dd531941d6b9",
@@ -17475,7 +17420,8 @@
             "height": 14,
             "imageWidth": 384,
             "imageHeight": 112,
-            "filename": "sheets\\desert.png"
+            "filename": "sheets\\desert.png",
+            "tileColors": []
         },
         {
             "id": "6baa9d06-2f62-489e-ad16-923b02b31c2b",
@@ -30073,6 +30019,11 @@
             "symbol": "var_menu_items_dialogue"
         },
         {
+            "id": "30",
+            "name": "player_gender",
+            "symbol": "var_player_gender_0"
+        },
+        {
             "id": "4f9e84c2-617c-4d49-ba7b-c13714018354__L0",
             "name": "dialogue_battle",
             "symbol": "var_dialogue_battle"
@@ -30111,11 +30062,6 @@
             "id": "7e526b40-2320-4dab-a9be-d6f3b7cb9c7e__L0",
             "name": "player_gender",
             "symbol": "var_player_gender"
-        },
-        {
-            "id": "30",
-            "name": "player_gender",
-            "symbol": "var_player_gender_0"
         }
     ],
     "engineFieldValues": [
@@ -30129,16 +30075,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "c9d001c5-e756-460b-a513-359baaa8874e",
-        "startX": 9,
-        "startY": 3,
+        "startSceneId": "d40b4982-d67a-466c-be6e-4ef86f3f12a3",
+        "startX": 6,
+        "startY": 11,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": "all",
-        "worldScrollX": 16,
-        "worldScrollY": 26,
+        "worldScrollX": 0,
+        "worldScrollY": 29,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
