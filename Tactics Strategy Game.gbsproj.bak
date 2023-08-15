@@ -7893,7 +7893,8 @@
                                                 "right"
                                             ],
                                             "override": true,
-                                            "__scriptTabs": "press"
+                                            "__scriptTabs": "press",
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
@@ -7938,7 +7939,8 @@
                                                 "left"
                                             ],
                                             "override": true,
-                                            "__scriptTabs": "press"
+                                            "__scriptTabs": "press",
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
@@ -7982,7 +7984,8 @@
                                                 "a"
                                             ],
                                             "override": true,
-                                            "__scriptTabs": "press"
+                                            "__scriptTabs": "press",
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
@@ -8030,7 +8033,8 @@
                                                 "b"
                                             ],
                                             "override": true,
-                                            "__scriptTabs": "press"
+                                            "__scriptTabs": "press",
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
@@ -8078,7 +8082,8 @@
                                                 "start"
                                             ],
                                             "override": true,
-                                            "__scriptTabs": "press"
+                                            "__scriptTabs": "press",
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
@@ -12718,27 +12723,27 @@
                                 "command": "EVENT_ACTOR_ACTIVATE",
                                 "args": {
                                     "actorId": "$self$",
-                                    "__collapse": true
-                                },
-                                "id": "5d2787f3-841f-4265-ae53-5f1418eff58d"
-                            },
-                            {
-                                "command": "EVENT_ENGINE_FIELD_SET",
-                                "args": {
-                                    "engineFieldKey": "topdown_grid",
                                     "__collapse": false,
                                     "__comment": true
                                 },
-                                "id": "9d395c50-e9bd-41ce-a0b8-022c616e7f6f"
+                                "id": "5d2787f3-841f-4265-ae53-5f1418eff58d"
                             },
                             {
                                 "command": "EVENT_ACTOR_SET_STATE",
                                 "args": {
                                     "actorId": "$self$",
-                                    "spriteStateId": "menu_animation",
-                                    "__collapse": true
+                                    "spriteStateId": "",
+                                    "__collapse": false
                                 },
                                 "id": "7f6fbcc5-1290-4ea9-9868-23103f3f6f1a"
+                            },
+                            {
+                                "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                                "args": {
+                                    "actorId": "$self$",
+                                    "speed": 15
+                                },
+                                "id": "bfabfd11-b6ce-460a-ab75-4a51a2c037e7"
                             },
                             {
                                 "command": "EVENT_ACTOR_SET_POSITION",
@@ -15855,6 +15860,14 @@
                 }
             ],
             "script": [
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "1cd4b9a5-53cc-4a1a-a7a9-e58a35dc89c9",
+                        "__collapse": true
+                    },
+                    "id": "bbb7af71-1743-4d85-bddd-f9dbbea540b1"
+                },
                 {
                     "command": "EVENT_CALL_CUSTOM_EVENT",
                     "args": {
@@ -30070,7 +30083,7 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": "all",
-        "worldScrollX": 206,
+        "worldScrollX": 0,
         "worldScrollY": 29,
         "zoom": 100,
         "customColorsEnabled": false,
