@@ -7731,7 +7731,29 @@
                     "persistent": false,
                     "collisionGroup": "",
                     "symbol": "actor_19",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                            "args": {
+                                "__scriptTabs": "text",
+                                "minHeight": 3,
+                                "maxHeight": 1,
+                                "position": "bottom",
+                                "showBorder": "true",
+                                "clearPrevious": true,
+                                "textX": 1,
+                                "textY": 1,
+                                "textHeight": 3,
+                                "closeWhen": "notModal",
+                                "closeButton": "a",
+                                "text": [
+                                    "Great Pyramids"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "7c68dd02-22dd-4aba-8d39-6f38317225fe"
+                        }
+                    ],
                     "startScript": [
                         {
                             "command": "EVENT_ACTOR_SET_STATE",
@@ -7763,7 +7785,29 @@
                     "persistent": false,
                     "collisionGroup": "",
                     "symbol": "actor_20",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                            "args": {
+                                "__scriptTabs": "text",
+                                "minHeight": 3,
+                                "maxHeight": 1,
+                                "position": "bottom",
+                                "showBorder": "true",
+                                "clearPrevious": true,
+                                "textX": 1,
+                                "textY": 1,
+                                "textHeight": 3,
+                                "closeWhen": "notModal",
+                                "closeButton": "a",
+                                "text": [
+                                    "Pyramid of Djoser"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "13c1440f-f37b-48d3-9154-71ccd7e15f51"
+                        }
+                    ],
                     "startScript": [
                         {
                             "command": "EVENT_ACTOR_SET_STATE",
@@ -7795,7 +7839,29 @@
                     "persistent": false,
                     "collisionGroup": "",
                     "symbol": "actor_21",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                            "args": {
+                                "__scriptTabs": "text",
+                                "minHeight": 3,
+                                "maxHeight": 1,
+                                "position": "bottom",
+                                "showBorder": "true",
+                                "clearPrevious": true,
+                                "textX": 1,
+                                "textY": 1,
+                                "textHeight": 3,
+                                "closeWhen": "notModal",
+                                "closeButton": "a",
+                                "text": [
+                                    "Heliopolis"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "97d98e62-8de9-4f2a-aa55-1e9a791813dc"
+                        }
+                    ],
                     "startScript": [
                         {
                             "command": "EVENT_ACTOR_SET_STATE",
@@ -7827,7 +7893,7 @@
                         },
                         "y": {
                             "type": "number",
-                            "value": 9
+                            "value": 3
                         }
                     },
                     "id": "319eb4a8-c56e-493b-88ad-793c4780c783"
@@ -7843,6 +7909,13 @@
                     },
                     "children": {
                         "true": [
+                            {
+                                "command": "EVENT_OVERLAY_HIDE",
+                                "args": {
+                                    "__collapse": true
+                                },
+                                "id": "90f08384-4c01-4c7a-80f9-40b75455c46c"
+                            },
                             {
                                 "command": "EVENT_SCENE_POP_STATE",
                                 "args": {
@@ -7874,6 +7947,13 @@
                                 },
                                 "children": {
                                     "true": [
+                                        {
+                                            "command": "EVENT_OVERLAY_HIDE",
+                                            "args": {
+                                                "__collapse": true
+                                            },
+                                            "id": "bdf4624c-06f0-4458-a538-a7d5962b2879"
+                                        },
                                         {
                                             "command": "EVENT_SOUND_PLAY_EFFECT",
                                             "args": {
@@ -31577,8 +31657,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": "selected",
-        "worldScrollX": 381,
-        "worldScrollY": 652,
+        "worldScrollX": 602,
+        "worldScrollY": 676,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -31607,9 +31687,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            153,
-            248,
-            565
+            210,
+            294,
+            462
         ],
         "showNavigator": true,
         "defaultFontId": "a2d96799-08dd-47cd-b60f-d5400af5889c",

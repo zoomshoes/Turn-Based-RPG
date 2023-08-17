@@ -7769,7 +7769,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "6f45420c-2c4a-4ddf-a636-156eda0358b1",
-                    "x": 5,
+                    "x": 4,
                     "y": 5
                 },
                 {
@@ -7823,7 +7823,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "90148915-0b4b-4e89-b455-847fb14f32b4",
-                    "x": 6,
+                    "x": 5,
                     "y": 7
                 },
                 {
@@ -7843,19 +7843,19 @@
                         {
                             "command": "PT_EVENT_ADVANCED_DIALOGUE",
                             "args": {
-                                "__scriptTabs": "text",
-                                "minHeight": 3,
-                                "maxHeight": 1,
+                                "__scriptTabs": "layout",
+                                "minHeight": 5,
+                                "maxHeight": 5,
                                 "position": "bottom",
                                 "showBorder": "true",
                                 "clearPrevious": true,
                                 "textX": 1,
                                 "textY": 1,
-                                "textHeight": 3,
+                                "textHeight": 5,
                                 "closeWhen": "notModal",
                                 "closeButton": "a",
                                 "text": [
-                                    "Heliopolis"
+                                    "HELIOPOLIS\nSpiritual Center\nof the Nile region"
                                 ],
                                 "avatarId": ""
                             },
@@ -7881,7 +7881,74 @@
                     "y": 5
                 }
             ],
-            "triggers": [],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "8c80a355-4479-4196-bc9f-9aa53b6e45dc",
+                    "x": 7,
+                    "y": 4,
+                    "symbol": "trigger_7",
+                    "width": 1,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                            "args": {
+                                "__scriptTabs": "text",
+                                "minHeight": 5,
+                                "maxHeight": 5,
+                                "position": "bottom",
+                                "showBorder": "true",
+                                "clearPrevious": true,
+                                "textX": 1,
+                                "textY": 1,
+                                "textHeight": 5,
+                                "closeWhen": "notModal",
+                                "closeButton": "a",
+                                "text": [
+                                    "ALEXANDRIA\nGateway to\nthe Nile"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "f1beac43-6448-41f7-b413-53862e2da475"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "3eec2f9a-f50b-47a8-bf06-5d3b8ca04c18",
+                    "x": 9,
+                    "y": 7,
+                    "symbol": "trigger_8",
+                    "width": 1,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                            "args": {
+                                "__scriptTabs": "text",
+                                "minHeight": 5,
+                                "maxHeight": 5,
+                                "position": "bottom",
+                                "showBorder": "true",
+                                "clearPrevious": true,
+                                "textX": 1,
+                                "textY": 1,
+                                "textHeight": 5,
+                                "closeWhen": "notModal",
+                                "closeButton": "a",
+                                "text": [
+                                    "GIZA\nWhere Khufu was\nlaid to rest."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "dcad992e-72d3-427e-98a8-f7e35877e90d"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
             "script": [
                 {
                     "command": "EVENT_ACTOR_SET_POSITION",
@@ -31657,7 +31724,7 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": "selected",
-        "worldScrollX": 602,
+        "worldScrollX": 635,
         "worldScrollY": 676,
         "zoom": 200,
         "customColorsEnabled": false,
