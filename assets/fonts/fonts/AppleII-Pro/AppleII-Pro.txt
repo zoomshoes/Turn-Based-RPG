@@ -1,5 +1,0 @@
-Font: AppleII-Pro
-Top padding: 7
-Interword: 0
-Kerning: 1
-txt2img.sh -f AppleII-Pro -t7 -i0 -k1 file.txt 
